@@ -7,7 +7,7 @@ const path = require('path');
 const app = express(); // Create an instance of Express
 const port = 3262; // Define the port number the server will listen on
 
-const loginRouter = require('./server_scripts/login');
+const loginRouter = require("./modules/login");
 
 // Use CORS middleware to allow all cross-origin requests
 // This is essential for allowing requests from different domains, especially during development.
@@ -19,10 +19,10 @@ app.use(bodyParser.json());
 
 // Serve static files from the 'public' directory (e.g., HTML, CSS, JS)
 // This line configures Express to serve all static files in the 'public' directory, such as your client-side HTML, CSS, and JavaScript files.
-app.use(express.static("node/PublicResources/"));
+app.use(express.static("node/static/"));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/node/public_resources/pages/', 'login_page.html'));
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "login_page.html"));
 });
 
 app.post("/login", loginRouter);
