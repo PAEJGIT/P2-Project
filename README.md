@@ -69,11 +69,6 @@ For a full list of all authors and contributors, see [the contributors page](htt
 > With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his guidance and support.
 > In addition, our work has been inspired by multiple factors, so it is only appropriate to we acknowledge this intellectual debt too.
 
-## License
-
-This project is licensed under the **MIT license**.
-
-See [LICENSE](LICENSE) for more information.
 
 ### Built With
 
