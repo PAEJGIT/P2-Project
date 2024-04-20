@@ -6,25 +6,14 @@
 </h1>
 
 <div align="center">
-  P2 Meal Recommendation
-  <br />
-  <a href="#about"><strong>Explore the screenshots »</strong></a>
-  <br />
-  <br />
-  <a href="https://github.com/SkimmedMilky/p2-meal-recommendation/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
-  ·
-  <a href="https://github.com/SkimmedMilky/p2-meal-recommendation/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
-  .
-  <a href="https://github.com/SkimmedMilky/p2-meal-recommendation/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
-</div>
-
-<div align="center">
 <br />
 
 [![Project license](https://img.shields.io/github/license/SkimmedMilky/p2-meal-recommendation.svg?style=flat-square)](LICENSE)
 
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/SkimmedMilky/p2-meal-recommendation/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-[![code with love by SkimmedMilky](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-SkimmedMilky-ff1414.svg?style=flat-square)](https://github.com/SkimmedMilky)
+[![code with love by Peter](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Peter-6082B6.svg?style=flat-square)](https://github.com/SkimmedMilky)
+[![code with love by Daniel](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Daniel-8A9A5B.svg?style=flat-square)](https://github.com/SkimmedMilky)
+[![code with love by Johannes](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Johannes-708090.svg?style=flat-square)](https://github.com/SkimmedMilky)
+[![code with love by Stefan](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Stefan-B2BEB5.svg?style=flat-square)](https://github.com/SkimmedMilky)
 
 </div>
 
