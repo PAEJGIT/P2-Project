@@ -82,7 +82,7 @@ git clone
 ## Usage
 
 > **[?]**
-> ```sh
+```sh
 npm start
 ```
 
