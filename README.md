@@ -1,7 +1,7 @@
 <h1 align="center">
-  <a href="https://github.com/SkimmedMilky/p2-meal-recommendation">
+  <a href="https://github.com/PAEJGIT/P2-Projectn">
     <!-- Please provide path to your logo here -->
-    <img src="docs/images/logo.svg" alt="Logo" width="100" height="100">
+    <img src="docs/images/AAU_logo_2012.png" alt="Logo" width="100" height="100">
   </a>
 </h1>
 
@@ -41,18 +41,16 @@
 ## About
 
 > **[?]**
-> Provide general information about your project here.
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> Why did you undertake it?
-> You don't have to answer all the questions -- just the ones relevant to your project.
+> Project created for the course "P2" at Aalborg University, Denmark.
+> Part of Datalogy Bachelor's degree.
+> Meal Recommendation Web Application that provides users with meal recommendations based on their preferences and dietary restrictions to help them plan their meals.
 
 <details>
 <summary>Screenshots</summary>
 <br>
 
 > **[?]**
-> Please provide your screenshots here.
+> Examples of Current Screenshots.
 
 |                               Home Page                               |                               Login Page                               |
 | :-------------------------------------------------------------------: | :--------------------------------------------------------------------: |
@@ -63,14 +61,18 @@
 ### Built With
 
 > **[?]**
-> Please provide the technologies that are used in the project.
+> No frameworks or libraries used, only pure HTML, CSS, and JavaScript.
 
 ## Getting Started
 
 ### Prerequisites
 
 > **[?]**
-> What are the project requirements/dependencies?
+> Clone the repository and open the `index.html` file in your browser.
+
+```sh
+git clone
+```
 
 ### Installation
 
@@ -80,8 +82,9 @@
 ## Usage
 
 > **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+> ```sh
+npm start
+```
 
 ## Roadmap
 
@@ -134,5 +137,7 @@ See [LICENSE](LICENSE) for more information.
 ## Acknowledgements
 
 > **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
+> Aalborg University, Denmark.
+> Special thanks to our teachers and mentors for their guidance and support.
+> With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his guidance and support.
+> In addition, our work has been inspired by multiple factors, so it is only appropriate to we acknowledge this intellectual debt too.
