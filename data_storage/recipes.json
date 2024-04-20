@@ -1,0 +1,384 @@
+{
+	"1": {
+		"id": 1,
+		"name": "Oatmeal Cake",
+		"description": "Oatmeal",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat oven to 190°C.",
+			"Roll out pie crust and place it in a pie dish.",
+			"In a large bowl, mix sliced apples, sugar, flour, cinnamon, and nutmeg.",
+			"Pour the apple mixture into the pie crust.",
+			"Cover the pie with another layer of pie crust or a lattice design.",
+			"Brush the top crust with egg wash.",
+			"Bake for 45-50 minutes, or until the crust is golden brown.",
+			"Allow the pie to cool before serving."
+		],
+		"ratio": [10, 50, 40],
+		"type": [0, 1, 1],
+		"category": ["cake"],
+		"tags": ["dessert"],
+		"ingredients": [
+			["Apple, raw, all varieties", 120, "gram"],
+			["Oats, rolled, average values", 2, "pieces"],
+			["Cinnamon stick", 2, "tspn"],
+			["Eggs, chicken, egg white, raw", 2, "pieces"]
+		]
+	},
+	"2": {
+		"id": 2,
+		"name": "Oatmeal",
+		"description": "A hearty and nutritious bowl featuring oatmeal, fruits, nuts, and seeds.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"In a saucepan, bring water or milk to a boil.",
+			"Stir in oats and reduce heat to low. Cook for 5-7 minutes, stirring occasionally, until oats are creamy.",
+			"Transfer oatmeal to a bowl.",
+			"Top with sliced fruits (such as bananas, berries, or apples), nuts (such as almonds or walnuts), and seeds (such as chia or flax seeds).",
+			"Drizzle with honey or maple syrup if desired.",
+			"Serve hot and enjoy!"
+		],
+		"ratio": [15, 55, 30],
+		"type": [1, 0, 0],
+		"category": ["simple"],
+		"tags": ["fiber-rich", "vegetarian"],
+		"ingredients": [
+			["Oats, rolled, average values", 50, "grams"],
+			["Milk, whole, organic, 3.5 % fat", 200, "ml"],
+			["Sliced Fruits", 0, "as desired"],
+			["Nuts", 0, "as desired"],
+			["Seeds", 0, "as desired"],
+			["Honey", 0, "optional"]
+		]
+	},
+	"3": {
+		"id": 3,
+		"name": "Avocado Toast",
+		"description": "A quick and nutritious breakfast or snack option featuring mashed avocado on whole grain toast.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Toast whole grain bread until golden brown and crispy.",
+			"Halve and pit the avocado, then scoop the flesh into a bowl.",
+			"Mash the avocado with a fork and season with salt, pepper, and a squeeze of lemon juice.",
+			"Spread the mashed avocado evenly on the toasted bread slices.",
+			"Top with optional additions such as sliced tomatoes, radishes, or a sprinkle of chili flakes.",
+			"Serve immediately and enjoy!"
+		],
+		"ratio": [10, 60, 30],
+		"type": [1, 0, 0],
+		"category": ["simple"],
+		"tags": ["fiber-rich", "vegetarian"],
+		"ingredients": [
+			["Rye bread, dark, with high fat seeds, retail bakery", 2, "slices"],
+			["Avocado, raw", 1, "ripe"],
+			["Lemon juice, fresh", 0, "to taste"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"]
+		]
+	},
+	"4": {
+		"id": 4,
+		"name": "Simple Grilled Chicken",
+		"description": "Juicy and flavorful grilled chicken breasts seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season chicken breasts with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned chicken breasts on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
+			"Remove chicken from the grill and let it rest for a few minutes before serving.",
+			"Slice the grilled chicken and serve with your favorite side dishes or salads.",
+			"Enjoy the juicy and tender grilled chicken!"
+		],
+		"ratio": [90, 0, 10],
+		"type": [0, 1, 1],
+		"category": ["simple", "meat", "chicken", "carnivore"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Chicken, breast, flesh and skin, raw", 150, "gram"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"],
+			["Garlic, dried, powder", 0, "to taste"],
+			["Pepper, sweet, red, raw", 0, "to taste"]
+		]
+	},
+	"5": {
+		"id": 5,
+		"name": "Simple Grilled Salmon",
+		"description": "Juicy and flavorful grilled salmon seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season salmon with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned salmon on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
+			"Remove salmon from the grill and let it rest for a few minutes before serving.",
+			"Slice the grilled salmon and serve with your favorite side dishes or salads.",
+			"Enjoy the juicy and tender grilled salmon!"
+		],
+		"ratio": [70, 0, 30],
+		"type": [0, 1, 1],
+		"category": ["simple", "meat", "fish", "carnivore"],
+		"tags": ["high-protein", "healthy fats"],
+		"ingredients": [
+			["Salmon, Atlantic, wild, raw", 150, "gram"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"],
+			["Garlic, dried, powder", 0, "to taste"],
+			["Pepper, sweet, red, raw", 0, "to taste"]
+		]
+	},
+	"6": {
+		"id": 6,
+		"name": "Simple Porkchops",
+		"description": "Juicy and flavorful Porkchops seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat oven to 190°C.",
+			"Season Porkchops with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned Porkchops in oven and cook for 25 minutes, or until fully cooked (internal temperature reaches 165°F or 75°C).",
+			"Remove Porkchops from the oven and let it rest for a few minutes before serving.",
+			"Enjoy the juicy and tender Porkchops!"
+		],
+		"ratio": [70, 0, 30],
+		"type": [0, 1, 1],
+		"category": ["simple", "meat", "pork", "carnivore"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Pork, meat, approx. 10 % fat, raw", 150, "gram"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"],
+			["Garlic, dried, powder", 0, "to taste"],
+			["Pepper, sweet, red, raw", 0, "to taste"]
+		]
+	},
+	"7": {
+		"id": 7,
+		"name": "Golden Coconut Drink",
+		"description": "Juicy and flavorful Porkchops seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat oatmilk to 60°C.",
+			"Slowly add turmeric powder, honey and pepper to the oatmilk.",
+			"Stir well until the turmeric powder and honey are fully dissolved.",
+			"Pour the golden coconut drink into a cup and serve warm.",
+			"Enjoy the soothing and aromatic golden coconut drink!"
+		],
+		"ratio": [0, 2, 17],
+		"type": [1, 1, 1],
+		"category": ["simple", "drink", "vegan", "plant-based"],
+		"tags": ["healthy fats", "anti-inflammatory"],
+		"ingredients": [
+			["Oatmilk, with added calcium and vitamins", 250, "gram"],
+			["Ginger root, raw", 10, "gram"],
+			["Honey", 20, "gram"],
+			["Pepper, black", 1, "gram"]
+		]
+	},
+	"8": {
+		"id": 8,
+		"name": "Simple Grilled Tofu",
+		"description": "Juicy and flavorful grilled tofu seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season tofu with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned tofu on the grill and cook for 6-8 minutes on each side, or until fully cooked.",
+			"Remove tofu from the grill and let it rest for a few minutes before serving.",
+			"Slice the grilled tofu and serve with your favorite side dishes or salads.",
+			"Enjoy the juicy and tender grilled tofu!"
+		],
+		"ratio": [80, 2, 20],
+		"type": [0, 1, 1],
+		"category": ["simple", "vegan", "plant-based"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Tofu, soy bean curd", 150, "gram"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"],
+			["Garlic, dried, powder", 0, "to taste"],
+			["Pepper, sweet, red, raw", 0, "to taste"]
+		]
+	},
+	"9": {
+		"id": 9,
+		"name": "Carrot Smoothie",
+		"description": "A refreshing and nutritious smoothie featuring carrots, oranges, and ginger.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Peel and chop carrots into small pieces.",
+			"Peel and chop oranges into segments.",
+			"Peel and chop ginger into small pieces.",
+			"Add carrots, oranges, ginger, and water to a blender.",
+			"Blend until smooth and creamy.",
+			"Pour the carrot smoothie into a glass and serve chilled.",
+			"Enjoy the refreshing and nutritious carrot smoothie!"
+		],
+		"ratio": [10, 80, 10],
+		"type": [1, 1, 1],
+		"category": ["simple", "smoothie", "vegan", "plant-based"],
+		"tags": ["vitamin C", "antioxidants"],
+		"ingredients": [
+			["Carrots, Danish, without peel, raw", 100, "gram"],
+			["Orange, raw", 200, "gram"],
+			["Ginger root, raw", 10, "gram"],
+			["Water, tap, drinking, average values", 200, "ml"]
+		]
+	},
+	"10": {
+		"id": 10,
+		"name": "Simple Grilled Shrimp",
+		"description": "Juicy and flavorful grilled shrimp seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season shrimp with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned shrimp on the grill and cook for 2-3 minutes on each side, or until fully cooked.",
+			"Remove shrimp from the grill and let it rest for a few minutes before serving.",
+			"Enjoy the juicy and tender grilled shrimp!"
+		],
+		"ratio": [80, 0, 20],
+		"type": [0, 1, 1],
+		"category": ["simple", "seafood", "shrimp", "carnivore"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Shrimp, boiled, shell removed", 150, "gram"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"],
+			["Garlic, dried, powder", 0, "to taste"],
+			["Pepper, sweet, red, raw", 0, "to taste"]
+		]
+	},
+	"11": {
+		"id": 11,
+		"name": "Simple Grilled Beef",
+		"description": "Juicy and flavorful grilled beef seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season beef with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned beef on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
+			"Remove beef from the grill and let it rest for a few minutes before serving.",
+			"Slice the grilled beef and serve with your favorite side dishes or salads.",
+			"Enjoy the juicy and tender grilled beef!"
+		],
+		"ratio": [70, 0, 30],
+		"type": [0, 1, 1],
+		"category": ["simple", "meat", "beef", "carnivore"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Beef, mince, 8-12% fat, raw", 150, "gram"],
+			["Salt, table", 0, "to taste"],
+			["Pepper, black", 0, "to taste"],
+			["Garlic, dried, powder", 0, "to taste"],
+			["Pepper, sweet, red, raw", 0, "to taste"]
+		]
+	},
+	"12": {
+		"id": 12,
+		"name": "Simple Grilled Lamb",
+		"description": "Juicy and flavorful grilled lamb seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season lamb with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned lamb on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
+			"Remove lamb from the grill and let it rest for a few minutes before serving.",
+			"Slice the grilled lamb and serve with your favorite side dishes or salads.",
+			"Enjoy the juicy and tender grilled lamb!"
+		],
+		"ratio": [70, 0, 30],
+		"type": [0, 1, 1],
+		"category": ["simple", "meat", "lamb", "carnivore"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Lamb, breast, raw", 150, "gram"],
+			["Salt, table", "to taste"],
+			["Pepper, black", "to taste"],
+			["Garlic, dried, powder", "to taste"],
+			["Pepper, sweet, red, raw", "to taste"]
+		]
+	},
+	"13": {
+		"id": 13,
+		"name": "Simple Grilled Duckliver",
+		"description": "Juicy and flavorful grilled duck seasoned with herbs and spices.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"Preheat grill to medium-high heat.",
+			"Season duck with salt, pepper, garlic powder, and paprika.",
+			"Place seasoned duck on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
+			"Remove duck from the grill and let it rest for a few minutes before serving.",
+			"Slice the grilled duck and serve with your favorite side dishes or salads.",
+			"Enjoy the juicy and tender grilled duck!"
+		],
+		"ratio": [70, 0, 30],
+		"type": [0, 1, 1],
+		"category": ["simple", "meat", "duck", "carnivore"],
+		"tags": ["high-protein"],
+		"ingredients": [
+			["Liver, duck, raw", 150, "gram"],
+			["Salt, table", "to taste"],
+			["Pepper, black", "to taste"],
+			["Garlic, dried, powder", "to taste"],
+			["Pepper, sweet, red, raw", "to taste"]
+		]
+	},
+	"14": {
+		"id": 14,
+		"name": "Keto Pancakes",
+		"description": "Fluffy and delicious pancakes made with Rice flour and Almondmilk, perfect for a keto-friendly breakfast.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"In a bowl, whisk together almond flour, coconut flour, baking powder, and salt.",
+			"Add eggs, coconut milk, and vanilla extract to the dry ingredients and mix until well combined.",
+			"Heat a non-stick skillet over medium heat and grease with coconut oil or butter.",
+			"Scoop 1/4 cup of batter onto the skillet and cook until bubbles form on the surface.",
+			"Flip the pancake and cook for another 1-2 minutes, or until golden brown.",
+			"Repeat with the remaining batter.",
+			"Serve the keto pancakes with your favorite toppings such as sugar-free syrup, berries, or whipped cream.",
+			"Enjoy the fluffy and delicious keto pancakes!"
+		],
+		"ratio": [20, 0, 80],
+		"type": [1, 1, 0],
+		"category": ["simple", "breakfast", "keto"],
+		"tags": ["low-carb", "gluten-free"],
+		"ingredients": [
+			["Rice flour", 100, "gram"],
+			["Spelt wheat flour, whole", 30, "gram"],
+			["Baking powder", 1, "tspn"],
+			["Salt, table", "to taste"],
+			["Eggs, chicken, organic farming, raw", 2, "pieces"],
+			["Almondmilk, with added calcium", 120, "ml"],
+			["Vanilla Extract", 0, "tspn"],
+			["Oil, coconut", 10, "gram"],
+			["Toppings (Sugar-Free Syrup, Berries, Whipped Cream)", 0, "as desired"]
+		]
+	},
+	"15": {
+		"id": 15,
+		"name": "Keto Avocado Salad",
+		"description": "A refreshing and satisfying salad featuring avocado, cucumber, cherry tomatoes, and feta cheese, drizzled with a lemon vinaigrette.",
+		"image": "./placeholder.svg",
+		"instructions": [
+			"In a large bowl, combine diced avocado, cucumber, cherry tomatoes, and crumbled feta cheese.",
+			"In a small bowl, whisk together olive oil, lemon juice, Dijon mustard, salt, and pepper to make the vinaigrette.",
+			"Pour the vinaigrette over the salad and toss gently to coat.",
+			"Serve the keto avocado salad chilled and enjoy!",
+			"Optional: Add grilled chicken or shrimp for extra protein."
+		],
+		"ratio": [10, 70, 20],
+		"type": [1, 1, 0],
+		"category": ["advanced", "salad", "keto"],
+		"tags": ["low-carb", "gluten-free"],
+		"ingredients": [
+			["Avocado, raw", 1, "ripe"],
+			["Cucumber, raw", 1, "medium"],
+			["Tomato, ripe, raw, origin unknown", 100, "gram"],
+			["Feta, 5% (Salad cheese)", 50, "gram"],
+			["Olive oil", 2, "tbsp"],
+			["Lemon juice, fresh", 1, "tbsp"],
+			["Mustard, yellow, ready made", 1, "tspn"],
+			["Salt, table", "to taste"],
+			["Pepper, black", "to taste"]
+		]
+	}
+}

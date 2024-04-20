@@ -1,0 +1,50 @@
+{
+	"apple": {
+		"type": "fruit",
+		"img": "../../apple.png",
+		"description": "Apples are rich in dietary fiber, vitamins (such as vitamin C and vitamin K), and minerals (such as potassium and manganese). They are low in calories and fat, making them a healthy snack choice. Regular consumption of apples may support digestive health, boost immune function, and contribute to heart health.",
+		"macros": {
+			"protein": 0.47,
+			"carbohydrates": 25.13,
+			"fat": 0.31,
+			"fiber": 4.4
+		},
+		"micros": {
+			"vitamin_A": 54,
+			"vitamin_B1": 0.017,
+			"vitamin_B2": 0.026,
+			"vitamin_B3": 0.091,
+			"vitamin_B5": 0.061,
+			"vitamin_B6": 0.041,
+			"vitamin_B9": 3,
+			"vitamin_B12": 0,
+			"vitamin_C": 8.4,
+			"vitamin_D": 0,
+			"vitamin_E": 0.18,
+			"vitamin_K": 2.2,
+			"mineral_calcium": 6,
+			"mineral_iron": 0.12,
+			"mineral_magnesium": 5,
+			"mineral_phosphorus": 11,
+			"mineral_potassium": 107,
+			"mineral_sodium": 1,
+			"mineral_zinc": 0.04,
+			"mineral_copper": 0.032,
+			"mineral_manganese": 0.035,
+			"mineral_selenium": 0.2,
+			"mineral_iodine": 0,
+			"mineral_chloride": 0,
+			"mineral_molybdenum": 0,
+			"mineral_sulfur": 0
+		},
+		"allergens": ["None"],
+		"glycemic_index": 38,
+		"serving_size": "1 medium apple (182g)",
+		"biometabolites": ["phenolics", "pectin"],
+		"phytochemicals": ["quercetin", "catechin", "chlorogenic acid"],
+		"functional_properties": ["digestion", "immune", "cardiovascular"],
+		"shelf_life": "Approximately 1-2 months when stored in a cool, dark place",
+		"ideal_storage_conditions": "Store in the refrigerator crisper drawer, away from other fruits and vegetables. Keep apples in a perforated plastic bag to maintain humidity and freshness.",
+		"nutrient_density": 0
+	}
+}
