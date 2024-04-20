@@ -54,6 +54,27 @@
 
 </details>
 
+
+## Authors & contributors
+
+The original setup of this repository is by [CS-XX-XX](https://github.com/XXX).
+
+For a full list of all authors and contributors, see [the contributors page](https://github.com/SkimmedMilky/p2-meal-recommendation/contributors).
+
+## Acknowledgements
+
+> **[?]**
+> Aalborg University, Denmark.
+> Special thanks to our teachers and mentors for their guidance and support.
+> With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his guidance and support.
+> In addition, our work has been inspired by multiple factors, so it is only appropriate to we acknowledge this intellectual debt too.
+
+## License
+
+This project is licensed under the **MIT license**.
+
+See [LICENSE](LICENSE) for more information.
+
 ### Built With
 
 > **[?]**
@@ -90,23 +111,4 @@ See the [open issues](https://github.com/SkimmedMilky/p2-meal-recommendation/iss
 - [Top Bugs](https://github.com/SkimmedMilky/p2-meal-recommendation/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
 - [Newest Bugs](https://github.com/SkimmedMilky/p2-meal-recommendation/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 
-## Authors & contributors
 
-The original setup of this repository is by [CS-XX-XX](https://github.com/XXX).
-
-For a full list of all authors and contributors, see [the contributors page](https://github.com/SkimmedMilky/p2-meal-recommendation/contributors).
-
-
-## License
-
-This project is licensed under the **MIT license**.
-
-See [LICENSE](LICENSE) for more information.
-
-## Acknowledgements
-
-> **[?]**
-> Aalborg University, Denmark.
-> Special thanks to our teachers and mentors for their guidance and support.
-> With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his guidance and support.
-> In addition, our work has been inspired by multiple factors, so it is only appropriate to we acknowledge this intellectual debt too.
