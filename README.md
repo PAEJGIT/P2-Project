@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://github.com/PAEJGIT/P2-Projectn">
     <!-- Please provide path to your logo here -->
-    <img src="docs/images/AAU_logo_2012.png" alt="Logo" width="100" height="100">
+    <img src="docs/images/logo.png" alt="Logo" width="100" height="100">
   </a>
 </h1>
 
@@ -94,36 +94,9 @@ See the [open issues](https://github.com/SkimmedMilky/p2-meal-recommendation/iss
 - [Top Bugs](https://github.com/SkimmedMilky/p2-meal-recommendation/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
 - [Newest Bugs](https://github.com/SkimmedMilky/p2-meal-recommendation/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 
-## Support
-
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
-
-Reach out to the maintainer at one of the following places:
-
-- [GitHub issues](https://github.com/SkimmedMilky/p2-meal-recommendation/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+)
-- Contact options listed on [this GitHub profile](https://github.com/SkimmedMilky)
-
-## Project assistance
-
-If you want to say **thank you** or/and support active development of P2 Meal Recommendation:
-
-- Add a [GitHub Star](https://github.com/SkimmedMilky/p2-meal-recommendation) to the project.
-- Tweet about the P2 Meal Recommendation.
-- Write interesting articles about the project on [Dev.to](https://dev.to/), [Medium](https://medium.com/) or your personal blog.
-
-Together, we can make P2 Meal Recommendation **better**!
-
-## Contributing
-
-First off, thanks for taking the time to contribute! Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
-
-
-Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
-
 ## Authors & contributors
 
-The original setup of this repository is by [Stefan Leif Brzost-Andersen](https://github.com/SkimmedMilky).
+The original setup of this repository is by [CS-XX-XX](https://github.com/XXX).
 
 For a full list of all authors and contributors, see [the contributors page](https://github.com/SkimmedMilky/p2-meal-recommendation/contributors).
 
