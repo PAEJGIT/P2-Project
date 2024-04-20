@@ -8,7 +8,6 @@
 <div align="center">
 <br />
 
-[![Project license](https://img.shields.io/github/license/SkimmedMilky/p2-meal-recommendation.svg?style=flat-square)](LICENSE)
 
 [![code with love by Peter](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Peter-6082B6.svg?style=flat-square)](https://github.com/SkimmedMilky)
 [![code with love by Daniel](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Daniel-8A9A5B.svg?style=flat-square)](https://github.com/SkimmedMilky)
@@ -27,9 +26,6 @@
   - [Installation](#installation)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
-- [Support](#support)
-- [Project assistance](#project-assistance)
-- [Contributing](#contributing)
 - [Authors & contributors](#authors--contributors)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
