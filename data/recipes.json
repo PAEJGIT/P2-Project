@@ -15,14 +15,14 @@
 			"Allow the pie to cool before serving."
 		],
 		"ratio": [10, 50, 40],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["cake"],
 		"tags": ["dessert"],
 		"ingredients": [
 			["Apple, raw, all varieties", 120, "gram"],
-			["Oats, rolled, average values", 2, "pieces"],
-			["Cinnamon stick", 2, "tspn"],
-			["Eggs, chicken, egg white, raw", 2, "pieces"]
+			["Oats, rolled, average values", 50, "gram"],
+			["Cinnamon stick", 2, "gram"],
+			["Eggs, chicken, egg white, raw", 120, "gram"]
 		]
 	},
 	"2": {
@@ -39,7 +39,7 @@
 			"Serve hot and enjoy!"
 		],
 		"ratio": [15, 55, 30],
-		"type": [1, 0, 0],
+		"mealtype": [1, 0, 0],
 		"category": ["simple"],
 		"tags": ["fiber-rich", "vegetarian"],
 		"ingredients": [
@@ -65,7 +65,7 @@
 			"Serve immediately and enjoy!"
 		],
 		"ratio": [10, 60, 30],
-		"type": [1, 0, 0],
+		"mealtype": [1, 0, 0],
 		"category": ["simple"],
 		"tags": ["fiber-rich", "vegetarian"],
 		"ingredients": [
@@ -90,7 +90,7 @@
 			"Enjoy the juicy and tender grilled chicken!"
 		],
 		"ratio": [90, 0, 10],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "meat", "chicken", "carnivore"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -115,7 +115,7 @@
 			"Enjoy the juicy and tender grilled salmon!"
 		],
 		"ratio": [70, 0, 30],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "meat", "fish", "carnivore"],
 		"tags": ["high-protein", "healthy fats"],
 		"ingredients": [
@@ -139,7 +139,7 @@
 			"Enjoy the juicy and tender Porkchops!"
 		],
 		"ratio": [70, 0, 30],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "meat", "pork", "carnivore"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -163,7 +163,7 @@
 			"Enjoy the soothing and aromatic golden coconut drink!"
 		],
 		"ratio": [0, 2, 17],
-		"type": [1, 1, 1],
+		"mealtype": [1, 1, 1],
 		"category": ["simple", "drink", "vegan", "plant-based"],
 		"tags": ["healthy fats", "anti-inflammatory"],
 		"ingredients": [
@@ -187,7 +187,7 @@
 			"Enjoy the juicy and tender grilled tofu!"
 		],
 		"ratio": [80, 2, 20],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "vegan", "plant-based"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -213,7 +213,7 @@
 			"Enjoy the refreshing and nutritious carrot smoothie!"
 		],
 		"ratio": [10, 80, 10],
-		"type": [1, 1, 1],
+		"mealtype": [1, 1, 1],
 		"category": ["simple", "smoothie", "vegan", "plant-based"],
 		"tags": ["vitamin C", "antioxidants"],
 		"ingredients": [
@@ -236,7 +236,7 @@
 			"Enjoy the juicy and tender grilled shrimp!"
 		],
 		"ratio": [80, 0, 20],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "seafood", "shrimp", "carnivore"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -261,7 +261,7 @@
 			"Enjoy the juicy and tender grilled beef!"
 		],
 		"ratio": [70, 0, 30],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "meat", "beef", "carnivore"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -286,7 +286,7 @@
 			"Enjoy the juicy and tender grilled lamb!"
 		],
 		"ratio": [70, 0, 30],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "meat", "lamb", "carnivore"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -311,7 +311,7 @@
 			"Enjoy the juicy and tender grilled duck!"
 		],
 		"ratio": [70, 0, 30],
-		"type": [0, 1, 1],
+		"mealtype": [0, 1, 1],
 		"category": ["simple", "meat", "duck", "carnivore"],
 		"tags": ["high-protein"],
 		"ingredients": [
@@ -338,7 +338,7 @@
 			"Enjoy the fluffy and delicious keto pancakes!"
 		],
 		"ratio": [20, 0, 80],
-		"type": [1, 1, 0],
+		"mealtype": [1, 1, 0],
 		"category": ["simple", "breakfast", "keto"],
 		"tags": ["low-carb", "gluten-free"],
 		"ingredients": [
@@ -366,7 +366,7 @@
 			"Optional: Add grilled chicken or shrimp for extra protein."
 		],
 		"ratio": [10, 70, 20],
-		"type": [1, 1, 0],
+		"mealtype": [1, 1, 0],
 		"category": ["advanced", "salad", "keto"],
 		"tags": ["low-carb", "gluten-free"],
 		"ingredients": [
