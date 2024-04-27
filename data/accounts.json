@@ -1,6 +1,11 @@
 {
-    "Peter": {
-        "email": "peter@gmail.com",
-        "password": "Peter123"
+    "users": [
+        {
+            "name": "peter",
+            "email": "peter@gmail.com",
+            "password": "Peter123",
+            "familySize": "1",
+            "meals": "2"
         }
+    ]
 }
