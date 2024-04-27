@@ -26,6 +26,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/node/static/pages/", "login_page.html"));
 });
 
+// app.get("/heydude", (req, res) => {
+//   res.send("HEYDUDE!");
+// });
+
 app.post("/login", loginRouter);
 
 // Route for registration
