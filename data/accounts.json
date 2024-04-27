@@ -1,3 +1,6 @@
+
+{"Peter":{"email":"peter@gmail.com","password":"Peter123"},"Peter2":{"password":"Okay123"},"Fedepede":{"password":"okayokay"},"Fedepede2":{"password":"okayokay"},"Dudeman":{"password":"ja"}}
+=======
 {
     "users": [
         {
@@ -9,3 +12,4 @@
         }
     ]
 }
+

@@ -3,11 +3,12 @@ const express = require("express"); // Express framework to simplify server crea
 const bodyParser = require("body-parser"); // Middleware to parse incoming request bodies into JSON
 const cors = require("cors"); // Middleware to enable Cross-Origin Resource Sharing (CORS) for your server
 const fs = require("fs"); // Node.js core module to interact with the file system
-const path = require('path');
+const path = require("path");
 const app = express(); // Create an instance of Express
 const port = 3262; // Define the port number the server will listen on
 
 const loginRouter = require("./modules/login");
+const registerRouter = require("./modules/register");
 
 /* Middleware used to convert incoming POST requests to JSON */
 app.use(express.urlencoded({ extended: true}));
@@ -25,6 +26,13 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/node/static/"));
 
 app.get("/", (req, res) => {
+
+  res.sendFile(path.join(__dirname, "/node/static/pages/", "login_page.html"));
+});
+
+// app.get("/heydude", (req, res) => {
+//   res.send("HEYDUDE!");
+// });
 	res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
 });
 
@@ -69,10 +77,14 @@ app.post("/mealplandata", (req, res) => {
 
 });
 
+
 app.post("/login", loginRouter);
 
+// Route for registration
+app.post("/register", registerRouter);
+
 // Start the server on the specified port
-// This line makes the server listen on port 3000 and logs a message to the console when it starts successfully.
+// This line makes the server listen on port XXXX and logs a message to the console when it starts successfully.
 app.listen(port, "127.0.0.1", () => {
   console.log(`Server listening on http://localhost:${port}`);
 });

@@ -13,28 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const wrapper = document.querySelector(".wrapper");
-const loginLink = document.querySelector(".login-link");
-const registerLink = document.querySelector(".register-link");
-const btnPopup = document.querySelector(".btnLogin-popup");
-const iconClose = document.querySelector(".icon-close");
-
-registerLink.addEventListener("click", () => {
-  wrapper.classList.add("active");
-});
-
-loginLink.addEventListener("click", () => {
-  wrapper.classList.remove("active");
-});
-
-btnPopup.addEventListener("click", () => {
-  wrapper.classList.add("active-popup");
-});
-
-iconClose.addEventListener("click", () => {
-  wrapper.classList.remove("active-popup");
-});
-
 function reqLogin(username, password) {
   fetch("/login", {
     method: "POST",
@@ -45,9 +23,36 @@ function reqLogin(username, password) {
   })
     .then((response) => response.json())
     .then((data) => {
+      if (data.success) {
+        alert("Login succesful!");
+        window.location.href = "../pages/dashboard.html";
+      } else {
+        alert("Login failed:" + data.reason);
+      }
       console.log(data); // Log the response from the server
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
+
+// fetch("/register", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({ username, password }),
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     if (data.success) {
+//       alert("Registration Successful");
+//     } else {
+//       alert("Registration Failed: " + data.reason);
+//     }
+//   })
+//   .catch((error) => {
+//     console.error("Error:", error);
+//   });
+// });
