@@ -19,10 +19,22 @@ app.use(bodyParser.json());
 
 // Serve static files from the 'public' directory (e.g., HTML, CSS, JS)
 // This line configures Express to serve all static files in the 'public' directory, such as your client-side HTML, CSS, and JavaScript files.
-app.use(express.static("node/static/"));
+app.use(express.static(__dirname + "/node/static/"));
 
 app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
+});
+
+app.get("/login", (req, res) => {
 	res.sendFile(path.join(__dirname, "/node/static/pages/", "login_page.html"));
+});
+
+app.get("/order/choose-mealplan", (req, res) => {
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "choose_mealplan.html"));
+});
+
+app.get("/order/set-profile", (req, res) => {
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "set_profile.html"));
 });
 
 app.post("/login", loginRouter);
