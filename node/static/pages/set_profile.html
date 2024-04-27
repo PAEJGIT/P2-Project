@@ -100,23 +100,11 @@
         <div id="step_content">
 
             <div id="users">
-                <div>
-                    <span>1</span>
-                </div>
-
-                <div>
-                    <span>2</span>
-                </div>
-
-                <div>
-                    <i class="fa fa-info-circle" style="font-size:24px"></i>
-                    
-                    
-                </div>
+                
 
             </div>
 
-            <form action="step2.html" id="profile_form">
+            <form class="profile_form" id="form1">
 
                 <div>
                     <label>Navn</label>
@@ -182,39 +170,105 @@
 
     <script>
 
-        if (localStorage.getItem('formData')) {
-            const formData = JSON.parse(localStorage.getItem('formData'));
-            document.getElementById('gender').value = formData.gender;
-            document.getElementById('abc').value = formData.abc;
-        }
+        /* dynamically renders a form for each profile */
+        function profileRendering(numberOfPeople) {
 
-        // Save form data to sessionStorage when user navigates away from the page
-        window.addEventListener('beforeunload', () => {
-            const formData = {
-                gender: document.getElementById('gender').value,
-                abc: document.getElementById('abc').value,
-            };
+            allProfiles = document.getElementById('users');
 
-            localStorage.setItem('formData', JSON.stringify(formData));
+            for (let i = 0; i < numberOfPeople; i++) {
+                profile = document.createElement("div");
+                profileNumber = document.createElement("span");
+                profileNumber.innerHTML = i + 1;
+                profile.id = `profile${i + 1}`;
 
-        });
+                allProfiles.append(profile);
+                profile.append(profileNumber);
 
-
-        /*
-        function goForward() {
-            let input = document.getElementsByClassName("formInput")
-
-            for (let i = 0; i < input.length; i++) {
-                if (!input[i].value) {
-                    window.alert("Please fill out the form");
-                    return;
+                if (i >= 1)
+                {
+                    form = document.getElementById('form1');
+                    newForm = form.cloneNode(true);
+                    newForm.class = `profile_form`;
+                    newForm.id = `form${i + 1}`
+                    newForm.style.visibility = "hidden";
+                    content = document.getElementById('step_content');
+                    content.appendChild(newForm);
                 }
             }
-            window.history.forward();
         }
-        */
 
-    
+        profileRendering(3);
+
+
+        for (let i = 1; i <= 3; i++)
+        {
+            swapForms(`profile${i}`, `form${i}`);
+        }
+  
+        /* makes it possible to swap between forms by clicking on the profile boxes */
+       function swapForms(profile, form) {
+
+        document.getElementById(profile).addEventListener("click", function() {
+            for (let i = 0; i < 3; i++) {
+                hide = document.getElementById(`form${i + 1}`);
+                hide.style.visibility = "hidden";
+            }
+
+            hide = document.getElementById(form);
+            hide.style.visibility = "visible";
+       }); 
+        
+       }
+
+
+       
+  
+
+       
+
+        
+
+
+
+        
+/*
+    if (localStorage.getItem('formData')) {
+        const formData = JSON.parse(localStorage.getItem('formData'));
+        document.getElementById('gender').value = formData.gender;
+        document.getElementById('abc').value = formData.abc;
+    }
+
+    // Save form data to sessionStorage when user navigates away from the page
+    window.addEventListener('beforeunload', () => {
+        const formData = {
+            gender: document.getElementById('gender').value,
+            abc: document.getElementById('abc').value,
+        };
+
+        localStorage.setItem('formData', JSON.stringify(formData));
+
+    });
+
+
+    function goForward() {
+        let input = document.getElementsByClassName("formInput")
+
+        for (let i = 0; i < input.length; i++) {
+            if (!input[i].value) {
+                window.alert("Please fill out the form");
+                return;
+            }
+        }
+        window.history.forward();
+    }
+    */
+
+
+
+
+        
     </script>
+
+   
 </body>
 </html>

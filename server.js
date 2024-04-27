@@ -9,6 +9,9 @@ const port = 3262; // Define the port number the server will listen on
 
 const loginRouter = require("./modules/login");
 
+/* Middleware used to convert incoming POST requests to JSON */
+app.use(express.urlencoded({ extended: true}));
+
 // Use CORS middleware to allow all cross-origin requests
 // This is essential for allowing requests from different domains, especially during development.
 app.use(cors());
@@ -35,6 +38,35 @@ app.get("/order/choose-mealplan", (req, res) => {
 
 app.get("/order/set-profile", (req, res) => {
 	res.sendFile(path.join(__dirname, "/node/static/pages/", "set_profile.html"));
+});
+
+app.post("/mealplandata", (req, res) => {
+  /* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
+  try {
+    const data = fs.readFileSync(__dirname + '/data/accounts.json');
+    
+    const jsonData = JSON.parse(data);
+    console.log("Parsed JSON data:", jsonData);
+
+    console.log("Request body:", req.body); 
+
+    /*
+    const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
+    */
+
+    jsonData.users[0].familySize = req.body.number_of_people;
+    jsonData.users[0].meals = req.body.number_of_meals;
+    console.log("Updated JSON data:", jsonData); 
+
+    fs.writeFileSync(__dirname + '/data/accounts.json', JSON.stringify(jsonData, undefined, 4));
+
+    res.redirect("/order/set-profile");
+
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).send("Internal server error");
+  }
+
 });
 
 app.post("/login", loginRouter);

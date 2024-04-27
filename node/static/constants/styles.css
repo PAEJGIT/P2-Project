@@ -293,7 +293,7 @@ li:hover .endpoints {
     align-items: center;
 }
 
-#profile_form {
+.profile_form {
     display: flex;
     flex-direction: column;
     grid-column:  3 / 7;
@@ -304,23 +304,24 @@ li:hover .endpoints {
     row-gap: 20px;
     font-family: "poppins", sans-serif;
     font-size: 15px;
+    
 }
 
-#profile_form div {
+.profile_form div {
     display: flex;
     flex-direction: column;
     
 }
 
-#profile_form label {
+.profile_form label {
     margin-bottom: 3px;
 }
 
-#profile_form input {
+.profile_form input {
     height: 30px;
 }
 
-#profile_form select {
+.profile_form select {
     height: 30px;
 }
 
