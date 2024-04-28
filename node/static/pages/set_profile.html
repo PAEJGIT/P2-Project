@@ -197,10 +197,12 @@
             }
         }
 
-        profileRendering(3);
+        mealPlan = localStorage.getItem('mealPlan')
+        data = JSON.parse(mealPlan);
 
-
-        for (let i = 1; i <= 3; i++)
+        profileRendering(data.peopleAmount);
+        
+        for (let i = 1; i <= data.peopleAmount; i++)
         {
             swapForms(`profile${i}`, `form${i}`);
         }
@@ -209,8 +211,8 @@
        function swapForms(profile, form) {
 
         document.getElementById(profile).addEventListener("click", function() {
-            for (let i = 0; i < 3; i++) {
-                hide = document.getElementById(`form${i + 1}`);
+            for (let i = 1; i <= data.peopleAmount; i++) {
+                hide = document.getElementById(`form${i}`);
                 hide.style.visibility = "hidden";
             }
 

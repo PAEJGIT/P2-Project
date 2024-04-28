@@ -108,7 +108,7 @@
         
                         <div> 
                             <span>Antal personer</span>
-                            <input class="formInput" type="radio" name="number_of_people" id="one_person" value="1" checked />
+                            <input class="formInput" type="radio" name="number_of_people" id="one_person" value="1" checked/>
                             <input class="formInput" type="radio" name="number_of_people" id="two_people" value="2"/>
                             <input class="formInput" type="radio" name="number_of_people" id="three_people" value="3"/>
                             <input class="formInput" type="radio" name="number_of_people" id="four_people" value="4"/>
@@ -138,7 +138,7 @@
                        
                       </div>
                 
-                    <input id="select_plan_submit" type="submit">
+                    <input id="select_plan_submit" type="submit" onclick="saveChoice()">
 
                 </form>
 
@@ -162,7 +162,45 @@
 
     </div>
 
-    <script></script>
+    <script>
+
+        // if data already exists then set the default value to what the user had previously picked
+        if (localStorage.getItem('mealPlan')) {
+            const formData = JSON.parse(localStorage.getItem('mealPlan'));
+            let radios = document.getElementsByTagName('input');
+
+            for (let i = 0; i < radios.length; i++) {
+            if (radios[i].value === formData.peopleAmount) {
+                radios[i].checked = true;
+                break;       
+             }
+            }
+        }
+
+
+    // Save form data to localStorage when user navigates away from the page
+        function saveChoice() {
+            window.addEventListener('beforeunload', () => {
+            let radios = document.getElementsByTagName('input');
+            let value;
+            
+            for (let i = 0; i < radios.length; i++) {
+            if (radios[i].type === 'radio' && radios[i].checked) {
+                value = radios[i].value;
+                break;       
+             }
+            }
+
+            const formData = {
+                peopleAmount: value
+            };
+
+            localStorage.setItem('mealPlan', JSON.stringify(formData));
+
+        });
+    }
+
+    </script>
 
 </body>
 </html>

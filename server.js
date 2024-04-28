@@ -26,13 +26,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/node/static/"));
 
 app.get("/", (req, res) => {
-
-  res.sendFile(path.join(__dirname, "/node/static/pages/", "login_page.html"));
-});
-
-// app.get("/heydude", (req, res) => {
-//   res.send("HEYDUDE!");
-// });
 	res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
 });
 
@@ -51,7 +44,7 @@ app.get("/order/set-profile", (req, res) => {
 app.post("/mealplandata", (req, res) => {
   /* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
   try {
-    const data = fs.readFileSync(__dirname + '/data/accounts.json');
+    const data = fs.readFileSync(__dirname + '/data/temp.json');
     
     const jsonData = JSON.parse(data);
     console.log("Parsed JSON data:", jsonData);
