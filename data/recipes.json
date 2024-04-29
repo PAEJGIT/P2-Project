@@ -1,384 +1,2355 @@
 {
-	"1": {
-		"id": 1,
-		"name": "Oatmeal Cake",
-		"description": "Oatmeal",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat oven to 190°C.",
-			"Roll out pie crust and place it in a pie dish.",
-			"In a large bowl, mix sliced apples, sugar, flour, cinnamon, and nutmeg.",
-			"Pour the apple mixture into the pie crust.",
-			"Cover the pie with another layer of pie crust or a lattice design.",
-			"Brush the top crust with egg wash.",
-			"Bake for 45-50 minutes, or until the crust is golden brown.",
-			"Allow the pie to cool before serving."
-		],
-		"ratio": [10, 50, 40],
-		"mealtype": [0, 1, 1],
-		"category": ["cake"],
-		"tags": ["dessert"],
-		"ingredients": [
-			["Apple, raw, all varieties", 120, "gram"],
-			["Oats, rolled, average values", 50, "gram"],
-			["Cinnamon stick", 2, "gram"],
-			["Eggs, chicken, egg white, raw", 120, "gram"]
-		]
-	},
-	"2": {
-		"id": 2,
-		"name": "Oatmeal",
-		"description": "A hearty and nutritious bowl featuring oatmeal, fruits, nuts, and seeds.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"In a saucepan, bring water or milk to a boil.",
-			"Stir in oats and reduce heat to low. Cook for 5-7 minutes, stirring occasionally, until oats are creamy.",
-			"Transfer oatmeal to a bowl.",
-			"Top with sliced fruits (such as bananas, berries, or apples), nuts (such as almonds or walnuts), and seeds (such as chia or flax seeds).",
-			"Drizzle with honey or maple syrup if desired.",
-			"Serve hot and enjoy!"
-		],
-		"ratio": [15, 55, 30],
-		"mealtype": [1, 0, 0],
-		"category": ["simple"],
-		"tags": ["fiber-rich", "vegetarian"],
-		"ingredients": [
-			["Oats, rolled, average values", 50, "grams"],
-			["Milk, whole, organic, 3.5 % fat", 200, "ml"],
-			["Sliced Fruits", 0, "as desired"],
-			["Nuts", 0, "as desired"],
-			["Seeds", 0, "as desired"],
-			["Honey", 0, "optional"]
-		]
-	},
-	"3": {
-		"id": 3,
-		"name": "Avocado Toast",
-		"description": "A quick and nutritious breakfast or snack option featuring mashed avocado on whole grain toast.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Toast whole grain bread until golden brown and crispy.",
-			"Halve and pit the avocado, then scoop the flesh into a bowl.",
-			"Mash the avocado with a fork and season with salt, pepper, and a squeeze of lemon juice.",
-			"Spread the mashed avocado evenly on the toasted bread slices.",
-			"Top with optional additions such as sliced tomatoes, radishes, or a sprinkle of chili flakes.",
-			"Serve immediately and enjoy!"
-		],
-		"ratio": [10, 60, 30],
-		"mealtype": [1, 0, 0],
-		"category": ["simple"],
-		"tags": ["fiber-rich", "vegetarian"],
-		"ingredients": [
-			["Rye bread, dark, with high fat seeds, retail bakery", 2, "slices"],
-			["Avocado, raw", 1, "ripe"],
-			["Lemon juice, fresh", 0, "to taste"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"]
-		]
-	},
-	"4": {
-		"id": 4,
-		"name": "Simple Grilled Chicken",
-		"description": "Juicy and flavorful grilled chicken breasts seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season chicken breasts with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned chicken breasts on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
-			"Remove chicken from the grill and let it rest for a few minutes before serving.",
-			"Slice the grilled chicken and serve with your favorite side dishes or salads.",
-			"Enjoy the juicy and tender grilled chicken!"
-		],
-		"ratio": [90, 0, 10],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "meat", "chicken", "carnivore"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Chicken, breast, flesh and skin, raw", 150, "gram"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"],
-			["Garlic, dried, powder", 0, "to taste"],
-			["Pepper, sweet, red, raw", 0, "to taste"]
-		]
-	},
-	"5": {
-		"id": 5,
-		"name": "Simple Grilled Salmon",
-		"description": "Juicy and flavorful grilled salmon seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season salmon with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned salmon on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
-			"Remove salmon from the grill and let it rest for a few minutes before serving.",
-			"Slice the grilled salmon and serve with your favorite side dishes or salads.",
-			"Enjoy the juicy and tender grilled salmon!"
-		],
-		"ratio": [70, 0, 30],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "meat", "fish", "carnivore"],
-		"tags": ["high-protein", "healthy fats"],
-		"ingredients": [
-			["Salmon, Atlantic, wild, raw", 150, "gram"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"],
-			["Garlic, dried, powder", 0, "to taste"],
-			["Pepper, sweet, red, raw", 0, "to taste"]
-		]
-	},
-	"6": {
-		"id": 6,
-		"name": "Simple Porkchops",
-		"description": "Juicy and flavorful Porkchops seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat oven to 190°C.",
-			"Season Porkchops with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned Porkchops in oven and cook for 25 minutes, or until fully cooked (internal temperature reaches 165°F or 75°C).",
-			"Remove Porkchops from the oven and let it rest for a few minutes before serving.",
-			"Enjoy the juicy and tender Porkchops!"
-		],
-		"ratio": [70, 0, 30],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "meat", "pork", "carnivore"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Pork, meat, approx. 10 % fat, raw", 150, "gram"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"],
-			["Garlic, dried, powder", 0, "to taste"],
-			["Pepper, sweet, red, raw", 0, "to taste"]
-		]
-	},
-	"7": {
-		"id": 7,
-		"name": "Golden Coconut Drink",
-		"description": "Juicy and flavorful Porkchops seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat oatmilk to 60°C.",
-			"Slowly add turmeric powder, honey and pepper to the oatmilk.",
-			"Stir well until the turmeric powder and honey are fully dissolved.",
-			"Pour the golden coconut drink into a cup and serve warm.",
-			"Enjoy the soothing and aromatic golden coconut drink!"
-		],
-		"ratio": [0, 2, 17],
-		"mealtype": [1, 1, 1],
-		"category": ["simple", "drink", "vegan", "plant-based"],
-		"tags": ["healthy fats", "anti-inflammatory"],
-		"ingredients": [
-			["Oatmilk, with added calcium and vitamins", 250, "gram"],
-			["Ginger root, raw", 10, "gram"],
-			["Honey", 20, "gram"],
-			["Pepper, black", 1, "gram"]
-		]
-	},
-	"8": {
-		"id": 8,
-		"name": "Simple Grilled Tofu",
-		"description": "Juicy and flavorful grilled tofu seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season tofu with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned tofu on the grill and cook for 6-8 minutes on each side, or until fully cooked.",
-			"Remove tofu from the grill and let it rest for a few minutes before serving.",
-			"Slice the grilled tofu and serve with your favorite side dishes or salads.",
-			"Enjoy the juicy and tender grilled tofu!"
-		],
-		"ratio": [80, 2, 20],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "vegan", "plant-based"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Tofu, soy bean curd", 150, "gram"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"],
-			["Garlic, dried, powder", 0, "to taste"],
-			["Pepper, sweet, red, raw", 0, "to taste"]
-		]
-	},
-	"9": {
-		"id": 9,
-		"name": "Carrot Smoothie",
-		"description": "A refreshing and nutritious smoothie featuring carrots, oranges, and ginger.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Peel and chop carrots into small pieces.",
-			"Peel and chop oranges into segments.",
-			"Peel and chop ginger into small pieces.",
-			"Add carrots, oranges, ginger, and water to a blender.",
-			"Blend until smooth and creamy.",
-			"Pour the carrot smoothie into a glass and serve chilled.",
-			"Enjoy the refreshing and nutritious carrot smoothie!"
-		],
-		"ratio": [10, 80, 10],
-		"mealtype": [1, 1, 1],
-		"category": ["simple", "smoothie", "vegan", "plant-based"],
-		"tags": ["vitamin C", "antioxidants"],
-		"ingredients": [
-			["Carrots, Danish, without peel, raw", 100, "gram"],
-			["Orange, raw", 200, "gram"],
-			["Ginger root, raw", 10, "gram"],
-			["Water, tap, drinking, average values", 200, "ml"]
-		]
-	},
-	"10": {
-		"id": 10,
-		"name": "Simple Grilled Shrimp",
-		"description": "Juicy and flavorful grilled shrimp seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season shrimp with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned shrimp on the grill and cook for 2-3 minutes on each side, or until fully cooked.",
-			"Remove shrimp from the grill and let it rest for a few minutes before serving.",
-			"Enjoy the juicy and tender grilled shrimp!"
-		],
-		"ratio": [80, 0, 20],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "seafood", "shrimp", "carnivore"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Shrimp, boiled, shell removed", 150, "gram"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"],
-			["Garlic, dried, powder", 0, "to taste"],
-			["Pepper, sweet, red, raw", 0, "to taste"]
-		]
-	},
-	"11": {
-		"id": 11,
-		"name": "Simple Grilled Beef",
-		"description": "Juicy and flavorful grilled beef seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season beef with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned beef on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
-			"Remove beef from the grill and let it rest for a few minutes before serving.",
-			"Slice the grilled beef and serve with your favorite side dishes or salads.",
-			"Enjoy the juicy and tender grilled beef!"
-		],
-		"ratio": [70, 0, 30],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "meat", "beef", "carnivore"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Beef, mince, 8-12% fat, raw", 150, "gram"],
-			["Salt, table", 0, "to taste"],
-			["Pepper, black", 0, "to taste"],
-			["Garlic, dried, powder", 0, "to taste"],
-			["Pepper, sweet, red, raw", 0, "to taste"]
-		]
-	},
-	"12": {
-		"id": 12,
-		"name": "Simple Grilled Lamb",
-		"description": "Juicy and flavorful grilled lamb seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season lamb with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned lamb on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
-			"Remove lamb from the grill and let it rest for a few minutes before serving.",
-			"Slice the grilled lamb and serve with your favorite side dishes or salads.",
-			"Enjoy the juicy and tender grilled lamb!"
-		],
-		"ratio": [70, 0, 30],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "meat", "lamb", "carnivore"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Lamb, breast, raw", 150, "gram"],
-			["Salt, table", "to taste"],
-			["Pepper, black", "to taste"],
-			["Garlic, dried, powder", "to taste"],
-			["Pepper, sweet, red, raw", "to taste"]
-		]
-	},
-	"13": {
-		"id": 13,
-		"name": "Simple Grilled Duckliver",
-		"description": "Juicy and flavorful grilled duck seasoned with herbs and spices.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"Preheat grill to medium-high heat.",
-			"Season duck with salt, pepper, garlic powder, and paprika.",
-			"Place seasoned duck on the grill and cook for 6-8 minutes on each side, or until fully cooked (internal temperature reaches 165°F or 75°C).",
-			"Remove duck from the grill and let it rest for a few minutes before serving.",
-			"Slice the grilled duck and serve with your favorite side dishes or salads.",
-			"Enjoy the juicy and tender grilled duck!"
-		],
-		"ratio": [70, 0, 30],
-		"mealtype": [0, 1, 1],
-		"category": ["simple", "meat", "duck", "carnivore"],
-		"tags": ["high-protein"],
-		"ingredients": [
-			["Liver, duck, raw", 150, "gram"],
-			["Salt, table", "to taste"],
-			["Pepper, black", "to taste"],
-			["Garlic, dried, powder", "to taste"],
-			["Pepper, sweet, red, raw", "to taste"]
-		]
-	},
-	"14": {
-		"id": 14,
-		"name": "Keto Pancakes",
-		"description": "Fluffy and delicious pancakes made with Rice flour and Almondmilk, perfect for a keto-friendly breakfast.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"In a bowl, whisk together almond flour, coconut flour, baking powder, and salt.",
-			"Add eggs, coconut milk, and vanilla extract to the dry ingredients and mix until well combined.",
-			"Heat a non-stick skillet over medium heat and grease with coconut oil or butter.",
-			"Scoop 1/4 cup of batter onto the skillet and cook until bubbles form on the surface.",
-			"Flip the pancake and cook for another 1-2 minutes, or until golden brown.",
-			"Repeat with the remaining batter.",
-			"Serve the keto pancakes with your favorite toppings such as sugar-free syrup, berries, or whipped cream.",
-			"Enjoy the fluffy and delicious keto pancakes!"
-		],
-		"ratio": [20, 0, 80],
-		"mealtype": [1, 1, 0],
-		"category": ["simple", "breakfast", "keto"],
-		"tags": ["low-carb", "gluten-free"],
-		"ingredients": [
-			["Rice flour", 100, "gram"],
-			["Spelt wheat flour, whole", 30, "gram"],
-			["Baking powder", 1, "tspn"],
-			["Salt, table", "to taste"],
-			["Eggs, chicken, organic farming, raw", 2, "pieces"],
-			["Almondmilk, with added calcium", 120, "ml"],
-			["Vanilla Extract", 0, "tspn"],
-			["Oil, coconut", 10, "gram"],
-			["Toppings (Sugar-Free Syrup, Berries, Whipped Cream)", 0, "as desired"]
-		]
-	},
-	"15": {
-		"id": 15,
-		"name": "Keto Avocado Salad",
-		"description": "A refreshing and satisfying salad featuring avocado, cucumber, cherry tomatoes, and feta cheese, drizzled with a lemon vinaigrette.",
-		"image": "./placeholder.svg",
-		"instructions": [
-			"In a large bowl, combine diced avocado, cucumber, cherry tomatoes, and crumbled feta cheese.",
-			"In a small bowl, whisk together olive oil, lemon juice, Dijon mustard, salt, and pepper to make the vinaigrette.",
-			"Pour the vinaigrette over the salad and toss gently to coat.",
-			"Serve the keto avocado salad chilled and enjoy!",
-			"Optional: Add grilled chicken or shrimp for extra protein."
-		],
-		"ratio": [10, 70, 20],
-		"mealtype": [1, 1, 0],
-		"category": ["advanced", "salad", "keto"],
-		"tags": ["low-carb", "gluten-free"],
-		"ingredients": [
-			["Avocado, raw", 1, "ripe"],
-			["Cucumber, raw", 1, "medium"],
-			["Tomato, ripe, raw, origin unknown", 100, "gram"],
-			["Feta, 5% (Salad cheese)", 50, "gram"],
-			["Olive oil", 2, "tbsp"],
-			["Lemon juice, fresh", 1, "tbsp"],
-			["Mustard, yellow, ready made", 1, "tspn"],
-			["Salt, table", "to taste"],
-			["Pepper, black", "to taste"]
-		]
-	}
+    "1": {
+        "id": 1,
+        "name": "Oatmeal with Apple",
+        "description": "A simple and nutritious breakfast featuring oatmeal, apple, and milk.",
+        "image": "assets/images/1_oatmeal_with_apple.jpg",
+        "equipment": ["stove", "pot", "knife", "cutting board"],
+        "preparationTime": 12,
+        "macroRatio": [297, 12, 50, 7, 8],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["lowFat", "highFiber", "Simple"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 2,
+                "name": "Apple",
+                "quantity": 120,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 59,
+                "name": "Oats",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 100,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 2,
+            "numberOfRatings": 462
+        },
+        "instructions": [
+            "Mix oats with milk and cook for 5 minutes.",
+            "Cut apple into small pieces.",
+            "Mix cooked oats with apple and serve."
+        ]
+    },
+    "2": {
+        "id": 2,
+        "name": "Oatmeal",
+        "description": "A simple and nutritious breakfast featuring oatmeal and milk.",
+        "image": "assets/images/2_oatmeal.jpg",
+        "equipment": ["stove", "pot"],
+        "preparationTime": 10,
+        "macroRatio": [231, 11, 35, 6, 5],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["lowFat", "Quick", "Simple"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 59,
+                "name": "Oats",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 100,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 406
+        },
+        "instructions": ["Mix oats with milk and cook for 5 minutes."]
+    },
+    "3": {
+        "id": 3,
+        "name": "Honey Mustard Chicken Salad",
+        "description": "A quick and delicious chicken salad with a sweet and tangy honey mustard dressing. Perfect for a healthy lunch or dinner.",
+        "image": "assets/images/3_honey_mustard_chicken_salad.jpg",
+        "equipment": ["bowl", "grill pan or skillet"],
+        "preparationTime": 15,
+        "macroRatio": [185, 26, 9, 9, 4],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["lowCarb", "noCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 754,
+                "name": "Chicken breast",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 50,
+                "name": "Salad greens",
+                "quantity": 75,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 204,
+                "name": "Mustard dressing",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 451,
+                "name": "cherry tomatoes",
+                "quantity": 50,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 122
+        },
+        "instructions": [
+            "Grill the chicken breast until fully cooked and lightly charred, then let it rest before slicing.",
+            "Wash and dry the mixed salad greens and halve the cherry tomatoes.",
+            "In a large bowl, combine the greens, tomatoes, and sliced chicken.",
+            "Drizzle with honey mustard dressing and toss to coat evenly.",
+            "Serve immediately, enjoy your light and flavorful salad!"
+        ]
+    },
+    "4": {
+        "id": 4,
+        "name": "Simple Lemon Garlic Pasta",
+        "description": "An easy and quick pasta dish featuring a tangy lemon and garlic sauce, perfect for a light meal.",
+        "image": "assets/images/4_simple_lemon_garlic_pasta.jpg",
+        "equipment": ["pot", "strainer", "pan"],
+        "preparationTime": 20,
+        "macroRatio": [627, 15, 65, 34, 11],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
+        "tags": ["highCalorie", "highFiber"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 377,
+                "name": "Spaghetti",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 3,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 21,
+                "name": "Lemon",
+                "quantity": 0,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 30,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 131
+        },
+        "instructions": [
+            "Cook the spaghetti in salted boiling water until al dente.",
+            "While the pasta cooks, heat olive oil in a pan and sauté minced garlic until fragrant.",
+            "Zest the lemon and juice it, adding both zest and juice to the pan.",
+            "Drain the pasta and add to the pan with the garlic and lemon mixture, tossing to coat.",
+            "Serve hot, optionally garnished with fresh herbs if available."
+        ]
+    },
+    "5": {
+        "id": 5,
+        "name": "Avocado Toast",
+        "description": "A classic and trendy breakfast option that combines ripe avocado on toasted bread, topped with a sprinkle of salt and pepper for added flavor.",
+        "image": "assets/images/5_avocado_toast.jpg",
+        "equipment": ["toaster", "knife"],
+        "preparationTime": 5,
+        "macroRatio": [587, 12, 50, 37, 17],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
+        "tags": ["highCalorie", "highFiber", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 616,
+                "name": "Avocado",
+                "quantity": 215,
+                "unit": "grans"
+            },
+            {
+                "ingredientID": 667,
+                "name": "Sourdough bread",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 136
+        },
+        "instructions": [
+            "Toast the sourdough bread slices to your liking.",
+            "While the bread is toasting, slice the avocado in half, remove the pit, and scoop the flesh into a bowl.",
+            "Mash the avocado with a fork, then spread evenly onto the toasted bread.",
+            "Season with salt and pepper to taste.",
+            "Serve immediately and enjoy!"
+        ]
+    },
+    "6": {
+        "id": 6,
+        "name": "Garlic Butter Shrimp",
+        "description": "An easy-to-make, flavorful seafood dish featuring succulent shrimp cooked in a rich garlic butter sauce.",
+        "image": "assets/images/6_garlic_butter_shrimp.jpg",
+        "equipment": ["skillet", "stirring spoon"],
+        "preparationTime": 10,
+        "macroRatio": [266, 19, 3, 24, 2],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "Vegetarian", "keto"],
+        "tags": ["lowCarb", "noCarb", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 518,
+                "name": "Shrimp",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1015,
+                "name": "Butter",
+                "quantity": 25,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 413
+        },
+        "instructions": [
+            "Melt butter in a skillet over medium heat.",
+            "Add minced garlic and sauté until fragrant, about 1 minute.",
+            "Increase heat to medium-high, add the shrimp and cook until they are pink and opaque, about 3-4 minutes.",
+            "Sprinkle chopped parsley over the cooked shrimp for garnish.",
+            "Serve immediately, great with pasta or over rice."
+        ]
+    },
+    "7": {
+        "id": 7,
+        "name": "Banana Smoothie",
+        "description": "A creamy and refreshing smoothie made with ripe bananas, milk, honey, and ice. Perfect for a nutritious snack or quick breakfast.",
+        "image": "assets/images/7_banana_smoothie.jpg",
+        "equipment": ["blender"],
+        "preparationTime": 5,
+        "macroRatio": [220, 8, 45, 3, 2],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["lowFat", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 3,
+                "name": "Banana",
+                "quantity": 120,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 120,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1176,
+                "name": "Honey",
+                "quantity": 15,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 53,
+                "name": "Ice cubes",
+                "quantity": 100,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 414
+        },
+        "instructions": [
+            "Peel the bananas and place them in the blender.",
+            "Add milk, honey, and ice cubes to the blender.",
+            "Blend on high until smooth and creamy.",
+            "Pour into a glass and serve immediately."
+        ]
+    },
+    "8": {
+        "id": 8,
+        "name": "Quick Beef Stir-Fry",
+        "description": "A fast and flavorful stir-fry featuring thinly sliced beef and bell peppers, seasoned with soy sauce and garlic, perfect for a busy weeknight dinner.",
+        "image": "assets/images/8_quick_beef_stir-fry.jpg",
+        "equipment": ["Frying pan or wok", "Knife", "Cutting board"],
+        "preparationTime": 15,
+        "macroRatio": [147, 25, 5, 7, 2],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["lowFat", "lowCarb", "noCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 818,
+                "name": "Thinly sliced beef",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "Bell pepper",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 4,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Soy sauce",
+                "quantity": 6,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 2,
+            "numberOfRatings": 129
+        },
+        "instructions": [
+            "Heat a little oil in a pan or wok over high heat.",
+            "Add the minced garlic and stir-fry quickly until fragrant.",
+            "Add the beef slices and stir-fry until they start to brown.",
+            "Toss in the sliced bell peppers and continue to stir-fry for another 2-3 minutes.",
+            "Pour in the soy sauce and stir everything together for another minute.",
+            "Serve hot over rice or noodles."
+        ]
+    },
+    "9": {
+        "id": 9,
+        "name": "Garlic Lemon Broccoli Pasta",
+        "description": "A light and zesty pasta dish that combines tender broccoli, garlic, and lemon zest for a delicious vegetarian dinner.",
+        "image": "assets/images/9_garlic_lemon_broccoli_pasta.jpg",
+        "equipment": ["Pot", "Frying pan", "Colander", "Grater"],
+        "preparationTime": 0,
+        "macroRatio": [436, 24, 74, 5, 18],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
+        "tags": ["lowFat", "highFiber", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 377,
+                "name": "Pasta",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 17,
+                "name": "Broccoli",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 6,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 268,
+                "name": "Lemon juice",
+                "quantity": 10,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 373
+        },
+        "instructions": [
+            "Cook pasta in salted boiling water according to package instructions. Add broccoli florets to the pot in the last 3 minutes of cooking.",
+            "Drain the pasta and broccoli, reserving a cup of pasta water.",
+            "In the same pot, heat a drizzle of olive oil over medium heat and sauté garlic until golden.",
+            "Return the pasta and broccoli to the pot, add lemon zest, and squeeze in the lemon juice.",
+            "Toss everything together, adding a bit of reserved pasta water to create a light sauce.",
+            "Season with salt and pepper to taste, and serve warm."
+        ]
+    },
+    "10": {
+        "id": 10,
+        "name": "Pork Chops with Apple and Onion",
+        "description": "Juicy pork chops paired with sweet apples and caramelized onions create a hearty and delicious meal that's easy to prepare and perfect for a comforting dinner.",
+        "image": "assets/images/10_pork_chops_with_apple_and_onion.jpg",
+        "equipment": ["Skillet", "Knife", "Cutting board"],
+        "preparationTime": 25,
+        "macroRatio": [358, 47, 22, 12, 5],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["highProtein", "lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 1688,
+                "name": "Pork chops",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 2,
+                "name": "Apple",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 0,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 150
+        },
+        "instructions": [
+            "Season the pork chops with salt and pepper.",
+            "Heat olive oil or butter in a skillet over medium-high heat.",
+            "Add the pork chops to the skillet and cook for about 4-5 minutes on each side until browned and cooked through.",
+            "Remove the pork chops and set aside to keep warm.",
+            "In the same skillet, reduce the heat to medium and add the sliced onions. Cook until they start to soften and turn golden, about 5 minutes.",
+            "Add the sliced apples to the skillet with the onions and cook for an additional 5 minutes, until the apples are just tender.",
+            "Return the pork chops to the skillet to reheat briefly with the apples and onions.",
+            "Serve the pork chops topped with the apple and onion mixture."
+        ]
+    },
+    "11": {
+        "id": 11,
+        "name": "Chicken and Cashew Stir-Fry",
+        "description": "This stir-fry combines tender chicken, crunchy cashews, and vibrant vegetables in a savory sauce, making it a quick and nutritious meal perfect for dinner.",
+        "image": "assets/images/11_chicken_and_cashew_stir-fry.jpg",
+        "equipment": ["Wok or large frying pan", "Knife", "Cutting board"],
+        "preparationTime": 20,
+        "macroRatio": [466, 28, 14, 38, 3],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["lowCarb"],
+        "allergens": ["Nuts"],
+        "ingredients": [
+            {
+                "ingredientID": 754,
+                "name": "Chicken breast",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 815,
+                "name": "Cashew nuts",
+                "quantity": 25,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "Bell peppers",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Soy sauce",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic ",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 20,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 2,
+            "numberOfRatings": 267
+        },
+        "instructions": [
+            "Heat the oil in a wok or large frying pan over medium-high heat.",
+            "Add the minced garlic and stir-fry until fragrant, about 1 minute.",
+            "Increase the heat to high and add the chicken slices. Stir-fry until they are just cooked through, about 4-5 minutes.",
+            "Add the bell pepper strips and continue stir-frying for another 2-3 minutes until they are just tender but still crisp.",
+            "Toss in the cashews and drizzle with soy sauce. Mix well to ensure everything is evenly coated with the sauce.",
+            "Cook for an additional 1-2 minutes, allowing the flavors to meld together.",
+            "Serve hot, ideally over a bed of steamed rice or noodles."
+        ]
+    },
+    "12": {
+        "id": 12,
+        "name": "Mediterranean Chickpea Salad",
+        "description": "A refreshing and colorful salad featuring chickpeas, cherry tomatoes, cucumber, feta cheese, and a zesty lemon dressing, perfect for a light and healthy meal.",
+        "image": "assets/images/12_mediterranean_chickpea_salad.jpg",
+        "equipment": ["Bowl", "Knife", "Cutting board"],
+        "preparationTime": 15,
+        "macroRatio": [557, 31, 49, 27, 26],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["highCalorie", "highFiber", "highProtein"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 1803,
+                "name": "Chickpeas",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 451,
+                "name": "Cherry tomatoes",
+                "quantity": 75,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 388,
+                "name": "Cucumber",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1771,
+                "name": "Feta cheese",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 268,
+                "name": "Lemon juice",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 15,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 2,
+            "numberOfRatings": 319
+        },
+        "instructions": [
+            "Rinse and drain the chickpeas, then place them in a large bowl.",
+            "Halve the cherry tomatoes, dice the cucumber, and crumble the feta cheese. Add them to the bowl with the chickpeas.",
+            "In a small bowl, whisk together the lemon juice, olive oil, salt, and pepper to make the dressing.",
+            "Pour the dressing over the salad and toss everything together until well combined.",
+            "Garnish with chopped parsley and serve chilled."
+        ]
+    },
+    "13": {
+        "id": 13,
+        "name": "Vegetarian Tofu Stir-Fry",
+        "description": "A flavorful and colorful stir-fry featuring tofu, bell peppers, broccoli, and a savory sauce, perfect for a quick and nutritious vegetarian meal.",
+        "image": "assets/images/13_vegetarian_tofu_stir-fry.jpg",
+        "equipment": ["Wok or large frying pan", "Knife", "Cutting board"],
+        "preparationTime": 20,
+        "macroRatio": [433, 29, 11, 37, 12],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["highFiber", "lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 272,
+                "name": "Tofu",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "Bell peppers",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 17,
+                "name": "Broccoli",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Soy sauce",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 20,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 486
+        },
+        "instructions": [
+            "Drain the tofu and cut it into cubes.",
+            "Heat the oil in a wok or large frying pan over medium-high heat.",
+            "Add the minced garlic and stir-fry until fragrant, about 1 minute.",
+            "Add the tofu cubes and cook until they are golden brown on all sides, about 5-7 minutes.",
+            "Toss in the bell pepper strips and broccoli florets, and continue stir-frying for another 3-4 minutes until the vegetables are tender but still crisp.",
+            "Drizzle with soy sauce and season with salt and pepper to taste.",
+            "Cook for an additional 1-2 minutes, allowing the flavors to meld together.",
+            "Serve hot, ideally over a bed of steamed rice or noodles."
+        ]
+    },
+    "14": {
+        "id": 14,
+        "name": "Mango Coconut Chia Pudding",
+        "description": "A tropical and refreshing chia pudding made with coconut milk, fresh mango, and a hint of honey, perfect for a healthy and satisfying breakfast or snack.",
+        "image": "assets/images/14_mango_coconut_chia_pudding.jpg",
+        "equipment": ["Bowl", "Blender", "Spoon"],
+        "preparationTime": 5,
+        "macroRatio": [1152, 17, 30, 100, 50],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
+        "tags": ["highCalorie", "highFiber", "lowCarb", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 1728,
+                "name": "Chia seeds",
+                "quantity": 20,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 704,
+                "name": "Coconut milk",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1859,
+                "name": "Mango",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1176,
+                "name": "Honey",
+                "quantity": 15,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 363
+        },
+        "instructions": [
+            "In a bowl, combine the chia seeds and coconut milk. Stir well to combine, then let it sit for 10 minutes to allow the chia seeds to absorb the liquid and thicken.",
+            "In a blender, puree the mango until smooth.",
+            "Layer the chia pudding and mango puree in serving glasses or jars.",
+            "Drizzle with honey and garnish with fresh parsley.",
+            "Refrigerate for at least 1 hour or overnight to allow the flavors to meld together.",
+            "Serve chilled and enjoy!"
+        ]
+    },
+    "15": {
+        "id": 15,
+        "name": "Salmon with Asparagus and Lemon",
+        "description": "A light and flavorful dish featuring baked salmon fillets with roasted asparagus and a squeeze of fresh lemon, perfect for a healthy and satisfying dinner.",
+        "image": "assets/images/15_salmon_with_asparagus_and_lemon.jpg",
+        "equipment": ["Baking sheet", "Aluminum foil", "Knife", "Cutting board"],
+        "preparationTime": 20,
+        "macroRatio": [362, 32, 13, 25, 4],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "Vegetarian", "LactoseFree"],
+        "tags": ["highProtein", "lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 30,
+                "name": "Salmon fillet",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 64,
+                "name": "Asparagus",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 21,
+                "name": "Lemon",
+                "quantity": 0,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 128
+        },
+        "instructions": [
+            "Preheat the oven to 400°F (200°C) and line a baking sheet with aluminum foil.",
+            "Place the salmon fillets on the baking sheet and drizzle with olive oil. Season with salt and pepper.",
+            "Trim the woody ends of the asparagus and arrange them around the salmon on the baking sheet.",
+            "Bake in the preheated oven for 12-15 minutes, or until the salmon is cooked through and the asparagus is tender.",
+            "Squeeze fresh lemon juice over the salmon and asparagus, then garnish with chopped parsley.",
+            "Serve hot and enjoy!"
+        ]
+    },
+    "16": {
+        "id": 16,
+        "name": "Herbed Pork Chops with Garlic",
+        "description": "Juicy pork chops seasoned with a blend of fresh herbs and garlic, then seared to perfection, making it a flavorful and satisfying meal for dinner.",
+        "image": "assets/images/16_herbed_pork_chops_with_garlic.jpg",
+        "equipment": ["Skillet", "Knife", "Cutting board"],
+        "preparationTime": 20,
+        "macroRatio": [371, 49, 6, 25, 5],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree", "keto"],
+        "tags": ["highProtein", "lowCarb", "noCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 1688,
+                "name": "Pork chops",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Rosemary",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Thyme",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 111
+        },
+        "instructions": [
+            "Season the pork chops with salt and pepper.",
+            "Finely chop the garlic, parsley, rosemary, and thyme, then mix them together to create an herb-garlic mixture.",
+            "Rub the herb-garlic mixture onto both sides of the pork chops, pressing it into the meat to adhere.",
+            "Heat olive oil in a skillet over medium-high heat.",
+            "Add the pork chops to the skillet and cook for about 4-5 minutes on each side until browned and cooked through.",
+            "Remove the pork chops and let them rest for a few minutes before serving.",
+            "Serve hot and enjoy the flavorful herb and garlic pork chops!"
+        ]
+    },
+    "17": {
+        "id": 17,
+        "name": "Caprese Salad",
+        "description": "A classic Italian salad featuring ripe tomatoes, fresh mozzarella, basil leaves, and a drizzle of balsamic glaze, perfect for a light and refreshing appetizer or side dish.",
+        "image": "assets/images/17_caprese_salad.jpg",
+        "equipment": ["Plate", "Knife"],
+        "preparationTime": 10,
+        "macroRatio": [311, 33, 7, 21, 4],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "keto"],
+        "tags": ["highProtein", "lowCarb", "noCarb", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 451,
+                "name": "Cherry tomatoes",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1299,
+                "name": "Fresh mozzarella",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 767,
+                "name": "Basil leaves",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Balsamic glaze",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 400
+        },
+        "instructions": [
+            "Slice the cherry tomatoes in half and the fresh mozzarella into rounds.",
+            "Arrange the tomato and mozzarella slices on a plate, alternating them for a visually appealing presentation.",
+            "Tuck basil leaves in between the tomato and mozzarella slices.",
+            "Drizzle the caprese salad with balsamic glaze and season with salt and pepper to taste.",
+            "Serve immediately and enjoy the fresh and vibrant flavors of this classic Italian salad!"
+        ]
+    },
+    "18": {
+        "id": 18,
+        "name": "Tomato, Basil and Broccoli Chicken",
+        "description": "A delicious and colorful chicken dish featuring juicy chicken breasts topped with a flavorful tomato, basil, and broccoli sauce, perfect for a satisfying and nutritious dinner.",
+        "image": "assets/images/18_tomato,_basil_and_broccoli_chicken.jpg",
+        "equipment": ["Skillet", "Knife", "Cutting board"],
+        "preparationTime": 25,
+        "macroRatio": [385, 50, 12, 22, 9],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["highFiber", "highProtein", "lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 754,
+                "name": "Chicken breast",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 451,
+                "name": "Cherry tomatoes",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 17,
+                "name": "Broccoli",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 767,
+                "name": "Basil leaves",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 312
+        },
+        "instructions": [
+            "Season the chicken breasts with salt and pepper.",
+            "Heat olive oil in a skillet over medium-high heat.",
+            "Add the chicken breasts to the skillet and cook for about 5-6 minutes on each side until browned and cooked through.",
+            "Remove the chicken breasts and set aside.",
+            "In the same skillet, add the minced garlic and sauté until fragrant.",
+            "Add the cherry tomatoes and broccoli florets to the skillet and cook until they start to soften, about 5 minutes.",
+            "Return the chicken breasts to the skillet and top with basil leaves.",
+            "Cover and simmer for an additional 5 minutes to allow the flavors to meld together.",
+            "Serve hot and enjoy the delicious combination of chicken, tomato, basil, and broccoli!"
+        ]
+    },
+    "19": {
+        "id": 19,
+        "name": "Mixed Smoothie with Nuts",
+        "description": "A nutritious and satisfying smoothie made with a blend of mixed fruits, nuts, and seeds, perfect for a quick and healthy breakfast or snack.",
+        "image": "assets/images/19_mixed_smoothie_with_nuts.jpg",
+        "equipment": ["Blender"],
+        "preparationTime": 5,
+        "macroRatio": [511, 18, 61, 23, 14],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["highCalorie", "highFiber", "Quick"],
+        "allergens": ["Nuts"],
+        "ingredients": [
+            {
+                "ingredientID": 3,
+                "name": "Banana",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1859,
+                "name": "Mango",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1728,
+                "name": "Chia seeds",
+                "quantity": 20,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 815,
+                "name": "Cashew nuts",
+                "quantity": 25,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1176,
+                "name": "Honey",
+                "quantity": 15,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 2,
+            "numberOfRatings": 229
+        },
+        "instructions": [
+            "Peel and chop the banana and mango into chunks.",
+            "In a blender, combine the banana, mango, chia seeds, cashew nuts, milk, and honey.",
+            "Blend on high until smooth and creamy.",
+            "Pour into a glass and enjoy the nutritious and delicious mixed smoothie with nuts!"
+        ]
+    },
+    "20": {
+        "id": 20,
+        "name": "Vegetarian Lentil Soup",
+        "description": "A hearty and comforting soup made with lentils, vegetables, and aromatic spices, perfect for a nutritious and satisfying meal.",
+        "image": "assets/images/20_vegetarian_lentil_soup.jpg",
+        "equipment": ["Pot", "Knife", "Cutting board"],
+        "preparationTime": 30,
+        "macroRatio": [265, 14, 32, 15, 10],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
+        "tags": ["highFiber"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 285,
+                "name": "Lentils",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1761,
+                "name": "Carrots",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 371
+        },
+        "instructions": [
+            "Rinse the lentils under cold water and drain.",
+            "In a large pot, heat olive oil over medium heat.",
+            "Add the minced garlic, diced onion, and sliced carrots to the pot. Sauté until the vegetables are softened, about 5 minutes.",
+            "Add the lentils to the pot and cover with water or vegetable broth.",
+            "Bring the soup to a boil, then reduce the heat and simmer for 20-25 minutes, or until the lentils are tender.",
+            "Season the soup with salt and pepper to taste.",
+            "Garnish with chopped parsley and serve hot for a comforting and nutritious meal."
+        ]
+    },
+    "21": {
+        "id": 21,
+        "name": "Spaghetti Carbonara",
+        "description": "A classic Italian pasta dish featuring spaghetti tossed with crispy pancetta, creamy egg sauce, and grated Parmesan cheese, perfect for a rich and indulgent meal.",
+        "image": "assets/images/21_spaghetti_carbonara.jpg",
+        "equipment": ["Pot", "Skillet", "Knife", "Cutting board"],
+        "preparationTime": 20,
+        "macroRatio": [654, 36, 69, 31, 12],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal"],
+        "tags": ["highCalorie", "highFiber", "highProtein"],
+        "allergens": ["Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 377,
+                "name": "Spaghetti",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1249,
+                "name": "Pancetta",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1663,
+                "name": "Eggs",
+                "quantity": 2,
+                "unit": "units"
+            },
+            {
+                "ingredientID": 309,
+                "name": "Parmesan cheese",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 408
+        },
+        "instructions": [
+            "Cook the spaghetti in a large pot of salted boiling water according to package instructions.",
+            "In a skillet, cook the diced pancetta over medium heat until crispy.",
+            "Add the minced garlic to the skillet and sauté until fragrant.",
+            "In a bowl, whisk together the eggs, grated Parmesan cheese, and black pepper to make the sauce.",
+            "Drain the cooked spaghetti, reserving a cup of pasta water.",
+            "Toss the hot spaghetti with the pancetta and garlic, then quickly stir in the egg and cheese sauce.",
+            "Add a splash of pasta water to create a creamy sauce that coats the spaghetti.",
+            "Serve hot, garnished with additional grated Parmesan cheese and black pepper."
+        ]
+    },
+    "22": {
+        "id": 22,
+        "name": "Chicken and Vegetable Skewers",
+        "description": "Juicy chicken and colorful vegetables threaded onto skewers and grilled to perfection, making it a flavorful and fun dish for a summer barbecue or dinner.",
+        "image": "assets/images/22_chicken_and_vegetable_skewers.jpg",
+        "equipment": ["Grill", "Knife", "Cutting board"],
+        "preparationTime": 30,
+        "macroRatio": [236, 25, 8, 17, 5],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree", "keto"],
+        "tags": ["lowCarb", "noCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 754,
+                "name": "Chicken breast",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "Bell peppers",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1761,
+                "name": "Carrots",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 93
+        },
+        "instructions": [
+            "Soak wooden skewers in water for at least 30 minutes to prevent burning.",
+            "Cut the chicken breast into cubes and the bell peppers and carrots into chunks.",
+            "Thread the chicken and vegetables onto the skewers, alternating between the different ingredients.",
+            "Brush the skewers with olive oil and season with salt and pepper.",
+            "Preheat the grill to medium-high heat and cook the skewers for 10-12 minutes, turning occasionally, until the chicken is cooked through and the vegetables are tender.",
+            "Garnish with chopped parsley and serve hot for a delicious and colorful meal."
+        ]
+    },
+    "23": {
+        "id": 23,
+        "name": "Mushroom Risotto",
+        "description": "A creamy and flavorful risotto made with Arborio rice, mushrooms, onions, and Parmesan cheese, perfect for a comforting and indulgent meal.",
+        "image": "assets/images/23_mushroom_risotto.jpg",
+        "equipment": ["Pot", "Skillet", "Knife", "Cutting board"],
+        "preparationTime": 40,
+        "macroRatio": [639, 25, 99, 25, 7],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["highCalorie"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 1225,
+                "name": "Arborio rice",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 961,
+                "name": "Mushrooms",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 309,
+                "name": "Parmesan cheese",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 131
+        },
+        "instructions": [
+            "In a pot, heat olive oil over medium heat.",
+            "Add the diced onion and minced garlic to the pot and sauté until softened.",
+            "Add the Arborio rice to the pot and toast for a few minutes until translucent around the edges.",
+            "Gradually add hot vegetable or chicken broth to the rice, one ladleful at a time, stirring constantly until the liquid is absorbed before adding more.",
+            "Continue this process until the rice is creamy and cooked to al dente, about 18-20 minutes.",
+            "Stir in the sliced mushrooms and cook for an additional 5 minutes until the mushrooms are tender.",
+            "Remove the pot from the heat and stir in grated Parmesan cheese, chopped parsley, salt, and pepper.",
+            "Let the risotto rest for a few minutes before serving hot for a delicious and comforting meal."
+        ]
+    },
+    "24": {
+        "id": 24,
+        "name": "Beef Tacos with Salsa",
+        "description": "A classic Mexican dish featuring seasoned ground beef, fresh salsa, and toppings wrapped in soft tortillas, perfect for a flavorful and fun meal.",
+        "image": "assets/images/24_beef_tacos_with_salsa.jpg",
+        "equipment": ["Skillet", "Knife", "Cutting board"],
+        "preparationTime": 30,
+        "macroRatio": [289, 26, 11, 23, 5],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 909,
+                "name": "Ground beef",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 451,
+                "name": "Cherry tomatoes",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 416
+        },
+        "instructions": [
+            "In a skillet, heat olive oil over medium heat.",
+            "Add the diced onion and minced garlic to the skillet and sauté until softened.",
+            "Add the ground beef to the skillet and cook until browned and cooked through.",
+            "Season the beef with salt and pepper to taste.",
+            "In a separate bowl, combine diced cherry tomatoes, chopped parsley, and a squeeze of lime juice to make the salsa.",
+            "Warm the tortillas in a dry skillet or microwave.",
+            "Assemble the tacos by filling each tortilla with the seasoned ground beef, salsa, and desired toppings.",
+            "Serve hot and enjoy the delicious and flavorful beef tacos!"
+        ]
+    },
+    "25": {
+        "id": 25,
+        "name": "Pumpkin Soup with Croutons",
+        "description": "A creamy and velvety pumpkin soup topped with crispy croutons and a drizzle of olive oil, perfect for a comforting and warming meal.",
+        "image": "assets/images/25_pumpkin_soup_with_croutons.jpg",
+        "equipment": ["Pot", "Blender", "Knife", "Cutting board"],
+        "preparationTime": 40,
+        "macroRatio": [272, 9, 36, 16, 11],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
+        "tags": ["highFiber"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 366,
+                "name": "Pumpkin",
+                "quantity": 250,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 3,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            },
+            {
+                "ingredientID": 413,
+                "name": "Bread",
+                "quantity": 50,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 424
+        },
+        "instructions": [
+            "Peel and dice the pumpkin, onion, and garlic.",
+            "In a pot, heat olive oil over medium heat.",
+            "Add the diced onion and minced garlic to the pot and sauté until softened.",
+            "Add the diced pumpkin to the pot and cover with water or vegetable broth.",
+            "Bring the soup to a boil, then reduce the heat and simmer for 20-25 minutes, or until the pumpkin is tender.",
+            "Using an immersion blender or regular blender, puree the soup until smooth and creamy.",
+            "Season the soup with salt and pepper to taste.",
+            "In a separate skillet, toast bread cubes in olive oil until crispy to make croutons.",
+            "Serve the pumpkin soup hot, garnished with croutons and chopped parsley for a delicious and comforting meal."
+        ]
+    },
+    "26": {
+        "id": 26,
+        "name": "Greek Salad",
+        "description": "A fresh and vibrant salad featuring crisp lettuce, juicy tomatoes, cucumbers, olives, feta cheese, and a tangy vinaigrette, perfect for a light and healthy meal or side dish.",
+        "image": "assets/images/26_greek_salad.jpg",
+        "equipment": ["Bowl", "Knife", "Cutting board"],
+        "preparationTime": 15,
+        "macroRatio": [292, 22, 14, 21, 11],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal"],
+        "tags": ["highFiber", "lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 451,
+                "name": "Cherry tomatoes",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1761,
+                "name": "Cucumbers",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 251,
+                "name": "Olives",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1299,
+                "name": "Feta cheese",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Lemon juice",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 237
+        },
+        "instructions": [
+            "Slice the cherry tomatoes in half, dice the cucumbers, and pit the olives.",
+            "In a bowl, combine the cherry tomatoes, cucumbers, olives, and crumbled feta cheese.",
+            "In a separate bowl, whisk together olive oil, lemon juice, salt, and pepper to make the vinaigrette.",
+            "Drizzle the vinaigrette over the salad and toss to combine.",
+            "Garnish with chopped parsley and serve the Greek salad chilled for a refreshing and flavorful meal."
+        ]
+    },
+    "27": {
+        "id": 27,
+        "name": "Stuffed Bell Peppers",
+        "description": "Colorful bell peppers stuffed with a savory mixture of ground beef, rice, tomatoes, and spices, baked to perfection, making it a hearty and satisfying meal.",
+        "image": "assets/images/27_stuffed_bell_peppers.jpg",
+        "equipment": ["Baking dish", "Skillet", "Knife", "Cutting board"],
+        "preparationTime": 60,
+        "macroRatio": [465, 33, 41, 25, 11],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["highFiber", "highProtein"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 909,
+                "name": "Ground beef",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 377,
+                "name": "Rice",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "Bell peppers",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 451,
+                "name": "Cherry tomatoes",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 84
+        },
+        "instructions": [
+            "Preheat the oven to 375°F (190°C) and grease a baking dish.",
+            "Cook the rice according to package instructions and set aside.",
+            "In a skillet, heat olive oil over medium heat.",
+            "Add the minced garlic and ground beef to the skillet and cook until browned.",
+            "Stir in the cooked rice, diced cherry tomatoes, chopped parsley, salt, and pepper to the skillet.",
+            "Cut the tops off the bell peppers and remove the seeds and membranes.",
+            "Stuff the bell peppers with the beef and rice mixture, then place them in the baking dish.",
+            "Cover the baking dish with foil and bake for 30 minutes, then uncover and bake for an additional 15 minutes until the peppers are tender.",
+            "Serve the stuffed bell peppers hot for a delicious and satisfying meal."
+        ]
+    },
+    "28": {
+        "id": 28,
+        "name": "Lasagne Bolognese",
+        "description": "A classic Italian pasta dish featuring layers of lasagne sheets, rich Bolognese sauce, creamy béchamel, and melted cheese, baked to perfection, making it a hearty and indulgent meal.",
+        "image": "assets/images/28_lasagne_bolognese.jpg",
+        "equipment": ["Baking dish", "Skillet", "Pot", "Knife", "Cutting board"],
+        "preparationTime": 90,
+        "macroRatio": [1053, 67, 134, 37, 16],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal"],
+        "tags": ["highCalorie", "highFiber", "highProtein"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 305,
+                "name": "Lasagne sheets",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 909,
+                "name": "Ground beef",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1761,
+                "name": "Carrots",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1216,
+                "name": "Tomato Paste",
+                "quantity": 25,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Tomato",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 309,
+                "name": "Parmesan cheese",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Butter",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 61,
+                "name": "Flour",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 2,
+            "numberOfRatings": 240
+        },
+        "instructions": [
+            "Preheat the oven to 375°F (190°C) and grease a baking dish.",
+            "Cook the lasagne sheets according to package instructions and set aside.",
+            "In a skillet, heat olive oil over medium heat.",
+            "Add the diced onion, minced garlic, and sliced carrots to the skillet and sauté until softened.",
+            "Add the ground beef to the skillet and cook until browned.",
+            "Stir in the tomato paste and diced tomatoes to the skillet and simmer for 20-25 minutes to make the Bolognese sauce.",
+            "In a pot, melt butter over medium heat.",
+            "Whisk in flour to make a roux, then gradually whisk in milk to make a béchamel sauce.",
+            "Season the béchamel sauce with salt and pepper to taste.",
+            "Layer the lasagne sheets, Bolognese sauce, béchamel sauce, and grated Parmesan cheese in the baking dish.",
+            "Cover with foil and bake for 30 minutes, then uncover and bake for an additional 15 minutes until the cheese is melted and bubbly.",
+            "Let the lasagne rest for a few minutes before serving hot for a delicious and indulgent meal."
+        ]
+    },
+    "29": {
+        "id": 29,
+        "name": "Chicken and Mushroom Pie",
+        "description": "A comforting and hearty pie filled with tender chicken, mushrooms, and a creamy sauce, topped with flaky puff pastry, making it a delicious and satisfying meal.",
+        "image": "assets/images/29_chicken_and_mushroom_pie.jpg",
+        "equipment": ["Pie dish", "Skillet", "Pot", "Knife", "Cutting board"],
+        "preparationTime": 60,
+        "macroRatio": [722, 62, 53, 39, 8],
+        "mealTypes": [0, 0, 1],
+        "categories": ["Meal"],
+        "tags": ["highCalorie", "highFiber", "highProtein"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 754,
+                "name": "Chicken breast",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 961,
+                "name": "Mushrooms",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 716,
+                "name": "Onion",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Butter",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 61,
+                "name": "Flour",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 827,
+                "name": "Puff pastry",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 94
+        },
+        "instructions": [
+            "Preheat the oven to 375°F (190°C) and grease a pie dish.",
+            "In a skillet, heat olive oil over medium heat.",
+            "Add the diced onion and minced garlic to the skillet and sauté until softened.",
+            "Add the sliced mushrooms to the skillet and cook until they release their juices.",
+            "Add the diced chicken breast to the skillet and cook until browned and cooked through.",
+            "In a pot, melt butter over medium heat.",
+            "Whisk in flour to make a roux, then gradually whisk in milk to make a creamy sauce.",
+            "Season the sauce with salt and pepper to taste.",
+            "Combine the chicken and mushroom mixture with the creamy sauce and chopped parsley.",
+            "Pour the filling into the pie dish and top with puff pastry, crimping the edges to seal.",
+            "Bake for 30-35 minutes until the pastry is golden brown and the filling is bubbling.",
+            "Serve the chicken and mushroom pie hot for a delicious and comforting meal."
+        ]
+    },
+    "30": {
+        "id": 30,
+        "name": "Vegetable Stir-Fry with Tofu",
+        "description": "A colorful and flavorful stir-fry featuring a variety of vegetables, tofu, and a savory sauce, perfect for a quick and healthy meal.",
+        "image": "assets/images/30_vegetable_stir-fry_with_tofu.jpg",
+        "equipment": ["Wok", "Knife", "Cutting board"],
+        "preparationTime": 30,
+        "macroRatio": [287, 13, 40, 16, 15],
+        "mealTypes": [0, 1, 1],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["highFiber"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 1859,
+                "name": "Tofu",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1761,
+                "name": "Carrots",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "Bell peppers",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 17,
+                "name": "Broccoli",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 205,
+                "name": "Garlic",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Soy sauce",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Honey",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 62,
+                "name": "Ginger",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1467,
+                "name": "Olive oil",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "Parsley",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 475
+        },
+        "instructions": [
+            "Press the tofu to remove excess moisture, then cut into cubes.",
+            "Slice the carrots, bell peppers, and broccoli into bite-sized pieces.",
+            "In a wok, heat olive oil over medium heat.",
+            "Add the minced garlic and sliced vegetables to the wok and stir-fry until tender-crisp.",
+            "Push the vegetables to the side of the wok and add the tofu cubes to the center.",
+            "Cook the tofu until golden brown on all sides.",
+            "In a small bowl, whisk together soy sauce, honey, and grated ginger to make the sauce.",
+            "Pour the sauce over the vegetables and tofu in the wok and toss to combine.",
+            "Season with salt and pepper to taste.",
+            "Garnish with chopped parsley and serve the vegetable stir-fry with tofu hot for a delicious and healthy meal."
+        ]
+    },
+    "31": {
+        "id": 31,
+        "name": "Pancakes with Berries",
+        "description": "Fluffy and golden pancakes topped with a mix of fresh berries and a drizzle of maple syrup, perfect for a delicious and indulgent breakfast or brunch.",
+        "image": "assets/images/31_pancakes_with_berries.jpg",
+        "equipment": ["Pan", "Bowl", "Whisk", "Spatula"],
+        "preparationTime": 30,
+        "macroRatio": [562, 21, 104, 8, 18],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal"],
+        "tags": ["highCalorie", "lowFat", "highFiber"],
+        "allergens": ["Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 61,
+                "name": "Flour",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1663,
+                "name": "Eggs",
+                "quantity": 2,
+                "unit": "units"
+            },
+            {
+                "ingredientID": 1098,
+                "name": "Maple syrup",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1817,
+                "name": "Blueberries",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Butter",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1312,
+                "name": "Baking powder",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 26
+        },
+        "instructions": [
+            "In a bowl, whisk together flour, baking powder, and salt.",
+            "In a separate bowl, whisk together milk and eggs.",
+            "Gradually whisk the wet ingredients into the dry ingredients until smooth.",
+            "Heat a pan over medium heat and melt butter in the pan.",
+            "Pour 1/4 cup of batter into the pan and cook until bubbles form on the surface.",
+            "Flip the pancake and cook until golden brown on both sides.",
+            "Repeat with the remaining batter to make a stack of pancakes.",
+            "Top the pancakes with fresh berries and a drizzle of maple syrup for a delicious and indulgent breakfast or brunch."
+        ]
+    },
+    "32": {
+        "id": 32,
+        "name": "Avocado Toast with Eggs",
+        "description": "Sliced avocado on toasted bread topped with a fried or poached egg, perfect for a simple and nutritious breakfast or snack.",
+        "image": "assets/images/32_avocado_toast_with_eggs.jpg",
+        "equipment": ["Toaster", "Pan", "Knife", "Cutting board"],
+        "preparationTime": 15,
+        "macroRatio": [130, 7, 27, 4, 7],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["lowFat", "lowCarb"],
+        "allergens": ["Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 413,
+                "name": "Bread",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1663,
+                "name": "Eggs",
+                "quantity": 1,
+                "unit": "units"
+            },
+            {
+                "ingredientID": 366,
+                "name": "Avocado",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Butter",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 236,
+                "name": "Pepper",
+                "quantity": 1,
+                "unit": "gram"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 410
+        },
+        "instructions": [
+            "Toast the bread until golden brown and crispy.",
+            "In a pan, melt butter over medium heat.",
+            "Fry or poach the eggs until cooked to your liking.",
+            "Slice the avocado and arrange it on the toasted bread.",
+            "Top the avocado toast with the fried or poached eggs.",
+            "Season with salt and pepper to taste.",
+            "Serve the avocado toast with eggs for a simple and nutritious breakfast or snack."
+        ]
+    },
+    "33": {
+        "id": 33,
+        "name": "Chia Seed Pudding",
+        "description": "A creamy and nutritious pudding made with chia seeds, milk, and sweetener, perfect for a healthy and satisfying breakfast or snack.",
+        "image": "assets/images/33_chia_seed_pudding.jpg",
+        "equipment": ["Bowl", "Whisk", "Jar"],
+        "preparationTime": 480,
+        "macroRatio": [266, 13, 41, 10, 6],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": [],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1764,
+                "name": "Greek yogurt",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1098,
+                "name": "Maple syrup",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Chia seeds",
+                "quantity": 20,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1817,
+                "name": "Blueberries",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1818,
+                "name": "Raspberries",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1819,
+                "name": "Strawberries",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1098,
+                "name": "Honey",
+                "quantity": 10,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 479
+        },
+        "instructions": [
+            "In a bowl, whisk together milk, Greek yogurt, maple syrup, and chia seeds.",
+            "Cover the bowl and refrigerate for at least 4 hours or overnight to allow the chia seeds to absorb the liquid and thicken.",
+            "Stir the chia seed pudding before serving to ensure a creamy consistency.",
+            "Layer the chia seed pudding with fresh berries and a drizzle of honey for a healthy and satisfying breakfast or snack."
+        ]
+    },
+    "34": {
+        "id": 34,
+        "name": "Banana Bread",
+        "description": "A moist and flavorful bread made with ripe bananas, walnuts, and warm spices, perfect for a comforting and delicious treat.",
+        "image": "assets/images/34_banana_bread.jpg",
+        "equipment": ["Loaf pan", "Bowl", "Whisk"],
+        "preparationTime": 90,
+        "macroRatio": [1127, 42, 150, 44, 31],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal"],
+        "tags": ["highCalorie", "highFiber", "highProtein"],
+        "allergens": ["Nuts", "Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 61,
+                "name": "Flour",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 33,
+                "name": "Milk 1.5%",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 366,
+                "name": "Bananas",
+                "quantity": 200,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 647,
+                "name": "Walnuts",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "Butter",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1098,
+                "name": "Maple syrup",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1312,
+                "name": "Baking powder",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 417,
+                "name": "Salt",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1096,
+                "name": "Cinnamon",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1157,
+                "name": "Nutmeg",
+                "quantity": 1,
+                "unit": "gram"
+            },
+            {
+                "ingredientID": 1663,
+                "name": "Eggs",
+                "quantity": 2,
+                "unit": "units"
+            },
+            {
+                "ingredientID": 1098,
+                "name": "Honey",
+                "quantity": 10,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 413
+        },
+        "instructions": [
+            "Preheat the oven to 350°F (180°C) and grease a loaf pan.",
+            "In a bowl, whisk together flour, baking powder, baking soda, salt, cinnamon, and nutmeg.",
+            "In a separate bowl, mash the ripe bananas and whisk in melted butter, maple syrup, vanilla extract, and eggs.",
+            "Gradually whisk the wet ingredients into the dry ingredients until combined.",
+            "Fold in chopped walnuts and pour the batter into the loaf pan.",
+            "Bake for 50-60 minutes until a toothpick inserted into the center comes out clean.",
+            "Let the banana bread cool in the pan before slicing and serving for a comforting and delicious treat."
+        ]
+    }
 }
