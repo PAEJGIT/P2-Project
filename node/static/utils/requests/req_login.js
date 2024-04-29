@@ -25,7 +25,7 @@ function reqLogin(username, password) {
     .then((data) => {
       if (data.success) {
         alert("Login succesful!");
-        window.location.href = "../pages/dashboard.html";
+        window.location.href = "../pages/choose_mealplan.html";
       } else {
         alert("Login failed:" + data.reason);
       }

@@ -11,7 +11,7 @@ const loginRouter = require("./modules/login");
 const registerRouter = require("./modules/register");
 
 /* Middleware used to convert incoming POST requests to JSON */
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 // Use CORS middleware to allow all cross-origin requests
 // This is essential for allowing requests from different domains, especially during development.
@@ -42,34 +42,31 @@ app.get("/order/set-profile", (req, res) => {
 });
 
 app.post("/mealplandata", (req, res) => {
-  /* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
-  try {
-    const data = fs.readFileSync(__dirname + '/data/temp.json');
-    
-    const jsonData = JSON.parse(data);
-    console.log("Parsed JSON data:", jsonData);
+	/* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
+	try {
+		const data = fs.readFileSync(__dirname + "/data/temp.json");
 
-    console.log("Request body:", req.body); 
+		const jsonData = JSON.parse(data);
+		console.log("Parsed JSON data:", jsonData);
 
-    /*
+		console.log("Request body:", req.body);
+
+		/*
     const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
     */
 
-    jsonData.users[0].familySize = req.body.number_of_people;
-    jsonData.users[0].meals = req.body.number_of_meals;
-    console.log("Updated JSON data:", jsonData); 
+		jsonData.users[0].familySize = req.body.number_of_people;
+		jsonData.users[0].meals = req.body.number_of_meals;
+		console.log("Updated JSON data:", jsonData);
 
-    fs.writeFileSync(__dirname + '/data/accounts.json', JSON.stringify(jsonData, undefined, 4));
+		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(jsonData, undefined, 4));
 
-    res.redirect("/order/set-profile");
-
-  } catch (error) {
-    console.error("Error:", error);
-    res.status(500).send("Internal server error");
-  }
-
+		res.redirect("/order/set-profile");
+	} catch (error) {
+		console.error("Error:", error);
+		res.status(500).send("Internal server error");
+	}
 });
-
 
 app.post("/login", loginRouter);
 
@@ -79,5 +76,5 @@ app.post("/register", registerRouter);
 // Start the server on the specified port
 // This line makes the server listen on port XXXX and logs a message to the console when it starts successfully.
 app.listen(port, "127.0.0.1", () => {
-  console.log(`Server listening on http://localhost:${port}`);
+	console.log(`Server listening on http://localhost:${port}`);
 });

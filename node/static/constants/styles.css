@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: "poppins", sans-serif;
 }
 
 a, button {
@@ -16,7 +17,7 @@ a, button {
 
 #logo {
     height: 60px;
-    width: 60px; 
+    width: 60px;
 }
 
 .nav_icons {
@@ -80,7 +81,7 @@ li:hover .endpoints {
     border-color: #2d3648;
     border-style: solid;
     height: 40px;
-    width: 90px;  
+    width: 90px;
 }
 
 #log_in_button:hover {
@@ -96,8 +97,8 @@ li:hover .endpoints {
     border-color: #2d3648;
     border-style: solid;
     color: white;
+    width: 10rem;
     height: 40px;
-    width: 110px;
 }
 
 #sign_in_button:hover {
@@ -195,7 +196,7 @@ li:hover .endpoints {
     border-color: #2d3648;
     border-style: solid;
     height: 40px;
-    width: 90px; 
+    width: 90px;
 }
 
 #button_back:hover {
@@ -226,13 +227,22 @@ li:hover .endpoints {
 }
 
 #step_content {
-    display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(15, 1fr);
-    background-color: white;
-    grid-column: 4 / 21;
+    display: flex;
+    flex-direction: row;
     grid-row: 5 / 19;
-    overflow: auto;
+    grid-column: 4 / 21;
+    padding: 30px;
+    font-family: "poppins", sans-serif;
+    font-size: 15px;
+}
+#meal_plan_div {
+    margin-left: 20px;
+}
+#meal_plan {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
 }
 
 #step_bar {
@@ -260,7 +270,7 @@ li:hover .endpoints {
     height: 50px;
 }
 
-#step_links div:hover .step_icons {    
+#step_links div:hover .step_icons {
     filter: invert(0%) sepia(95%) saturate(21%) hue-rotate(2deg) brightness(92%) contrast(108%);
 }
 
@@ -274,7 +284,7 @@ li:hover .endpoints {
 }
 
 .link_spans {
-    position: absolute; 
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -304,13 +314,13 @@ li:hover .endpoints {
     row-gap: 20px;
     font-family: "poppins", sans-serif;
     font-size: 15px;
-    
+
 }
 
 .profile_form div {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .profile_form label {
@@ -367,7 +377,7 @@ li:hover .endpoints {
 
 
 
-  
+
   #one_person:checked ~ label[for="one_person"],
   #two_people:checked ~ label[for="two_people"],
   #three_people:checked ~ label[for="three_people"],
@@ -396,9 +406,27 @@ li:hover .endpoints {
 #users {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    width: 100px;
     grid-row: 2 / 7;
     grid-column: 2 / 3;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+#meal_plan_content {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2 / 7;
+    grid-column: 3 / 21;
+    row-gap: 20px;
+
 }
 
 #users div {
@@ -407,14 +435,14 @@ li:hover .endpoints {
     height: 45px;
     border: solid black;
     border-width: 2px;
-    border-right: hidden;   
+    border-right: hidden;
     align-content: center;
     text-align: center;
     font-size: 25px;
 }
 
 #users div:not(:first-child) {
-    border-top: hidden; 
+    border-top: hidden;
 }
 
 
