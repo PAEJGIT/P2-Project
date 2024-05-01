@@ -164,8 +164,6 @@ li:hover .endpoints {
     background-color: #edf0f7;
     border: solid black;
     border-width: 2px;
-    grid-row: 3 / 19;
-    grid-column: 1 / 4;
     border-bottom: hidden;
     border-top: hidden;
 }
