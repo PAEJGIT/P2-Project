@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../constants/styles.css">
 </head>
 
@@ -48,29 +49,33 @@
 
             <div id="step_links">
 
-                <div>
+            
+                <div class="linkContainers" style="background-color: rgba(158, 158, 158, 0.384);">
                     <ul> 
                         <li>
-                            <img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                            <a href="#"><span class="link_spans"></span>Vælg måltidsplan</a>
+                            <img class="step_icons" style="filter: invert(0%) sepia(95%) saturate(21%) hue-rotate(2deg) brightness(92%) contrast(108%);" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
+                            <a class="stepLinks" id="order/choose-mealplan" style="color: black;"><span class="link_spans"></span>Vælg måltidsplan</a>
+                            <i></i>
                         </li>
                     </ul>
                 </div>
 
-                <div>
+                <div class="linkContainers">
                     <ul> 
                         <li>
                             <img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                            <a href="#"><span class="link_spans"></span>Sundhedsprofil</a>
+                            <a class="stepLinks" id="order/set-profile"><span class="link_spans"></span>Sundhedsprofil</a>
+                            <i></i>
                         </li>
                     </ul>
                 </div>
 
-                <div>
+                <div class="linkContainers">
                     <ul> 
                         <li>
                             <img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                            <a href="#"><span class="link_spans"></span>test</a>
+                            <a class="stepLinks" id="test"><span class="link_spans"></span>test</a>
+                            <i></i>
                         </li>
                     </ul>
                 </div>
@@ -108,10 +113,10 @@
         
                         <div> 
                             <span>Antal personer</span>
-                            <input class="formInput" type="radio" name="number_of_people" id="one_person" value="1" checked/>
-                            <input class="formInput" type="radio" name="number_of_people" id="two_people" value="2"/>
-                            <input class="formInput" type="radio" name="number_of_people" id="three_people" value="3"/>
-                            <input class="formInput" type="radio" name="number_of_people" id="four_people" value="4"/>
+                            <input class="peopleRadios" type="radio" name="number_of_people" id="one_person" value="1" checked/>
+                            <input class="peopleRadios" type="radio" name="number_of_people" id="two_people" value="2"/>
+                            <input class="peopleRadios" type="radio" name="number_of_people" id="three_people" value="3"/>
+                            <input class="peopleRadios" type="radio" name="number_of_people" id="four_people" value="4"/>
                         
                             <label for="one_person">1</label>
                             <label for="two_people">2</label>
@@ -124,11 +129,11 @@
                      <div id="number_of_meals"> 
 
                         <span>Antal måltidspakker</span>
-                        <input class="formInput" type="radio" name="number_of_meals" id="one_meal" value="1" checked/>
-                        <input class="formInput" type="radio" name="number_of_meals" id="two_meals" value="2"/>
-                        <input class="formInput" type="radio" name="number_of_meals" id="three_meals" value="3"/>
-                        <input class="formInput" type="radio" name="number_of_meals" id="four_meals" value="4"/>
-                        <input class="formInput" type="radio" name="number_of_meals" id="five_meals" value="5"/>
+                        <input class="mealRadios" type="radio" name="number_of_meals" id="one_meal" value="1" checked/>
+                        <input class="mealRadios" type="radio" name="number_of_meals" id="two_meals" value="2"/>
+                        <input class="mealRadios" type="radio" name="number_of_meals" id="three_meals" value="3"/>
+                        <input class="mealRadios" type="radio" name="number_of_meals" id="four_meals" value="4"/>
+                        <input class="mealRadios" type="radio" name="number_of_meals" id="five_meals" value="5"/>
     
                         <label for="one_meal">1</label>
                         <label for="two_meals">2</label>
@@ -161,17 +166,27 @@
         </div>
 
     </div>
-
+    <script src="../components/allPages.js"></script>
+    
     <script>
 
         // if data already exists then set the default value to what the user had previously picked
-        if (localStorage.getItem('mealPlan')) {
-            const formData = JSON.parse(localStorage.getItem('mealPlan'));
-            let radios = document.getElementsByTagName('input');
+        if (localStorage.getItem('order/choose-mealplan')) {
+            const formData = JSON.parse(localStorage.getItem('order/choose-mealplan'));
 
-            for (let i = 0; i < radios.length; i++) {
-            if (radios[i].value === formData.peopleAmount) {
-                radios[i].checked = true;
+            let peopleRadios = document.getElementsByClassName('peopleRadios');
+            let mealRadios = document.getElementsByClassName('mealRadios');
+
+            for (let i = 0; i < peopleRadios.length; i++) {
+            if (peopleRadios[i].value === formData.peopleAmount) {
+                peopleRadios[i].checked = true;
+                break;       
+             }
+            }
+
+            for (let i = 0; i < mealRadios.length; i++) {
+            if (mealRadios[i].value === formData.mealAmount) {
+                mealRadios[i].checked = true;
                 break;       
              }
             }
@@ -181,21 +196,33 @@
     // Save form data to localStorage when user navigates away from the page
         function saveChoice() {
             window.addEventListener('beforeunload', () => {
-            let radios = document.getElementsByTagName('input');
-            let value;
+            let peopleRadios = document.getElementsByClassName('peopleRadios');
+            let mealRadios = document.getElementsByClassName('mealRadios');
+
+            let mealValue;
+            let peopleValue;
             
-            for (let i = 0; i < radios.length; i++) {
-            if (radios[i].type === 'radio' && radios[i].checked) {
-                value = radios[i].value;
+            for (let i = 0; i < peopleRadios.length; i++) {
+            if (peopleRadios[i].type === 'radio' && peopleRadios[i].checked) {
+                peopleValue = peopleRadios[i].value;
+                break;       
+             }
+            }
+
+             for (let i = 0; i < mealRadios.length; i++) {
+             if (mealRadios[i].type === 'radio' && mealRadios[i].checked) {
+                mealValue = mealRadios[i].value;
                 break;       
              }
             }
 
             const formData = {
-                peopleAmount: value
+                peopleAmount: peopleValue,
+                mealAmount: mealValue 
             };
 
-            localStorage.setItem('mealPlan', JSON.stringify(formData));
+            localStorage.setItem('order/choose-mealplan', JSON.stringify(formData));
+
 
         });
     }

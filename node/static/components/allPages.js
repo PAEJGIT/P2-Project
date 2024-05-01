@@ -1,0 +1,60 @@
+
+function updateCompletedSteps() {
+
+let links = document.getElementsByClassName("stepLinks")
+let icons = document.getElementsByClassName("step_icons")
+let containers = document.getElementsByClassName("linkContainers")
+let checkmarkIcons = document.getElementsByTagName("i");
+
+let stepsCompleted;
+
+/* counts each consecutive completed step for the ordering process */
+for (let i = links.length - 1; i >= 0; i--) {
+    if (localStorage.getItem(links[i].id) && hasNoEmptyValues(links[i].id)) {
+        stepsCompleted++;
+    }
+    else {
+        stepsCompleted = 0;
+    }
+}
+
+/* assigns approiate values to each completed step (changes style indicating the step is completed and adds a link so the user can navigate back and forth) */
+for (let i = 0; i < links.length - 1; i++) {
+    if (i < stepsCompleted) {
+        links[i].setAttribute('href', 'http://localhost:3262/' + links[i].id);
+        links[i].style.color = "black";
+        icons[i].style = "filter: invert(0%) sepia(95%) saturate(21%) hue-rotate(2deg) brightness(92%) contrast(108%);"
+        containers[i].style = "background-color: rgba(158, 158, 158, 0.384);"
+        checkmarkIcons[i].className = "bi bi-check-circle";
+    }
+
+    if (i === stepsCompleted) {
+        links[i].setAttribute('href', 'http://localhost:3262/' + links[i].id);
+    }
+}
+}
+
+/* checks if local storage item has any empty values in it */
+function hasNoEmptyValues(storageData) {
+    let jsonData = localStorage.getItem(storageData);
+    let obj = JSON.parse(jsonData);
+    for (let key in obj) {
+        if(obj[key] === null || obj[key] === undefined || obj[key] === '') {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+console.log("hello");
+
+let step1Submit = document.getElementById("select_plan_submit");
+let step2Submit = document.getElementById("profileSubmit");
+
+
+document.addEventListener('DOMContentLoaded', updateCompletedSteps);
+
+step2Submit.addEventListener("click", updateCompletedSteps); 
+
+
