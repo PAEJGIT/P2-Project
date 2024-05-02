@@ -67,7 +67,7 @@
 						<ul> 
 							<li>
 								<img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-								<a class="stepLinks" id="test"><span class="link_spans"></span>test</a>
+								<a class="stepLinks" id="order/test"><span class="link_spans"></span>test</a>
 								<i></i>
 							</li>
 						</ul>
@@ -84,7 +84,7 @@
 				<span id="step_title">Sundhedsprofil</span>
 
 				<div id="step_buttons">
-					<button id="button_back">Tilbage</button>
+					<button id="button_back" onclick="window.location.href = step1Page;">Tilbage</button>
 					<button id="button_next">Næste</button>
 				</div>
 			</div>
@@ -97,7 +97,7 @@
 				<form class="profile_form" id="form1">
 					<div>
 						<label>Navn</label>
-						<input type="text" id="name" required />
+						<input type="text" id="name" name="name" required />
 					</div>
 
 					<div>
@@ -111,17 +111,17 @@
 
 					<div>
 						<label for="age">Din alder</label>
-						<input type="number" id="age" min="10" max="100" step="1" required />
+						<input type="number" id="age" min="10" max="100" name="age" step="1" required />
 					</div>
 
 					<div>
 						<label for="height">Din højde</label>
-						<input type="number" id="height" min="120" max="220" step="1" required />
+						<input type="number" id="height" min="120" max="220" name="height" step="1" required />
 					</div>
 
 					<div>
 						<label for="weight">Din kropsvægt</label>
-						<input type="number" id="weight" min="30" max="400" step="1" required />
+						<input type="number" id="weight" min="30" max="400" name="weight" step="1" required />
 					</div>
 
 					<div>
@@ -145,7 +145,7 @@
 						</select>
 					</div>
 
-					<input id="profileSubmit"type="submit" />
+					<input id="profileSubmit" type="submit" onclick="updateCompletedSteps()"/>
 				</form>
 
 				<div id="meal_plan">
@@ -263,6 +263,9 @@
 		<script src="../components/allPages.js"></script>
 		
 		<script>
+			
+
+					
 			/* dynamically renders a form for each profile */
 			function profileRendering(numberOfPeople) {
 				allProfiles = document.getElementById("users");
@@ -284,9 +287,29 @@
 						newForm.style.visibility = "hidden";
 						content = document.getElementById("step_content");
 						content.appendChild(newForm);
+						addChildIds(i + 1);
+					
 					}
 				}
 			}
+
+			function addChildIds(formNumber) {
+
+				let childInputs = document.querySelectorAll(`#form${formNumber} input`);
+				let childSelects = document.querySelectorAll(`#form${formNumber} select`);
+
+				let firstFormInputs = document.querySelectorAll(`#form1 input`);
+				let firstFormSelects = document.querySelectorAll(`#form1 select`);
+
+					for (let i = 0; i < childInputs.length; i++) {
+						childInputs[i].id = firstFormInputs[i].id + `${formNumber}`;
+					}
+
+					for (let i = 0; i < childSelects.length; i++) {
+						childSelects[i].id = firstFormSelects[i].id + `${formNumber}`;
+					}
+			}
+
 
 			mealPlan = localStorage.getItem("order/choose-mealplan");
 			data = JSON.parse(mealPlan);
@@ -310,33 +333,60 @@
 				});
 			}
 
-			
-    if (localStorage.getItem('order/set-profile')) {
-        const formData = JSON.parse(localStorage.getItem('order/set-profile'));
-			document.getElementById("name").value = formData.name,
-			document.getElementById("select_sex").value = formData.sex,
-			document.getElementById("age").value = formData.age,
-			document.getElementById("height").value = formData.height,
-			document.getElementById("weight").value = formData.weight,
-			document.getElementById("select_allergies").value = formData.allergies,
-			document.getElementById("select_healthgoal").value = formData.healthgoal
-    }
 
-    // Save form data to sessionStorage when user navigates away from the page
-    window.addEventListener('beforeunload', () => {
-        const profile = {
-				 name: document.getElementById("name").value,
-				 sex: document.getElementById("select_sex").value,
-				 age: document.getElementById("age").value,
-				 height: document.getElementById("height").value,
-				 weight: document.getElementById("weight").value,
-				 allergies: document.getElementById("select_allergies").value,
-				 healthgoal: document.getElementById("select_healthgoal").value
-        }
+    /* Saves all form data to localStorage when user navigates away from the page */
 
-        localStorage.setItem('order/set-profile', JSON.stringify(profile));
+    window.addEventListener("beforeunload", () => {
+		let allFormsData = [];
+		
+		for (let i = 1; i <= data.peopleAmount; i++) {
+			let getEachForm = document.getElementById(`form${i}`)
+			let formData = new FormData(getEachForm);
+			let obj = Object.fromEntries(formData);
+			allFormsData.push(obj);
 
+        localStorage.setItem('order/set-profile', JSON.stringify(allFormsData));
+	}
     });
+
+	window.addEventListener("DOMContentLoaded", () => {
+		let allFormsData = [];
+		
+		for (let i = 1; i <= data.peopleAmount; i++) {
+			let getEachForm = document.getElementById(`form${i}`)
+			let formData = new FormData(getEachForm);
+			let obj = Object.fromEntries(formData);
+			allFormsData.push(obj);
+
+        localStorage.setItem('order/set-profile', JSON.stringify(allFormsData));
+	}
+    });
+		
+		/* checks if existing form data is available. if it is then assign the values to the input fields */
+	if (localStorage.getItem('order/set-profile')) {
+        const formData = JSON.parse(localStorage.getItem('order/set-profile'));
+			document.getElementById("name").value = formData[0].name,
+			document.getElementById("select_sex").value = formData[0].sex,
+			document.getElementById("age").value = formData[0].age,
+			document.getElementById("height").value = formData[0].height,
+			document.getElementById("weight").value = formData[0].weight,
+			document.getElementById("select_allergies").value = formData[0].allergies,
+			document.getElementById("select_healthgoal").value = formData[0].healthgoal
+
+			for (let i = 2, k = 1; i <= data.peopleAmount; i++, k++) {
+			document.getElementById(`name${i}`).value = formData[`${k}`].name,
+			document.getElementById(`select_sex${i}`).value = formData[`${k}`].sex,
+			document.getElementById(`age${i}`).value = formData[`${k}`].age,
+			document.getElementById(`height${i}`).value = formData[`${k}`].height,
+			document.getElementById(`weight${i}`).value = formData[`${k}`].weight,
+			document.getElementById(`select_allergies${i}`).value = formData[`${k}`].allergies,
+			document.getElementById(`select_healthgoal${i}`).value = formData[`${k}`].healthgoal
+			}
+    }
+	
+				
+	
+	let step1Page = "http://localhost:3262/order/choose-mealplan";
 
 	/*
     function goForward() {

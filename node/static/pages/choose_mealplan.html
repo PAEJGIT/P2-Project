@@ -74,7 +74,7 @@
                     <ul> 
                         <li>
                             <img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                            <a class="stepLinks" id="test"><span class="link_spans"></span>test</a>
+                            <a class="stepLinks" id="order/test"><span class="link_spans"></span>test</a>
                             <i></i>
                         </li>
                     </ul>
@@ -96,7 +96,7 @@
 
             <div id="step_buttons">
                 <button id="button_back">Tilbage</button>
-                <button id="button_next" onclick="goForward()">Næste</button>
+                <button id="button_next" onclick="nextPage(step1Data, step2Page)">Næste</button>
             </div>
 
         </div>
@@ -169,6 +169,8 @@
     <script src="../components/allPages.js"></script>
     
     <script>
+        let inputButton = document.getElementById("select_plan_submit");
+        inputButton.addEventListener("submit", updateCompletedSteps());
 
         // if data already exists then set the default value to what the user had previously picked
         if (localStorage.getItem('order/choose-mealplan')) {
@@ -226,6 +228,25 @@
 
         });
     }
+
+
+    let step2Page = "http://localhost:3262/order/set-profile";
+    
+    let jsonData = localStorage.getItem("order/choose-mealplan");
+    let step1Data = JSON.parse(jsonData);
+    
+    function nextPage(stepData, nextPage) {
+        for (let key in stepData) {
+            if(stepData[key] === null || stepData[key] === undefined || stepData[key] === '') {
+                window.alert("Please enter all your details!");
+                return false;
+            }
+        }
+        window.location.href = nextPage;
+}
+
+
+
 
     </script>
 

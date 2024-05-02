@@ -41,6 +41,11 @@ app.get("/order/set-profile", (req, res) => {
 	res.sendFile(path.join(__dirname, "/node/static/pages/", "set_profile.html"));
 });
 
+app.get("/order/test", (req, res) => {
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "test.html"));
+});
+
+
 app.post("/mealplandata", (req, res) => {
 	/* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
 	try {
