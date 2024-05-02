@@ -19,7 +19,7 @@ for (let i = links.length - 1; i >= 0; i--) {
 }
 
 /* assigns approiate values to each completed step (changes style indicating the step is completed and adds a link so the user can navigate back and forth) */
-for (let i = 0; i < links.length - 1; i++) {
+for (let i = 0; i <= links.length - 1; i++) {
     if (i < stepsCompleted) {
         links[i].setAttribute('href', 'http://localhost:3262/' + links[i].id);
         links[i].style.color = "black";
@@ -38,8 +38,27 @@ for (let i = 0; i < links.length - 1; i++) {
 function hasNoEmptyValues(storageData) {
     let jsonData = localStorage.getItem(storageData);
     let obj = JSON.parse(jsonData);
-    for (let key in obj) {
-        if(obj[key] === null || obj[key] === undefined || obj[key] === '') {
+    let bool;
+
+    /* since the functions differs from two different cases i have divided it into an if else statement (array of objects or a singular object) */
+    if (obj.length >= 1) {
+        for (let i = 0; i < obj.length; i++) {
+            bool = checkForEmptyValues(obj[i]);
+            console.log(bool);
+            if (bool === false) {
+                return bool;
+            }
+        }
+    }
+    else {
+         bool = checkForEmptyValues(obj);
+    }
+    return bool;
+}
+
+function checkForEmptyValues(object) {
+    for (let key in object) {
+        if(object[key] === null || object[key] === undefined || object[key] === '') {
             return false;
         }
     }
@@ -54,7 +73,5 @@ let step2Submit = document.getElementById("profileSubmit");
 
 
 document.addEventListener('DOMContentLoaded', updateCompletedSteps);
-
-step2Submit.addEventListener("click", updateCompletedSteps); 
 
 
