@@ -6,42 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../constants/styles.css">
+    <script src="../components/header.js"></script>
+    <script src="../components/footer.js"></script>
 </head>
 
 <body>
 
+    <div id="header-container"></div>
+    
     <div id="grid_parent">
     
-        <div id="header">
-
-            <a href="#"><img id="logo" src=https://www.iconpacks.net/icons/1/free-restaurant-icon-952-thumb.png></a>
-
-            <nav class="nav_bar">
-                <ul> 
-                    <li>
-                        <img class="nav_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                        <a class="endpoints" href="#">Planlæg Måltid</a>
-                    </li>
-                    <li>
-                        <img class="nav_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                        <a class="endpoints" href="#">Alle Opskrifter</a></li>
-                    <li>
-                        <img class="nav_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                        <a class="endpoints" href="#">Alle Ingredienser  </a>
-                    </li>
-                    <li>
-                        <img class="nav_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                        <a  class="endpoints" id="kosttilskud" href="#">Kosttilskud</a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <div id="nav_buttons">
-                <button id="log_in_button" onclick="location.href='https://google.com'" type="button">Log ind</button>
-                <button id="sign_in_button" onclick="location.href='step2.html'" type="button">Opret bruger</button>
-            </div>
-
-        </div>
+  
 
         
         
@@ -150,22 +125,13 @@
             </div>
 
         </div>
-
-
-        <div id="footer">
-           
-            <span id="copyright">© 2023-current — Aalborg Universitet. All rights reserved.</span>
-
-            <footer>
-                <a  href="#" class="footer_links">Privacy Policy</a>
-                <a  href="#" class="footer_links">Terms & Conditions</a>
-                <a  href="#" class="footer_links">Cookie Policy</a>
-                <a  href="#" class="footer_links">Contact</a>
-            </footer>   
-
-        </div>
-
     </div>
+            
+    
+
+          <div id="footer-container"></div>
+
+
     <script src="../components/allPages.js"></script>
     
     <script>
@@ -235,9 +201,15 @@
     let jsonData = localStorage.getItem("order/choose-mealplan");
     let step1Data = JSON.parse(jsonData);
     
+
     function nextPage(stepData, nextPage) {
+        if (!stepData) {
+            window.alert("Please enter all your details!");
+            return false;   
+         }
+         
         for (let key in stepData) {
-            if(stepData[key] === null || stepData[key] === undefined || stepData[key] === '') {
+            if (stepData[key] === null || stepData[key] === undefined || stepData[key] === '') {
                 window.alert("Please enter all your details!");
                 return false;
             }
@@ -246,6 +218,14 @@
 }
 
 
+    document.addEventListener("DOMContentLoaded", function () {
+				const headerContainer = document.getElementById("header-container");
+				headerContainer.innerHTML = Header();
+			});
+			document.addEventListener("DOMContentLoaded", function () {
+				const headerContainer = document.getElementById("footer-container");
+				headerContainer.innerHTML = Footer();
+			});
 
 
     </script>

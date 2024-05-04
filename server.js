@@ -69,7 +69,7 @@ app.post("/mealplandata", (req, res) => {
 
 		const jsonData = JSON.parse(data);
 
-		/*
+	/*
     const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
     */
 
@@ -142,6 +142,8 @@ app.get("/api/ingredients", validateAPIKey, (req, res) => {
 		}
 	});
 });
+
+
 
 // Start the server on the specified port and hostname
 app.listen(port, hostname, () => {
