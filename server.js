@@ -7,6 +7,7 @@ const path = require("path"); // Node.js core module to work with file paths
 // Import custom modules
 const loginRouter = require("./modules/login"); // Import the login module
 const registerRouter = require("./modules/register"); // Import the register module
+const log = require("./modules/logger"); // Import the register module
 
 // Create an instance of Express
 const app = express();
@@ -114,6 +115,7 @@ app.get("/api/ingredients", (req, res) => {
 	fs.readFile(filePath, (err, data) => {
 		if (err) {
 			// Send an error message if the file cannot be read
+			log.error(__filename, null, "Error reading ingredients.json", err);
 			res.status(500).send("An error occurred while reading ingredients.json");
 			return;
 		}
@@ -124,6 +126,7 @@ app.get("/api/ingredients", (req, res) => {
 			res.json(jsonData);
 		} catch (e) {
 			// Handle parsing errors
+			log.error(__filename, null, "Error parsing ingredients.json", e);
 			res.status(500).send("Error parsing JSON data.");
 		}
 	});
@@ -131,7 +134,7 @@ app.get("/api/ingredients", (req, res) => {
 
 // Start the server on the specified port and hostname
 app.listen(port, hostname, () => {
-	console.log(`Server listening on http://localhost:${port}`);
+	log.success(__filename, null, "Server listening on", `http://${hostname}:${port}`);
 });
 
 // Define a route for the home page
