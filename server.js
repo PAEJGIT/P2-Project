@@ -59,15 +59,17 @@ Object.keys(routes).forEach((route) => {
 
 app.post("/login", loginRouter);
 app.post("/register", registerRouter);
+app.get("/order/test", (req, res) => {
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "test.html"));
+});
+
+
 app.post("/mealplandata", (req, res) => {
 	/* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
 	try {
 		const data = fs.readFileSync(__dirname + "/data/temp.json");
 
 		const jsonData = JSON.parse(data);
-		console.log("Parsed JSON data:", jsonData);
-
-		console.log("Request body:", req.body);
 
 		/*
     const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
@@ -75,7 +77,7 @@ app.post("/mealplandata", (req, res) => {
 
 		jsonData.users[0].familySize = req.body.number_of_people;
 		jsonData.users[0].meals = req.body.number_of_meals;
-		console.log("Updated JSON data:", jsonData);
+
 
 		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(jsonData, undefined, 4));
 
