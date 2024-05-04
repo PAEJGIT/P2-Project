@@ -24,7 +24,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/node/static/"));
 
 // ROUTING
-const path_to_pages = (page) => path.join(__dirname, "/node/static/pages/", page);
 const routes = {
 	Home: {
 		url: "/",
@@ -53,7 +52,7 @@ const routes = {
 };
 Object.keys(routes).forEach((route) => {
 	app.get(routes[route].url, (req, res) => {
-		res.sendFile(path_to_pages(routes[route].page));
+		res.sendFile(path.join(__dirname, "/node/static/pages/", routes[route].page));
 	});
 });
 
@@ -62,7 +61,6 @@ app.post("/register", registerRouter);
 app.get("/order/test", (req, res) => {
 	res.sendFile(path.join(__dirname, "/node/static/pages/", "test.html"));
 });
-
 
 app.post("/mealplandata", (req, res) => {
 	/* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
@@ -78,7 +76,6 @@ app.post("/mealplandata", (req, res) => {
 		jsonData.users[0].familySize = req.body.number_of_people;
 		jsonData.users[0].meals = req.body.number_of_meals;
 
-
 		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(jsonData, undefined, 4));
 
 		res.redirect("/order/set-profile");
@@ -88,8 +85,20 @@ app.post("/mealplandata", (req, res) => {
 	}
 });
 
+// API Validation Middleware
+const validateAPIKey = (req, res, next) => {
+	const apiKey = req.headers["x-api-key"];
+	const validApiKey = "123456";
+	if (!apiKey || apiKey !== validApiKey) {
+		log.error(__filename, null, "Unauthorized: Invalid API key", apiKey);
+		res.status(401).send("Unauthorized: Invalid API key");
+		return;
+	}
+	log.success(__filename, null, "API key validated", apiKey);
+	next();
+};
 // API
-app.get("/api/recipes", (req, res) => {
+app.get("/api/recipes", validateAPIKey, (req, res) => {
 	// Specify the path to your JSON file
 	const filePath = "data/recipes.json";
 	// Read the JSON file
@@ -110,7 +119,7 @@ app.get("/api/recipes", (req, res) => {
 		}
 	});
 });
-app.get("/api/ingredients", (req, res) => {
+app.get("/api/ingredients", validateAPIKey, (req, res) => {
 	// Specify the path to your JSON file
 	const filePath = "data/ingredients.json";
 	// Read the JSON file

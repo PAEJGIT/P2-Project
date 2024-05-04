@@ -51,7 +51,7 @@ const colorsRef = {
  * @returns {string} The colorized string.
  */
 const colorString = (textcolor, backgroundColor, string) => {
-	return `${colorsRef[textcolor]}${colorsRef[backgroundColor]}${colorsRef.Bright}${string}${colorsRef.Reset}`;
+	return `${colorsRef[textcolor]}${colorsRef[backgroundColor]}${colorsRef.Bright}${string}${colorsRef.Reset}\t`;
 };
 
 /**
@@ -82,7 +82,7 @@ const LogMain = ({
 		const locationString = fileString ? ` in ${fileString}` : "";
 		const profixString = profix ? `${profix}: ` : "";
 
-		console.info(colorString(fgColor, bgColor, ` ${symbol}${timeString}${funcString}${locationString} | ${profixString}${message} \t`));
+		console.info(colorString(fgColor, bgColor, ` ${symbol}${timeString}${funcString}${locationString} | ${profixString}${message}`));
 	};
 
 	const TYPES = {
