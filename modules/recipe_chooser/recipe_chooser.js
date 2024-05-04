@@ -110,6 +110,8 @@ function checkValidRecipeSetsOfBreakfast(recipeName, sortedRecipesJSON, targetMa
             if(recipeSetData.minError < maxErrorRange) {
                 validRecipes[recipeName][lunchKey][dinnerKey] = {
                     "info": sortedRecipesJSON[recipeName][lunchKey][dinnerKey].info,
+                    "portions": [recipeSetData.bestPortions.breakfast, recipeSetData.bestPortions.lunch, recipeSetData.bestPortions.dinner],
+                    "macros": recipeSetData.bestTotals
                 }
                 dinnerAmount++;
             }
