@@ -68,8 +68,7 @@ function checkForEmptyValues(object) {
 
 console.log("hello");
 
-let step1Submit = document.getElementById("select_plan_submit");
-let step2Submit = document.getElementById("profileSubmit");
+
 
 
 document.addEventListener('DOMContentLoaded', updateCompletedSteps);

@@ -53,7 +53,7 @@ app.post("/mealplandata", (req, res) => {
 
 		const jsonData = JSON.parse(data);
 
-		/*
+	/*
     const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
     */
 

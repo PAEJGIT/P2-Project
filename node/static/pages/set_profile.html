@@ -43,6 +43,7 @@
 
 			<div id="step_bar">
 				<div id="step_links">
+
 					<div class="linkContainers">
 						<ul> 
 							<li>
@@ -72,6 +73,7 @@
 							</li>
 						</ul>
 					</div>
+
 				</div>  
 
 				<div id="order_box">
@@ -84,7 +86,7 @@
 				<span id="step_title">Sundhedsprofil</span>
 
 				<div id="step_buttons">
-					<button id="button_back" onclick="window.location.href = step1Page;">Tilbage</button>
+					<button id="button_back" onclick="previousPage(`http://localhost:3262/order/choose-mealplan`)">Tilbage</button>
 					<button id="button_next">Næste</button>
 				</div>
 			</div>
@@ -95,13 +97,12 @@
 				</div>
 
 				<form class="profile_form" id="form1">
-					<div>
-						<label>Navn</label>
-						<input type="text" id="name" name="name" required />
-					</div>
-
-					<div>
-						<label for="select_sex" id="label_sex">Dit køn</label>
+									
+					<div> 
+						<div class="inputText"> 
+							<label for="select_sex" id="label_sex">Dit køn</label>
+							<span>gkrsfog</span>
+						</div>
 						<select name="sex" id="select_sex" required>
 							<option disabled selected value>— Vælg et køn —</option>
 							<option value="male">Mand</option>
@@ -109,55 +110,54 @@
 						</select>
 					</div>
 
-					<div>
-						<label for="age">Din alder</label>
+					<div> 
+						<div class="inputText"> 
+							<label for="age">Din alder</label>
+							<span>gkrsfog</span>
+						</div>
 						<input type="number" id="age" min="10" max="100" name="age" step="1" required />
 					</div>
 
-					<div>
-						<label for="height">Din højde</label>
-						<input type="number" id="height" min="120" max="220" name="height" step="1" required />
-					</div>
-
-					<div>
-						<label for="weight">Din kropsvægt</label>
+					<div> 
+						<div class="inputText"> 
+							<label for="weight">Din kropsvægt</label>
+							<span>gkrsfog</span>
+						</div>
 						<input type="number" id="weight" min="30" max="400" name="weight" step="1" required />
 					</div>
 
-					<div>
-						<label for="select_allergies" id="label_allergies">Har du allergi(er)?</label>
-						<select name="allergies" id="select_allergies">
-							<option disabled selected value>— Nej, jeg har ingen allergi(er) —</option>
-							<option value="lactoseintolerance">Laktoseintolerance</option>
-							<option value="nutsallergic">Nøddeallergi</option>
-							<option value="eggsallergic">Æggeallergi</option>
+					<div> 
+						<div class="inputText"> 
+							<label for="height">Din højde</label>
+							<span>gkrsfog</span>
+						</div>
+						<input type="number" id="height" min="120" max="220" name="height" step="1" required />
+					</div>
+
+					<div> 
+						<div class="inputText"> 
+							<label for="select_activity" id="label_activity">Dit aktivitetsniveau</label>
+							<span>gkrsfog</span>
+						</div>
+						<select name="activitylevel" id="select_activity" required>
+							<option disabled selected value>— Vælg et aktivitetsniveau —</option>
+							<option value="1">Lidt eller ingen aktivitet</option>
+							<option value="2">Lidt aktiv (let motion 1-2 gange/uge) </option>
+							<option value="3">Ret aktiv (moderat motion 2 dage/uge) </option>
+							<option value="4">Aktiv (let/moderat motion 3-4 dage/uge) </option>
+							<option value="5">Meget aktiv (Hård mortion 4-6 dage/uge) </option>		
 						</select>
 					</div>
 
-					<div>
-						<label for="select_healthgoal" id="label_healthgoal">Hvad er dit sundhedsmål?</label>
-						<select name="healthgoal" id="select_healthgoal" required>
-							<option disabled selected value>— Vælg en fra listen —</option>
-							<option value="weightloss">Vægttab</option>
-							<option value="weightgain">Vægtøgning</option>
-							<option value="maintaince">Generel Sundhed</option>
-							<option value="musclegain">Muskeløgning</option>
-						</select>
-					</div>
+			
 
-					<input id="profileSubmit" type="submit" onclick="updateCompletedSteps()"/>
+					<div id="stepbuttons">
+						<button id="backButtton">Tilbage</button>
+						<button id="nextButton" onclick="updateCompletedSteps()">Næste</button>
+					</div>
 				</form>
-
-				<div id="meal_plan">
-					<div>
-						<div id="meal_plan_title"></div>
-						<div id="meal_plan_stats"></div>
-					</div>
-					<div id="meal_plan_div">
-						<div id="meal_plan_content"></div>
-					</div>
-				</div>
 		</div>
+
 		<div id="footer">
 			<span id="copyright">© 2023-current — Aalborg Universitet. All rights reserved.</span>
 
@@ -168,97 +168,7 @@
 				<a href="#" class="footer_links">Contact</a>
 			</footer>
 		</div>
-		<script>
-			/* Recieve values from input fields and store them in an object */
-			const form = document.getElementById("form1");
-			form.addEventListener("submit", function (event) {
-				event.preventDefault();
-				const name = document.getElementById("name").value;
-				const sex = document.getElementById("select_sex").value;
-				const age = document.getElementById("age").value;
-				const height = document.getElementById("height").value;
-				const weight = document.getElementById("weight").value;
-				const allergies = document.getElementById("select_allergies").value;
-				const healthgoal = document.getElementById("select_healthgoal").value;
-				const profile = {
-					name: name,
-					sex: sex,
-					age: age,
-					height: height,
-					weight: weight,
-					allergies: allergies,
-					healthgoal: healthgoal,
-				};
-				const response = fetch("../data/recipes.json")
-					.then((response) => response.json())
-					.then((data) => {
-						/* Call the mealRecommendation function and pass the profile object as an argument */
-						const result = mealRecommendation(data, height, weight, age, 1);
-						console.log("Result: ", result);
-						console.table(result);
 
-						/* Append meals to <div id="meal_plan_content"> */
-						const mealPlanTitle = document.getElementById("meal_plan_title");
-						mealPlanTitle.innerHTML = `<h1>Din måltidsplan, ${name}</h1>`;
-						let mealPlanStats = document.getElementById("meal_plan_stats");
-						mealPlanStats.innerHTML = `<h4>Stats</h4>`;
-						mealPlanStats.innerHTML = `
-						<hr>
-						<p>Antal kalorier: ${result["totals"].calories} kcal</p>
-						<p>Antal proteiner: ${result["totals"].proteins} g</p>
-						<p>Antal kulhydrater: ${result["totals"].carbs} g</p>
-						<p>Antal fedt: ${result["totals"].fats} g</p>
-						<hr>
-						`;
-
-						const mealPlanContent = document.getElementById("meal_plan_content");
-						/* Create a div element for each meal and append it to the mealPlanContent */
-						/* Each div element contains the name of the meal, the amount of calories, proteins, carbohydrates, and fats on multiple lines with an image */
-						mealPlanContent.innerHTML = "";
-						for (let i = 0; i < 3; i++) {
-							let current = ""
-							if (i == 0) {
-								current = "breakfast"
-							} else if (i == 1) {
-								current = "lunch"
-							} else if (i == 2) {
-								current = "dinner"
-							}
-							const meal = document.createElement("div");
-							meal.className = "meal";
-							meal.innerHTML = `<img src="${result[current].image}" alt="${result[current].name}" />
-							<h3>${result[current].name}</h3>
-							<p>${result[current].calories} kcal</p>
-							<p>${result[current].proteins} g protein</p>
-							<p>${result[current].carbs} g kulhydrater</p>
-							<p>${result[current].fats} g fedt</p>`;
-							mealPlanContent.appendChild(meal);
-						}
-
-						/**
-						 * 						const breakfast = document.createElement("div");
-						breakfast.innerHTML = `Morgenmad: \n${result.breakfast.name} - ${result.breakfast.calories} kcal\nProteins: ${result.breakfast.proteins}\nCarbohydrates: ${result.breakfast.carbs}\nFats: ${result.breakfast.fats}`;
-						mealPlanContent.appendChild(breakfast);
-
-						const lunch = document.createElement("div");
-						lunch.innerHTML = `Frokost: \n${result.lunch.name} - ${result.lunch.calories} kcal\nProteins: ${result.lunch.proteins}\nCarbohydrates: ${result.lunch.carbs}\nFats: ${result.lunch.fats}`;
-						mealPlanContent.appendChild(lunch);
-
-						const dinner = document.createElement("div");
-						dinner.innerHTML = `Aftensmad: \n${result.dinner.name} - ${result.dinner.calories} kcal\nProteins: ${result.dinner.proteins}\nCarbohydrates: ${result.dinner.carbs}\nFats: ${result.dinner.fats}`;
-						mealPlanContent.appendChild(dinner);*/
-
-					})
-					.catch((error) => console.error("Error loading the JSON:", error));
-
-
-				/* Store the profile object in the local storage */
-				/* localStorage.setItem("profile", JSON.stringify(profile)); */
-
-				/* Redirect to the next page */
-				/* window.location.href = "http://localhost:3000/static/pages/test.html"; */
-			});
-		</script>
 
 		<script src="../components/allPages.js"></script>
 		
@@ -270,6 +180,7 @@
 			function profileRendering(numberOfPeople) {
 				allProfiles = document.getElementById("users");
 
+				
 				for (let i = 0; i < numberOfPeople; i++) {
 					profile = document.createElement("div");
 					profileNumber = document.createElement("span");
@@ -288,10 +199,10 @@
 						content = document.getElementById("step_content");
 						content.appendChild(newForm);
 						addChildIds(i + 1);
-					
 					}
 				}
 			}
+	
 
 			function addChildIds(formNumber) {
 
@@ -324,12 +235,19 @@
 			function swapForms(profile, form) {
 				document.getElementById(profile).addEventListener("click", function () {
 					for (let i = 1; i <= data.peopleAmount; i++) {
-						let hide = document.getElementById(`form${i}`);
-						hide.style.visibility = "hidden";
+						let formVisibility = document.getElementById(`form${i}`);
+						let userColor = document.getElementById(`profile${i}`)
+						userColor.style.height = "100%";
+						userColor.style.backgroundColor = "#a0abc0"
+						formVisibility.style.visibility = "hidden";
 					}
 
-					hide = document.getElementById(form);
-					hide.style.visibility = "visible";
+					userColor = document.getElementById(profile);
+					userColor.style.backgroundColor = "#2d3648"
+					userColor.style.height = "104%";
+
+					formVisibility = document.getElementById(form);
+					formVisibility.style.visibility = "visible";
 				});
 			}
 
@@ -349,44 +267,45 @@
 	}
     });
 
-	window.addEventListener("DOMContentLoaded", () => {
-		let allFormsData = [];
-		
-		for (let i = 1; i <= data.peopleAmount; i++) {
-			let getEachForm = document.getElementById(`form${i}`)
-			let formData = new FormData(getEachForm);
-			let obj = Object.fromEntries(formData);
-			allFormsData.push(obj);
-
-        localStorage.setItem('order/set-profile', JSON.stringify(allFormsData));
+	
+	reloadPage();
+	
+	function reloadPage() {
+		window.onload = function() {
+    if (!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
 	}
-    });
-		
+	}
+
+	
+	
 		/* checks if existing form data is available. if it is then assign the values to the input fields */
 	if (localStorage.getItem('order/set-profile')) {
         const formData = JSON.parse(localStorage.getItem('order/set-profile'));
-			document.getElementById("name").value = formData[0].name,
 			document.getElementById("select_sex").value = formData[0].sex,
 			document.getElementById("age").value = formData[0].age,
 			document.getElementById("height").value = formData[0].height,
 			document.getElementById("weight").value = formData[0].weight,
-			document.getElementById("select_allergies").value = formData[0].allergies,
-			document.getElementById("select_healthgoal").value = formData[0].healthgoal
-
+			document.getElementById("select_activity").value = formData[0].activitylevel
+	
 			for (let i = 2, k = 1; i <= data.peopleAmount; i++, k++) {
-			document.getElementById(`name${i}`).value = formData[`${k}`].name,
 			document.getElementById(`select_sex${i}`).value = formData[`${k}`].sex,
 			document.getElementById(`age${i}`).value = formData[`${k}`].age,
 			document.getElementById(`height${i}`).value = formData[`${k}`].height,
 			document.getElementById(`weight${i}`).value = formData[`${k}`].weight,
-			document.getElementById(`select_allergies${i}`).value = formData[`${k}`].allergies,
-			document.getElementById(`select_healthgoal${i}`).value = formData[`${k}`].healthgoal
+			document.getElementById(`select_activity${i}`).value = formData[`${k}`].activitylevel
 			}
     }
 	
 				
 	
-	let step1Page = "http://localhost:3262/order/choose-mealplan";
+	
+
+	function previousPage(previousPage) {
+		location.assign(previousPage);
+	}
 
 	/*
     function goForward() {
