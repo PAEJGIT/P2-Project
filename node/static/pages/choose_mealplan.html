@@ -235,9 +235,15 @@
     let jsonData = localStorage.getItem("order/choose-mealplan");
     let step1Data = JSON.parse(jsonData);
     
+
     function nextPage(stepData, nextPage) {
+        if (!stepData) {
+            window.alert("Please enter all your details!");
+            return false;   
+         }
+         
         for (let key in stepData) {
-            if(stepData[key] === null || stepData[key] === undefined || stepData[key] === '') {
+            if (stepData[key] === null || stepData[key] === undefined || stepData[key] === '') {
                 window.alert("Please enter all your details!");
                 return false;
             }

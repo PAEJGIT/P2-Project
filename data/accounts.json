@@ -4,8 +4,8 @@
             "name": "peter",
             "email": "peter@gmail.com",
             "password": "Peter123",
-            "familySize": "2",
-            "meals": "2"
+            "familySize": "4",
+            "meals": "4"
         }
     ]
 }
