@@ -27,6 +27,13 @@ const calcNutritionalValues = (height, weight, age, activityLevel) => {
 	return { tdee, protein, carbs, fat };
 };
 
+// Ingrediens to avoid
+// Recipes to avoid
+// Prefered cooking time, equipment, difficulty and amount of servings
+// Pre-sort recipes by meal type and macro ratio
+// Images for each (used) ingredients
+// Create proper JSON API to fetch recipes
+// Create proper JSON API to fetch ingredients
 const mealRecommendation = (recipes, weight, height, age, activityLevel) => {
 	const { tdee, protein, carbs, fat, bmi } = calcNutritionalValues(weight, height, age, activityLevel);
 	const target = { proteins: protein, carbs: carbs, fats: fat };
