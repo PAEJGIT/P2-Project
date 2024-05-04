@@ -9,6 +9,7 @@ const port = 3262; // Define the port number the server will listen on
 
 const loginRouter = require("./modules/login");
 const registerRouter = require("./modules/register");
+const validRecipesRouter = require("./modules/recipe_chooser/recipe_chooser")
 
 /* Middleware used to convert incoming POST requests to JSON */
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +27,8 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/node/static/"));
 
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
+	//res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "recipe_test.html"));
 });
 
 app.get("/login", (req, res) => {
@@ -74,6 +76,8 @@ app.post("/login", loginRouter);
 
 // Route for registration
 app.post("/register", registerRouter);
+
+app.post("/validRecipes", validRecipesRouter);
 
 // Start the server on the specified port
 // This line makes the server listen on port XXXX and logs a message to the console when it starts successfully.

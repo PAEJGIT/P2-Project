@@ -445,5 +445,100 @@ hr {
     border-top: hidden;
 }
 
+  
+.container {
+    display: flex;
+    width: 100%;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
 
+.button_container {
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
 
+.bar {
+    width: 500px;
+    background: gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.itemlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+
+.item {
+    /*transition: width 0.5s ease, height 0.5s ease, border 0.5s ease, transform 0.5s ease;*/
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    scroll-snap-align: center;
+}
+
+.invisible {
+    border: 0px solid black;
+    background: none;
+    opacity: 0%;
+}
+
+.arrow {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    color: black;
+}
+
+.arrow:focus {
+    outline: none;
+    background: none;
+    box-shadow: none;
+}
+
+.arrow:hover {
+    background-color: darkgray;
+}
+
+.arrow::selection {
+    outline: none;
+}
+
+.accept {
+    margin: 10px;
+    width: 90px;
+    height: 40px;
+    background: none;
+    color: black;
+}
+
+.accept:hover {
+    background: darkgray;
+}
+
+.accept:focus {
+    outline: none;
+    background: none;
+    box-shadow: none;
+}
+
+.accept::selection {
+    outline: none;
+}
