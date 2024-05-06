@@ -44,7 +44,17 @@
 						<ul> 
 							<li>
 								<img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-								<a class="stepLinks" id="order/test"><span class="link_spans"></span>test</a>
+								<a class="stepLinks" id="order/nutritional-preference"><span class="link_spans"></span>Sundhedsmål</a>
+								<i></i>
+							</li>
+						</ul>
+					</div>
+
+					<div class="linkContainers">
+						<ul> 
+							<li>
+								<img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
+								<a class="stepLinks" id="order/summary"><span class="link_spans"></span>Opsummering</a>
 								<i></i>
 							</li>
 						</ul>
@@ -60,11 +70,7 @@
 
 			<div id="step_header">
 				<span id="step_title">Sundhedsprofil</span>
-
-				<div id="step_buttons">
-					<button id="button_back" onclick="previousPage(`http://localhost:3262/order/choose-mealplan`)">Tilbage</button>
-					<button id="button_next">Næste</button>
-				</div>
+				<button id="orderTitle">Måltidsplanlægning</button>
 			</div>
 
 			<div id="step_content">
@@ -72,7 +78,7 @@
 
 				</div>
 
-				<form class="profile_form" id="form1">
+				<form action="nutritional-preference" method="GET" class="profile_form" id="form1">
 									
 					<div> 
 						<div class="inputText"> 
@@ -80,7 +86,7 @@
 							<span>gkrsfog</span>
 						</div>
 						<select name="sex" id="select_sex" required>
-							<option disabled selected value>— Vælg et køn —</option>
+							<option value=""selected>— Vælg et køn —</option>
 							<option value="male">Mand</option>
 							<option value="female">Kvinde</option>
 						</select>
@@ -116,21 +122,114 @@
 							<span>gkrsfog</span>
 						</div>
 						<select name="activitylevel" id="select_activity" required>
-							<option disabled selected value>— Vælg et aktivitetsniveau —</option>
+							<option value=""selected>— Vælg et aktivitetsniveau —</option>
 							<option value="1">Lidt eller ingen aktivitet</option>
 							<option value="2">Lidt aktiv (let motion 1-2 gange/uge) </option>
 							<option value="3">Ret aktiv (moderat motion 2 dage/uge) </option>
 							<option value="4">Aktiv (let/moderat motion 3-4 dage/uge) </option>
-							<option value="5">Meget aktiv (Hård mortion 4-6 dage/uge) </option>		
+							<option value="5">Meget aktiv (Hård motion 4-6 dage/uge) </option>		
 						</select>
 					</div>
 
 					<div id="stepbuttons">
 						<button id="backButtton">Tilbage</button>
-						<button id="nextButton" onclick="updateCompletedSteps()">Næste</button>
+						<button id="nextButton">Næste</button>
 					</div>
 				</form>
-			</div>
+
+				<div id="userRequirements">
+
+						<div id="energyRequirements">
+								<span id="energyRequirementsTitle">Energifordeling</span>
+								<div class="requirementsLines"></div>
+						</div>
+						
+						
+					<div class="requirementsParentContainers">
+
+						<div class="BMRTDEEContainers"> 	
+
+							<div> 
+								<span>BMR ?</span>
+							</div>
+							<span style="font-size: 12px;">Basic Metabolic Rate</span>
+
+							<div class="BMRTDEEBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+
+						<div class="BMRTDEEContainers"> 
+							<div> 
+								<span>BMR ?</span>	   
+							</div>
+							<span style="font-size: 12px;">Basic Metabolic Rate</span>
+
+							<div class="BMRTDEEBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div id="macroRequirements">
+						<span id="macroTitle">Anbefalet macros</span>
+						<div class="requirementsLines"></div>
+					</div>
+
+					<div class="macrosParentContainer">
+
+						<div class="macroRequirementBoxContainers"> 	
+
+							<div> 
+								<span>Proteiner ?</span>
+							</div>
+							<span style="font-size: 12px;">Daglig protein</span>
+
+							<div class="macroBoxes" id="BMRBox">
+								<span>1000</span>
+							</div>
+						</div>
+
+						<div class="macroRequirementBoxContainers"> 
+							<div> 
+								<span>kulhydrater ?</span>	   
+							</div>
+							<span style="font-size: 12px;">Daglig kulhydrater</span>
+
+							<div class="macroBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+
+						<div class="macroRequirementBoxContainers"> 
+							<div> 
+								<span>Fedt ?</span>	   
+							</div>
+							<span style="font-size: 12px;">Daglig fedt</span>
+
+							<div class="macroBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+
+					<div id="userGreeting">
+						<span> Hej bruger</span>
+						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque omnis at error sint similique delectus totam tenetur vel optio. Commodi minima aliquid enim quasi, illo veniam dolor placeat debitis laboriosam?</span>
+					</div>
+
+
+	
+
+
+				</div>
+
 	</div>
 	<div id="footer-container"></div>
 
@@ -290,7 +389,7 @@
         window.history.forward();
     }
 	*/
-	
+
 	document.addEventListener("DOMContentLoaded", function () {
 				const headerContainer = document.getElementById("header-container");
 				headerContainer.innerHTML = Header();

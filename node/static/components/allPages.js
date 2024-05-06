@@ -6,7 +6,7 @@ let icons = document.getElementsByClassName("step_icons")
 let containers = document.getElementsByClassName("linkContainers")
 let checkmarkIcons = document.getElementsByTagName("i");
 
-let stepsCompleted;
+let stepsCompleted = 0;
 
 /* counts each consecutive completed step for the ordering process */
 for (let i = links.length - 1; i >= 0; i--) {
@@ -40,11 +40,11 @@ function hasNoEmptyValues(storageData) {
     let obj = JSON.parse(jsonData);
     let bool;
 
+    /* obj.length */
     /* since the functions differs from two different cases i have divided it into an if else statement (array of objects or a singular object) */
     if (obj.length >= 1) {
-        for (let i = 0; i < obj.length; i++) {
-            bool = checkForEmptyValues(obj[i]);
-            console.log(bool);
+        for (let i = 0; i < 1; i++) {
+            bool = checkForEmptyValues(obj[i]);  
             if (bool === false) {
                 return bool;
             }
@@ -64,9 +64,6 @@ function checkForEmptyValues(object) {
     }
     return true;
 }
-
-
-console.log("hello");
 
 
 

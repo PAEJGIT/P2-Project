@@ -45,11 +45,21 @@
                     </ul>
                 </div>
 
+				<div class="linkContainers">
+                    <ul> 
+                        <li>
+                            <img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
+                            <a class="stepLinks" id="order/nutritional-preference"><span class="link_spans"></span>Sundhedsmål</a>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="linkContainers">
                     <ul> 
                         <li>
                             <img class="step_icons" src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png">
-                            <a class="stepLinks" id="order/test"><span class="link_spans"></span>test</a>
+                            <a class="stepLinks" id="order/summary"><span class="link_spans"></span>Opsummering</a>
                             <i></i>
                         </li>
                     </ul>
@@ -66,14 +76,8 @@
         
 
         <div id="step_header">
-
-            <span id="step_title">Vælg måltidsplan</span>
-
-            <div id="step_buttons">
-                <button id="button_back">Tilbage</button>
-                <button id="button_next" onclick="nextPage(step1Data, step2Page)">Næste</button>
-            </div>
-
+            <span id="step_title">Vælg Måltidsplan</span>
+            <button id="orderTitle">Måltidsplanlægning</button>
         </div>
 
         <div id="step_content">
@@ -82,7 +86,7 @@
                 
                 <span>Vælg antal personer og måltider</span>
 
-                <form action="/mealplandata" method="POST"> 
+                <form action="set-profile" method="GET"> 
 
                     <div id="number_of_people"> 
         

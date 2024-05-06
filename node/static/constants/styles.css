@@ -237,6 +237,7 @@ li:hover .endpoints {
 }
 
 #step_header {
+	padding: 40px;
 	font-family: "poppins", sans-serif;
 	display: flex;
 	justify-content: space-between;
@@ -249,25 +250,8 @@ li:hover .endpoints {
 }
 
 #step_title {
-	position: relative;
-	left: 100px;
 	color: black;
 	font-size: 30px;
-}
-
-#button_back {
-	background-color: white;
-	border-radius: 8px;
-	color: #2d3648;
-	border-color: #2d3648;
-	border-style: solid;
-	height: 40px;
-	width: 90px;
-}
-
-#button_back:hover {
-	background-color: rgb(230, 232, 236);
-	cursor: pointer;
 }
 
 #backButtton:hover {
@@ -280,26 +264,17 @@ li:hover .endpoints {
     cursor: pointer;
 }
 
-#button_next {
-	position: relative;
-	left: 10px;
+#orderTitle {
 	background-color: #2d3648;
 	border-radius: 8px;
 	border-color: #2d3648;
 	border-style: solid;
 	color: white;
+	width: fit-content;
 	height: 40px;
-	width: 90px;
-}
+	width: 250px;
+	margin-right: 150px;
 
-#button_next:hover {
-	background-color: #3f4b64;
-	cursor: pointer;
-}
-
-#step_buttons {
-	position: relative;
-	right: 200px;
 }
 
 #step_content {
@@ -379,6 +354,8 @@ li:hover .endpoints {
     padding: 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
     background-color: #edf0f7;
     row-gap: 17px;
     font-family: "poppins", sans-serif;
@@ -541,4 +518,123 @@ li:hover .endpoints {
 
 #users div:not(:first-child) {
     background-color:#a0abc0
+}
+
+#userRequirements {
+	background-color: #edf0f7;
+	box-shadow: 0 4px 2px -2px gray;
+	grid-row: 5 / 13;
+	grid-column: 13 / 21;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#userGreeting {
+	position: relative;
+	top: 40px;
+	grid-row: 2 / 4;
+	grid-column: 13 / 21;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #edf0f7;
+}
+
+#userRequirements {
+	padding: 1rem;
+}
+
+#energyRequirements {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: black;
+}
+
+#energyRequirementsTitle {
+	width: fit-content;
+}
+
+.requirementsLines {
+	margin-top: 5px;
+	background-color: #c7cedc;
+	height: 3px;
+	width: 100%;
+}
+
+body span {
+	width: fit-content;
+}
+
+.BMRTDEEContainers {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	height: 130px;
+	margin-top: 35px;
+}
+
+.BMRTDEEBoxes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	margin-top: 6px;
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	border-radius: 7px;
+	border: solid;
+	border-width: 1px;
+	border-color: #c7cedc;
+}
+
+.requirementsParentContainers {
+	display: flex;
+	justify-content: space-between;
+}
+
+#macroRequirements {
+	margin-top: 45px;
+}
+
+.macrosParentContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.macroRequirementBoxContainers {
+	margin-top: 30px;
+	display: flex;
+    flex-direction: column;
+    width: 45%;
+	height: 100%;
+    margin-top: 35px;
+}
+
+.macroBoxes {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 6px;
+    border-radius: 7px;
+    border: solid;
+    border-width: 1px;
+    border-color: #c7cedc;
+	font-size: 25px;
+	height: 80px;
+	width: 90%;
+}	
+
+#userGreeting {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+#userGreeting span {
+	width: fit-content;
 }
