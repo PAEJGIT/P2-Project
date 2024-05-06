@@ -24,7 +24,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/node/static/"));
 
 // ROUTING
-const path_to_pages = (page) => path.join(__dirname, "/node/static/pages/", page);
 const routes = {
 	Home: {
 		url: "/",
@@ -61,12 +60,13 @@ const routes = {
 };
 Object.keys(routes).forEach((route) => {
 	app.get(routes[route].url, (req, res) => {
-		res.sendFile(path_to_pages(routes[route].page));
+		res.sendFile(path.join(__dirname, "/node/static/pages/", routes[route].page));
 	});
 });
 
 app.post("/login", loginRouter);
 app.post("/register", registerRouter);
+
 
 
 app.post("/ordering-data", (req, res) => {
@@ -87,15 +87,26 @@ app.post("/ordering-data", (req, res) => {
 		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(fileData, undefined, 4));
 	
 		res.end();
-
 	} catch (error) {
 		console.error("Error:", error);
 		res.status(500).send("Internal server error");
 	}
 });
 
+// API Validation Middleware
+const validateAPIKey = (req, res, next) => {
+	const apiKey = req.headers["x-api-key"];
+	const validApiKey = "123456";
+	if (!apiKey || apiKey !== validApiKey) {
+		log.error(__filename, null, "Unauthorized: Invalid API key", apiKey);
+		res.status(401).send("Unauthorized: Invalid API key");
+		return;
+	}
+	log.success(__filename, null, "API key validated", apiKey);
+	next();
+};
 // API
-app.get("/api/recipes", (req, res) => {
+app.get("/api/recipes", validateAPIKey, (req, res) => {
 	// Specify the path to your JSON file
 	const filePath = "data/recipes.json";
 	// Read the JSON file
@@ -117,7 +128,7 @@ app.get("/api/recipes", (req, res) => {
 	});
 });
 
-app.get("/api/ingredients", (req, res) => {
+app.get("/api/ingredients", validateAPIKey, (req, res) => {
 	// Specify the path to your JSON file
 	const filePath = "data/ingredients.json";
 	// Read the JSON file
