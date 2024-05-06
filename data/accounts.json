@@ -4,8 +4,50 @@
             "name": "peter",
             "email": "peter@gmail.com",
             "password": "Peter123",
-            "familySize": "3",
-            "meals": "4"
+            "mealPlan": {
+                "peopleAmount": "3",
+                "mealAmount": "1"
+            },
+            "userDetails": [
+                {
+                    "sex": "male",
+                    "age": "10",
+                    "weight": "30",
+                    "height": "120",
+                    "activitylevel": "1"
+                },
+                {
+                    "sex": "male",
+                    "age": "10",
+                    "weight": "",
+                    "height": "",
+                    "activitylevel": ""
+                },
+                {
+                    "sex": "",
+                    "age": "",
+                    "weight": "",
+                    "height": "",
+                    "activitylevel": ""
+                }
+            ],
+            "userPreferences": [
+                {
+                    "healthgoal": "musclegain",
+                    "dietpreference": "omnivore",
+                    "diettype": "keto"
+                },
+                {
+                    "healthgoal": "maintenance",
+                    "dietpreference": "balanced",
+                    "diettype": "lowcarb"
+                },
+                {
+                    "healthgoal": "",
+                    "dietpreference": "",
+                    "diettype": ""
+                }
+            ]
         }
     ]
 }

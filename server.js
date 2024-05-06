@@ -42,6 +42,14 @@ const routes = {
 		url: "/order/set-profile",
 		page: "set_profile.html",
 	},
+	"Nutrtional Preference": {
+		url: "/order/nutritional-preference",
+		page: "nutritional_preference.html",
+	},
+	"Ordering Process Summary": {
+		url: "/order/summary",
+		page: "summary.html",
+	},
 	"Recipes Database": {
 		url: "/recipes",
 		page: "recipesDB.html",
@@ -59,29 +67,27 @@ Object.keys(routes).forEach((route) => {
 
 app.post("/login", loginRouter);
 app.post("/register", registerRouter);
-app.get("/order/test", (req, res) => {
-	res.sendFile(path.join(__dirname, "/node/static/pages/", "test.html"));
-});
 
 
-app.post("/mealplandata", (req, res) => {
-	/* retrieves data from user when they choose family/meal count and saves it in the accounts.json file */
+app.post("/ordering-data", (req, res) => {
 	try {
-		const data = fs.readFileSync(__dirname + "/data/temp.json");
+		const data = fs.readFileSync(__dirname + "/data/accounts.json");
+		
 
-		const jsonData = JSON.parse(data);
+		const fileData = JSON.parse(data);
 
-	/*
-    const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
-    */
+		/*
+		const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
+		*/
+		
+		fileData.users[0].mealPlan = req.body.mealPlan;
+		fileData.users[0].userDetails = req.body.userDetails;
+		fileData.users[0].userPreferences = req.body.userPreferences;
 
-		jsonData.users[0].familySize = req.body.number_of_people;
-		jsonData.users[0].meals = req.body.number_of_meals;
+		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(fileData, undefined, 4));
+	
+		res.end();
 
-
-		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(jsonData, undefined, 4));
-
-		res.redirect("/order/set-profile");
 	} catch (error) {
 		console.error("Error:", error);
 		res.status(500).send("Internal server error");
@@ -110,6 +116,7 @@ app.get("/api/recipes", (req, res) => {
 		}
 	});
 });
+
 app.get("/api/ingredients", (req, res) => {
 	// Specify the path to your JSON file
 	const filePath = "data/ingredients.json";
