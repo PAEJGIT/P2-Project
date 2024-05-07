@@ -556,7 +556,7 @@ li:hover .endpoints {
 	width: fit-content;
 }
 
-.requirementsLines {
+.horizontalLines {
 	margin-top: 5px;
 	background-color: #c7cedc;
 	height: 3px;
@@ -637,4 +637,108 @@ body span {
 
 #userGreeting span {
 	width: fit-content;
+}
+
+#lactAndPregnantCheckboxes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+#lactAndPregnantCheckboxes input{
+	width: 100px;
+	display: none;
+}
+
+#lactAndPregnantCheckboxes label{
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	background-color: white;
+	width: 170px;
+	height: 33px;
+	border: solid;
+	border-radius: 4px;
+	border-width: 1px;
+	cursor: pointer;
+}
+
+#pregnant:checked ~ label[for="pregnant"],
+#lactating:checked ~ label[for="lactating"] {
+	background-color: #2d3648;
+	color: white;
+}
+
+#summaryFormTitleContent {
+	height: 90px;
+	width: 100%;
+	white-space: normal;
+}
+
+#summaryFormTitle {
+	font-size: 28px;
+	margin-bottom: 15px;
+}
+
+#summaryFormDescription {
+	font-size: 15px;
+}
+
+#userHealthDetailsParentContainer {
+	width: 100%;
+}
+
+#userHealthDetails {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	width: 100%;
+	height: 23px;
+}
+
+#userHealthDetails span {
+	font-size: 15px;
+}
+
+#userRightHealthDetailsContainer {
+	height: 100%;
+	width: 180px;
+	background-color: #ffffff;
+	border: solid 1px;
+	border-color: #c7cedc;
+	border-radius: 5px;
+	padding-left: 7px;
+	justify-content: center;
+}
+
+.summaryHorizontalLines {
+	background-color: #c7cedc;
+	height: 2px;
+	width: 100%;
+}
+
+#summarySubmitButtonContainer {
+	position: relative;
+	height: 50px;
+	width: 100%;
+	align-items: end;
+}
+
+#submitDetails {
+	width: 50%;
+	height: 50px;
+	background-color: #2d3648;
+	border-radius: 6px;
+	border-style: solid;
+	border-color: #2d3648;
+	color: white;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+#submitDetails:hover {
+	background-color: #414c63;
+	border-color: #414c63;
 }

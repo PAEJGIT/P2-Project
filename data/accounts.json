@@ -4,50 +4,40 @@
             "name": "peter",
             "email": "peter@gmail.com",
             "password": "Peter123",
-            "mealPlan": {
-                "peopleAmount": "3",
-                "mealAmount": "1"
-            },
             "userDetails": [
                 {
+                    "sex": "female",
+                    "age": "15",
+                    "weight": "55",
+                    "height": "127",
+                    "activitylevel": "5"
+                },
+                {
                     "sex": "male",
-                    "age": "10",
-                    "weight": "30",
+                    "age": "15",
+                    "weight": "37",
                     "height": "120",
-                    "activitylevel": "1"
-                },
-                {
-                    "sex": "male",
-                    "age": "10",
-                    "weight": "",
-                    "height": "",
-                    "activitylevel": ""
-                },
-                {
-                    "sex": "",
-                    "age": "",
-                    "weight": "",
-                    "height": "",
-                    "activitylevel": ""
+                    "activitylevel": "3"
                 }
             ],
             "userPreferences": [
                 {
-                    "healthgoal": "musclegain",
-                    "dietpreference": "omnivore",
-                    "diettype": "keto"
+                    "healthgoal": "weightgain",
+                    "dietpreference": "vegetarian",
+                    "diettype": "keto",
+                    "pregnant": "True",
+                    "lactating": "True"
                 },
                 {
-                    "healthgoal": "maintenance",
-                    "dietpreference": "balanced",
+                    "healthgoal": "weightgain",
+                    "dietpreference": "vegan",
                     "diettype": "lowcarb"
-                },
-                {
-                    "healthgoal": "",
-                    "dietpreference": "",
-                    "diettype": ""
                 }
-            ]
+            ],
+            "mealPlan": {
+                "peopleAmount": "2",
+                "mealAmount": "5"
+            }
         }
     ]
 }
