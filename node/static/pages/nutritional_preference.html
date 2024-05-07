@@ -133,8 +133,8 @@
 				<div id="userRequirements">
 
 					<div id="energyRequirements">
-							<span id="energyRequirementsTitle">Energifordeling</span>
-							<div class="requirementsLines"></div>
+						<span id="energyRequirementsTitle">Energifordeling</span>
+						<div class="requirementsLines"></div>
 					</div>
 					
 					
@@ -231,6 +231,9 @@
 	<div id="footer-container"></div>
 	
 	<script src="../components/allPages.js"></script>
+	
+
+
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -243,11 +246,29 @@
 		});
 
 
+		const createCheckboxForWomen = () => {
+			return `<div class="checkboxesParentContainer"> 
+						<div class="inputText"> 
+							<label for="select_checkbox" id="label_checkbox">eagaegea ?</label>
+							<span>gkrsfog</span>
+						</div>
+
+						<div id="lactAndPregnantCheckboxes"> 
+							<input type="checkbox" name="pregnant" id="pregnant" value="True"/>
+							<input type="checkbox" name="lactating" id="lactating" value="True"/>
+
+							<label id="labelPregnant" for="pregnant">Pregnant</label>
+							<label id="labelLactating" for="lactating">Lactating</label>
+						</div>
+
+					</div>
+					`}
 
 		/* dynamically renders a form for each profile */
 		function profileRendering(numberOfPeople) {
 				allProfiles = document.getElementById("users");
 
+				createCheckboxes(1);
 				
 				for (let i = 0; i < numberOfPeople; i++) {
 					profile = document.createElement("div");
@@ -266,12 +287,36 @@
 						newForm.style.visibility = "hidden";
 						content = document.getElementById("step_content");
 						content.appendChild(newForm);
+						
 						addChildIds(i + 1);
+						createCheckboxes(i + 1);
 					}
 				}
 			}
 	
+			function createCheckboxes(formNumber) {
 
+				const profileDetails = JSON.parse(localStorage.getItem('order/set-profile'));
+				let userProfile = profileDetails[formNumber - 1];
+				let form = document.querySelector(`#form${formNumber}`);
+
+				if (userProfile["sex"] === "female" && form.getElementsByClassName("checkboxesParentContainer").length === 0) {
+					let newCheckbox = document.createElement('div');
+					newCheckbox.innerHTML = createCheckboxForWomen();
+					form.insertBefore(newCheckbox, form.lastElementChild);
+					console.log(formNumber);					
+				} else if (userProfile["sex"] === "male") {
+					let checkboxes = form.getElementsByClassName("checkboxesParentContainer");
+
+					while (checkboxes.length > 0) {
+						checkboxes[0].parentNode.removeChild(checkboxes[0]);
+					}
+
+				}
+
+			}
+
+			/* adds unique child ids for new forms that are created */
 			function addChildIds(formNumber) {
 
 				let childInputs = document.querySelectorAll(`#form${formNumber} input`);
@@ -279,6 +324,7 @@
 
 				let firstFormInputs = document.querySelectorAll(`#form1 input`);
 				let firstFormSelects = document.querySelectorAll(`#form1 select`);
+
 
 					for (let i = 0; i < childInputs.length; i++) {
 						childInputs[i].id = firstFormInputs[i].id + `${formNumber}`;
@@ -289,7 +335,7 @@
 					}
 			}
 
-
+			/* gets item from localStorage and renders a number of forms depending on the users input given on the first page */
 			mealPlan = localStorage.getItem("order/choose-mealplan");
 			data = JSON.parse(mealPlan);
 
@@ -319,45 +365,64 @@
 				});
 			}
 
+			/* saves form data before user clicks away from the page */
+			window.addEventListener("beforeunload", () => {
+			let allFormsData = [];
+			
+			for (let i = 1; i <= data.peopleAmount; i++) {
+				let getEachForm = document.getElementById(`form${i}`)
+				let formData = new FormData(getEachForm);
+				let obj = Object.fromEntries(formData);
+				allFormsData.push(obj);
+			
+				localStorage.setItem('order/nutritional-preference', JSON.stringify(allFormsData));
+			}
+		});
 
-		window.addEventListener("beforeunload", () => {
-		let allFormsData = [];
-		
-		for (let i = 1; i <= data.peopleAmount; i++) {
-			let getEachForm = document.getElementById(`form${i}`)
-			let formData = new FormData(getEachForm);
-			let obj = Object.fromEntries(formData);
-			allFormsData.push(obj);
 
-        localStorage.setItem('order/nutritional-preference', JSON.stringify(allFormsData));
-	}
-    });
-
-
+		/* fills out the forms with data the user had previously written before they left the page */
 		if (localStorage.getItem('order/nutritional-preference')) {
-        const formData = JSON.parse(localStorage.getItem('order/nutritional-preference'));
+        	const formData = JSON.parse(localStorage.getItem('order/nutritional-preference'));
 			document.getElementById("select_health_goal").value = formData[0].healthgoal;
 			document.getElementById("select_diet_preference").value = formData[0].dietpreference;
 			document.getElementById("select_diet_type").value = formData[0].diettype;
+			saveCheckBoxValue(formData, 0);
 			
-	
 			for (let i = 2, k = 1; i <= data.peopleAmount; i++, k++) {
-			document.getElementById(`select_health_goal${i}`).value = formData[`${k}`].healthgoal;
-			document.getElementById(`select_diet_preference${i}`).value = formData[`${k}`].dietpreference;
-			document.getElementById(`select_diet_type${i}`).value = formData[`${k}`].diettype;
+				document.getElementById(`select_health_goal${i}`).value = formData[`${k}`].healthgoal;
+				document.getElementById(`select_diet_preference${i}`).value = formData[`${k}`].dietpreference;
+				document.getElementById(`select_diet_type${i}`).value = formData[`${k}`].diettype;		
 			}
     }
 
-			reloadPage();
-	
-	function reloadPage() {
-		window.onload = function() {
-    if (!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-	}
-	}
+			/* reloads the page. this is necessary to update new data */
+			reloadPage();	
+
+			function reloadPage() {
+						window.onload = function() {
+					if (!window.location.hash) {
+						window.location = window.location + '#loaded';
+						window.location.reload();
+					}
+				}
+			}
+
+
+			function saveCheckBoxValue(formData, formNumber) {
+			
+				if (formData[formNumber].lactating && formData[formNumber].pregnant) {
+						document.getElementById("pregnant").checked = true; 
+						document.getElementById("lactating").checked = true; 
+					}
+					else if (formData[formNumber].lactating) {
+						document.getElementById("lactating").checked = true; 
+					}
+					else if (formData[formNumber].pregnant) {
+						document.getElementById("pregnant").checked = true; 
+					}
+			}
+
+
 
 
 
