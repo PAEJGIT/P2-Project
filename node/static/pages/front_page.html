@@ -36,9 +36,18 @@
             </nav>
             
             <div id="nav_buttons">
-                <button id="log_in_button" onclick="location.href='https://google.com'" type="button">Log ind</button>
-                <button id="sign_in_button" onclick="location.href='https://google.com'" type="button">Opret bruger</button>
+                <button id="log_in_button" onclick="navigateWithAction('login')" type="button">Log ind</button>
+                <button id="sign_in_button" onclick="navigateWithAction('register')" type="button">Opret bruger</button>
             </div>
+            <script>
+                function navigateWithAction(action) {
+                    // Set the action ('login' or 'register') in local storage
+                    localStorage.setItem('action', action);
+                
+                    // Redirect to the login page
+                    location.href = '../pages/login_page.html';
+                }
+                </script>
 
         </div>
 

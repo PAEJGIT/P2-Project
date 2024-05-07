@@ -30,7 +30,7 @@ function register(username, password, callback) {
     // Add new user
     users[username] = { password };
 
-    fs.writeFile(filePath, JSON.stringify(users), (err) => {
+    fs.writeFile(filePath, JSON.stringify(users, null, 4), (err) => {
       if (err) {
         console.error("Error writing to file:", err);
         callback({ success: false, reason: "Failed to write to file" });

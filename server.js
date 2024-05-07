@@ -27,8 +27,8 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/node/static/"));
 
 app.get("/", (req, res) => {
-	//res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
-	res.sendFile(path.join(__dirname, "/node/static/pages/", "recipe_test.html"));
+	res.sendFile(path.join(__dirname, "/node/static/pages/", "front_page.html"));
+	//res.sendFile(path.join(__dirname, "/node/static/pages/", "recipe_test.html"));
 });
 
 app.get("/login", (req, res) => {

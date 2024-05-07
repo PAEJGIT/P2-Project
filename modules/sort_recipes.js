@@ -45,6 +45,8 @@ function sortRecipes() {
             sortedJSONFileOBJ[breakfastRecipeName] = {"info": {
                 "name": breakfastRecipeName,
                 "id": breakfastRecipeID,
+                "image": recipesJSON[breakfastRecipeID].image,
+                "tags": recipesJSON[breakfastRecipeID].tags,
                 "calories": recipesJSON[breakfastRecipeID].macroRatio[0],
                 "protein": recipesJSON[breakfastRecipeID].macroRatio[1],
                 "carb": recipesJSON[breakfastRecipeID].macroRatio[2],
@@ -62,6 +64,8 @@ function sortRecipes() {
                 sortedJSONFileOBJ[breakfastRecipeName][lunchRecipeName] = {"info": {
                     "name": lunchRecipeName,
                     "id": lunchRecipeID,
+                    "image": recipesJSON[lunchRecipeID].image,
+                    "tags": recipesJSON[lunchRecipeID].tags,
                     "calories": recipesJSON[lunchRecipeID].macroRatio[0],
                     "protein": recipesJSON[lunchRecipeID].macroRatio[1],
                     "carb": recipesJSON[lunchRecipeID].macroRatio[2],
@@ -79,6 +83,8 @@ function sortRecipes() {
                     sortedJSONFileOBJ[breakfastRecipeName][lunchRecipeName][dinnerRecipeName] = {"info": {
                         "name": dinnerRecipeName,
                         "id": dinnerRecipeID,
+                        "image": recipesJSON[dinnerRecipeID].image,
+                        "tags": recipesJSON[dinnerRecipeID].tags,
                         "calories": recipesJSON[dinnerRecipeID].macroRatio[0],
                         "protein": recipesJSON[dinnerRecipeID].macroRatio[1],
                         "carb": recipesJSON[dinnerRecipeID].macroRatio[2],
@@ -94,4 +100,6 @@ function sortRecipes() {
 
     });
 }
+
+sortRecipes();
 

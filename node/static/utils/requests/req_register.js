@@ -20,6 +20,8 @@ document
         } else {
           alert("Registration Failed: " + data.reason);
         }
+        const wrapper = document.querySelector(".wrapper");
+        wrapper.classList.remove('active');
       })
       .catch((error) => {
         console.error("Error:", error);
