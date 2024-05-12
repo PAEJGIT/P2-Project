@@ -7,7 +7,10 @@ const path = require("path"); // Node.js core module to work with file paths
 // Import custom modules
 const loginRouter = require("./modules/login"); // Import the login module
 const registerRouter = require("./modules/register"); // Import the register module
-const log = require("./modules/logger"); // Import the register module
+
+const orderingDataRouter = require("./modules/ordering_data"); // Import the ordering data module
+const log = require("./modules/logger"); // Import the logger module
+
 
 // Create an instance of Express
 const app = express();
@@ -64,34 +67,11 @@ Object.keys(routes).forEach((route) => {
 	});
 });
 
+
 app.post("/login", loginRouter);
 app.post("/register", registerRouter);
+app.post("/ordering-data", orderingDataRouter);
 
-
-
-app.post("/ordering-data", (req, res) => {
-	try {
-		const data = fs.readFileSync(__dirname + "/data/accounts.json");
-		
-
-		const fileData = JSON.parse(data);
-
-		/*
-		const index = jsonData.findIndex(x => x.email === "peter@gmail.com");
-		*/
-		
-		fileData.users[0].mealPlan = req.body.mealPlan;
-		fileData.users[0].userDetails = req.body.userDetails;
-		fileData.users[0].userPreferences = req.body.userPreferences;
-
-		fs.writeFileSync(__dirname + "/data/accounts.json", JSON.stringify(fileData, undefined, 4));
-	
-		res.end();
-	} catch (error) {
-		console.error("Error:", error);
-		res.status(500).send("Internal server error");
-	}
-});
 
 // API Validation Middleware
 const validateAPIKey = (req, res, next) => {
@@ -152,12 +132,11 @@ app.get("/api/ingredients", validateAPIKey, (req, res) => {
 	});
 });
 
-
-
 // Start the server on the specified port and hostname
 app.listen(port, hostname, () => {
 	log.success(__filename, null, "Server listening on", `http://${hostname}:${port}`);
 });
+
 
 // Define a route for the home page
 //app.get(routes["Home"].url, (req, res) => {
