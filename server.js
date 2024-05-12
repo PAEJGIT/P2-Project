@@ -7,8 +7,10 @@ const path = require("path"); // Node.js core module to work with file paths
 // Import custom modules
 const loginRouter = require("./modules/login"); // Import the login module
 const registerRouter = require("./modules/register"); // Import the register module
+
 const orderingDataRouter = require("./modules/ordering_data"); // Import the ordering data module
 const log = require("./modules/logger"); // Import the logger module
+
 
 // Create an instance of Express
 const app = express();
@@ -64,6 +66,7 @@ Object.keys(routes).forEach((route) => {
 		res.sendFile(path.join(__dirname, "/node/static/pages/", routes[route].page));
 	});
 });
+
 
 app.post("/login", loginRouter);
 app.post("/register", registerRouter);
@@ -133,6 +136,7 @@ app.get("/api/ingredients", validateAPIKey, (req, res) => {
 app.listen(port, hostname, () => {
 	log.success(__filename, null, "Server listening on", `http://${hostname}:${port}`);
 });
+
 
 // Define a route for the home page
 //app.get(routes["Home"].url, (req, res) => {
