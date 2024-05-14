@@ -33,7 +33,7 @@
         ],
         "ratings": {
             "averageRating": 2,
-            "numberOfRatings": 13
+            "numberOfRatings": 28
         },
         "instructions": [
             "Mix oats with milk and cook for 5 minutes.",
@@ -68,8 +68,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 67
+            "averageRating": 2,
+            "numberOfRatings": 81
         },
         "instructions": ["Mix oats with milk and cook for 5 minutes."]
     },
@@ -112,8 +112,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 125
+            "averageRating": 3,
+            "numberOfRatings": 448
         },
         "instructions": [
             "Grill the chicken breast until fully cooked and lightly charred, then let it rest before slicing.",
@@ -162,8 +162,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 114
+            "averageRating": 3,
+            "numberOfRatings": 174
         },
         "instructions": [
             "Cook the spaghetti in salted boiling water until al dente.",
@@ -212,8 +212,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 352
+            "averageRating": 3,
+            "numberOfRatings": 180
         },
         "instructions": [
             "Toast the sourdough bread slices to your liking.",
@@ -262,8 +262,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 236
+            "averageRating": 2,
+            "numberOfRatings": 447
         },
         "instructions": [
             "Melt butter in a skillet over medium heat.",
@@ -313,7 +313,7 @@
         ],
         "ratings": {
             "averageRating": 2,
-            "numberOfRatings": 467
+            "numberOfRatings": 458
         },
         "instructions": [
             "Peel the bananas and place them in the blender.",
@@ -361,8 +361,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 238
+            "averageRating": 3,
+            "numberOfRatings": 174
         },
         "instructions": [
             "Heat a little oil in a pan or wok over high heat.",
@@ -413,7 +413,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 307
+            "numberOfRatings": 248
         },
         "instructions": [
             "Cook pasta in salted boiling water according to package instructions. Add broccoli florets to the pot in the last 3 minutes of cooking.",
@@ -463,8 +463,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 422
+            "averageRating": 3,
+            "numberOfRatings": 191
         },
         "instructions": [
             "Season the pork chops with salt and pepper.",
@@ -528,8 +528,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 422
+            "averageRating": 3,
+            "numberOfRatings": 317
         },
         "instructions": [
             "Heat the oil in a wok or large frying pan over medium-high heat.",
@@ -610,8 +610,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 12
+            "averageRating": 4,
+            "numberOfRatings": 348
         },
         "instructions": [
             "Rinse and drain the chickpeas, then place them in a large bowl.",
@@ -690,8 +690,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 456
+            "averageRating": 2,
+            "numberOfRatings": 237
         },
         "instructions": [
             "Drain the tofu and cut it into cubes.",
@@ -711,7 +711,7 @@
         "image": "assets/images/14_mango_coconut_chia_pudding.jpg",
         "equipment": ["Bowl", "Blender", "Spoon"],
         "preparationTime": 5,
-        "macroRatio": [490, 11, 22, 39, 24],
+        "macroRatio": [287, 9, 23, 20, 13],
         "mealTypes": [1, 1, 0],
         "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
         "tags": ["highFiber", "lowCarb", "Quick"],
@@ -724,7 +724,7 @@
                 "unit": "grams"
             },
             {
-                "ingredientID": 704,
+                "ingredientID": 1860,
                 "name": "coconut milk",
                 "quantity": 50,
                 "unit": "grams"
@@ -749,8 +749,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 267
+            "averageRating": 2,
+            "numberOfRatings": 204
         },
         "instructions": [
             "In a bowl, combine the chia seeds and coconut milk. Stir well to combine, then let it sit for 10 minutes to allow the chia seeds to absorb the liquid and thicken.",
@@ -818,8 +818,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 5,
-            "numberOfRatings": 123
+            "averageRating": 2,
+            "numberOfRatings": 201
         },
         "instructions": [
             "Preheat the oven to 400°F (200°C) and line a baking sheet with aluminum foil.",
@@ -894,7 +894,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 394
+            "numberOfRatings": 457
         },
         "instructions": [
             "Season the pork chops with salt and pepper.",
@@ -958,7 +958,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 309
+            "numberOfRatings": 183
         },
         "instructions": [
             "Slice the cherry tomatoes in half and the fresh mozzarella into rounds.",
@@ -1031,8 +1031,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 5,
-            "numberOfRatings": 85
+            "averageRating": 3,
+            "numberOfRatings": 422
         },
         "instructions": [
             "Season the chicken breasts with salt and pepper.",
@@ -1097,8 +1097,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 351
+            "averageRating": 4,
+            "numberOfRatings": 360
         },
         "instructions": [
             "Peel and chop the banana and mango into chunks.",
@@ -1170,8 +1170,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 2,
-            "numberOfRatings": 40
+            "averageRating": 5,
+            "numberOfRatings": 84
         },
         "instructions": [
             "Rinse the lentils under cold water and drain.",
@@ -1234,8 +1234,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 72
+            "averageRating": 4,
+            "numberOfRatings": 94
         },
         "instructions": [
             "Cook the spaghetti in a large pot of salted boiling water according to package instructions.",
@@ -1306,7 +1306,7 @@
         ],
         "ratings": {
             "averageRating": 2,
-            "numberOfRatings": 156
+            "numberOfRatings": 190
         },
         "instructions": [
             "Soak wooden skewers in water for at least 30 minutes to prevent burning.",
@@ -1386,8 +1386,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 122
+            "averageRating": 3,
+            "numberOfRatings": 367
         },
         "instructions": [
             "In a pot, heat olive oil over medium heat.",
@@ -1463,8 +1463,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 32
+            "averageRating": 2,
+            "numberOfRatings": 168
         },
         "instructions": [
             "In a skillet, heat olive oil over medium heat.",
@@ -1540,8 +1540,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 5,
-            "numberOfRatings": 91
+            "averageRating": 1,
+            "numberOfRatings": 329
         },
         "instructions": [
             "Peel and dice the pumpkin, onion, and garlic.",
@@ -1625,7 +1625,7 @@
         ],
         "ratings": {
             "averageRating": 3,
-            "numberOfRatings": 492
+            "numberOfRatings": 290
         },
         "instructions": [
             "Slice the cherry tomatoes in half, dice the cucumbers, and pit the olives.",
@@ -1704,8 +1704,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 2,
-            "numberOfRatings": 96
+            "averageRating": 1,
+            "numberOfRatings": 421
         },
         "instructions": [
             "Preheat the oven to 375°F (190°C) and grease a baking dish.",
@@ -1818,8 +1818,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 280
+            "averageRating": 1,
+            "numberOfRatings": 463
         },
         "instructions": [
             "Preheat the oven to 375°F (190°C) and grease a baking dish.",
@@ -1917,8 +1917,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 418
+            "averageRating": 1,
+            "numberOfRatings": 281
         },
         "instructions": [
             "Preheat the oven to 375°F (190°C) and grease a pie dish.",
@@ -2022,8 +2022,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 2,
-            "numberOfRatings": 409
+            "averageRating": 4,
+            "numberOfRatings": 254
         },
         "instructions": [
             "Press the tofu to remove excess moisture, then cut into cubes.",
@@ -2101,8 +2101,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 334
+            "averageRating": 2,
+            "numberOfRatings": 319
         },
         "instructions": [
             "In a bowl, whisk together flour, baking powder, and salt.",
@@ -2166,8 +2166,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 124
+            "averageRating": 2,
+            "numberOfRatings": 327
         },
         "instructions": [
             "Toast the bread until golden brown and crispy.",
@@ -2242,8 +2242,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 269
+            "averageRating": 5,
+            "numberOfRatings": 366
         },
         "instructions": [
             "In a bowl, whisk together milk, Greek yogurt, maple syrup, and chia seeds.",
@@ -2339,8 +2339,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 82
+            "averageRating": 2,
+            "numberOfRatings": 46
         },
         "instructions": [
             "Preheat the oven to 350°F (180°C) and grease a loaf pan.",
@@ -2409,8 +2409,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 340
+            "averageRating": 2,
+            "numberOfRatings": 393
         },
         "instructions": [
             "Grill the chicken until fully cooked.",
@@ -2465,8 +2465,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 416
+            "averageRating": 2,
+            "numberOfRatings": 474
         },
         "instructions": [
             "Preheat the grill to high heat.",
@@ -2520,8 +2520,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 2,
-            "numberOfRatings": 432
+            "averageRating": 1,
+            "numberOfRatings": 413
         },
         "instructions": [
             "Heat the skillet over medium-high heat.",
@@ -2578,8 +2578,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 421
+            "averageRating": 5,
+            "numberOfRatings": 203
         },
         "instructions": [
             "Melt butter in a non-stick skillet over medium heat.",
@@ -2634,7 +2634,7 @@
         ],
         "ratings": {
             "averageRating": 4,
-            "numberOfRatings": 409
+            "numberOfRatings": 75
         },
         "instructions": [
             "Preheat oven to 180 degrees Celsius.",
@@ -2695,8 +2695,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 72
+            "averageRating": 2,
+            "numberOfRatings": 154
         },
         "instructions": [
             "Preheat the oven to 180°C.",
@@ -2772,7 +2772,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 460
+            "numberOfRatings": 128
         },
         "instructions": [
             "1. Slice the avocado and cherry tomatoes.",
@@ -2834,8 +2834,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 350
+            "averageRating": 3,
+            "numberOfRatings": 347
         },
         "instructions": [
             "Preheat the oven to 180°C (350°F) and grease the muffin tin.",
@@ -2894,7 +2894,7 @@
         ],
         "ratings": {
             "averageRating": 4,
-            "numberOfRatings": 100
+            "numberOfRatings": 42
         },
         "instructions": [
             "1. In a skillet, sauté the spinach until wilted.",
@@ -2975,7 +2975,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 410
+            "numberOfRatings": 166
         },
         "instructions": [
             "Cook the green lentils according to package instructions and let them cool.",
@@ -3032,7 +3032,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 229
+            "numberOfRatings": 149
         },
         "instructions": [
             "Cook quinoa according to package instructions.",
@@ -3099,7 +3099,7 @@
         ],
         "ratings": {
             "averageRating": 3,
-            "numberOfRatings": 182
+            "numberOfRatings": 483
         },
         "instructions": [
             "Preheat the oven to 375°F (190°C).",
@@ -3167,7 +3167,7 @@
         ],
         "ratings": {
             "averageRating": 4,
-            "numberOfRatings": 474
+            "numberOfRatings": 398
         },
         "instructions": [
             "Cut the chicken breast into thin strips.",
@@ -3236,8 +3236,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 193
+            "averageRating": 4,
+            "numberOfRatings": 136
         },
         "instructions": [
             "In a small bowl, mix lemon juice, olive oil, minced garlic, chopped herbs, salt, and pepper to create the marinade.",
@@ -3311,7 +3311,7 @@
         ],
         "ratings": {
             "averageRating": 1,
-            "numberOfRatings": 414
+            "numberOfRatings": 222
         },
         "instructions": [
             "Preheat oven to 375°F (190°C).",
@@ -3378,8 +3378,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 1,
-            "numberOfRatings": 469
+            "averageRating": 4,
+            "numberOfRatings": 497
         },
         "instructions": [
             "1. Cut the turkey breast into thin strips.",
@@ -3446,8 +3446,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 221
+            "averageRating": 1,
+            "numberOfRatings": 445
         },
         "instructions": [
             "1. Preheat the grill or grill pan.",
@@ -3539,7 +3539,7 @@
         ],
         "ratings": {
             "averageRating": 3,
-            "numberOfRatings": 293
+            "numberOfRatings": 222
         },
         "instructions": [
             "In a hot wok or skillet, sear the beef until browned. Remove and set aside.",
@@ -3618,8 +3618,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 352
+            "averageRating": 1,
+            "numberOfRatings": 14
         },
         "instructions": [
             "1. Rinse and drain the chickpeas.",
@@ -3699,8 +3699,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 483
+            "averageRating": 5,
+            "numberOfRatings": 387
         },
         "instructions": [
             "1. Rinse and drain the chickpeas.",
@@ -3780,8 +3780,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 370
+            "averageRating": 3,
+            "numberOfRatings": 332
         },
         "instructions": [
             "1. Rinse and drain the chickpeas.",
@@ -3861,8 +3861,8 @@
             }
         ],
         "ratings": {
-            "averageRating": 5,
-            "numberOfRatings": 294
+            "averageRating": 4,
+            "numberOfRatings": 218
         },
         "instructions": [
             "1. Rinse and drain the chickpeas.",
@@ -3875,71 +3875,400 @@
     },
     "57": {
         "id": 57,
-        "name": "Creamy Pesto Chicken Skewers",
-        "description": "Tender chicken skewers marinated in a creamy pesto sauce, grilled to perfection",
-        "image": "assets/images/57_creamy_pesto_chicken_skewers.jpg",
-        "equipment": ["Skewers"],
-        "preparationTime": 30,
-        "macroRatio": [488, 38, 11, 37, 2],
-        "mealTypes": [0, 1, 1],
-        "categories": ["Meal"],
-        "tags": ["highProtein", "lowCarb"],
-        "allergens": [],
+        "name": "Keto Bacon and Egg Cups",
+        "description": "Delicious high-fat breakfast option that is low-carb and keto-friendly.",
+        "image": "assets/images/57_keto_bacon_and_egg_cups.jpg",
+        "equipment": ["Muffin Tin"],
+        "preparationTime": 25,
+        "macroRatio": [509, 33, 5, 46, 2],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal", "keto"],
+        "tags": ["highCalorie", "highProtein", "lowCarb", "noCarb"],
+        "allergens": ["Egg"],
         "ingredients": [
             {
-                "ingredientID": 754,
-                "name": "chicken breast",
-                "quantity": 150,
+                "ingredientID": 1137,
+                "name": "bacon",
+                "quantity": 100,
                 "unit": "grams"
             },
             {
-                "ingredientID": 671,
-                "name": "heavy cream",
+                "ingredientID": 1663,
+                "name": "eggs",
+                "quantity": 6,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 94,
+                "name": "cheese",
                 "quantity": 50,
                 "unit": "grams"
             },
             {
-                "ingredientID": 92,
-                "name": "pesto sauce",
-                "quantity": 30,
-                "unit": "grams"
-            },
-            {
-                "ingredientID": 1467,
-                "name": "olive oil",
-                "quantity": 20,
-                "unit": "grams"
-            },
-            {
-                "ingredientID": 650,
-                "name": "garlic powder",
-                "quantity": 5,
+                "ingredientID": 1015,
+                "name": "butter",
+                "quantity": 10,
                 "unit": "grams"
             },
             {
                 "ingredientID": 417,
                 "name": "salt",
-                "quantity": 3,
+                "quantity": 2,
                 "unit": "grams"
             },
             {
                 "ingredientID": 236,
-                "name": "black pepper",
+                "name": "pepper",
                 "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 8,
+                "name": "fresh herbs",
+                "quantity": 5,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 226
+        },
+        "instructions": [
+            "Preheat the oven to 375°F (190°C).",
+            "Grease the muffin tin with butter.",
+            "Line each muffin cup with bacon, creating a circle along the edges.",
+            "Crack an egg into each bacon-lined cup.",
+            "Season with salt, pepper, and sprinkle cheese on top.",
+            "Bake in the preheated oven for 15-18 minutes or until the eggs are set to your liking.",
+            "Remove from the oven and let them cool slightly before using a spatula to remove the cups from the tin.",
+            "Garnish with fresh herbs if desired.",
+            "Serve and enjoy!"
+        ]
+    },
+    "58": {
+        "id": 58,
+        "name": "Keto Avocado Smoothie Bowl",
+        "description": "A creamy and delicious smoothie bowl packed with healthy fats from avocado, perfect for a high-fat breakfast option.",
+        "image": "assets/images/58_keto_avocado_smoothie_bowl.jpg",
+        "equipment": ["Blender"],
+        "preparationTime": 10,
+        "macroRatio": [771, 9, 9, 82, 18],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree", "keto"],
+        "tags": ["highCalorie", "highFiber", "lowCarb", "noCarb", "Quick"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 616,
+                "name": "avocado",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1860,
+                "name": "coconut milk",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1364,
+                "name": "cocoa butter",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1728,
+                "name": "chia seeds",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 704,
+                "name": "unsweetened shredded coconut",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 50,
+                "name": "spinach",
+                "quantity": 20,
                 "unit": "grams"
             }
         ],
         "ratings": {
             "averageRating": 5,
-            "numberOfRatings": 43
+            "numberOfRatings": 180
         },
         "instructions": [
-            "Cut the chicken breast into cubes and place them in a bowl",
-            "In a separate bowl, mix heavy cream, pesto sauce, olive oil, garlic powder, salt, and black pepper",
-            "Pour the marinade over the chicken and let it marinate for 20 minutes",
-            "Thread the marinated chicken onto skewers",
-            "Grill the skewers over medium heat for 8-10 minutes, turning occasionally until chicken is cooked through",
+            "1. In a blender, combine the avocado, coconut milk, almond butter, and blend until smooth and creamy.",
+            "2. Pour the smoothie into a bowl.",
+            "3. Top with chia seeds, unsweetened shredded coconut, and hemp hearts.",
+            "4. Enjoy your keto avocado smoothie bowl!"
+        ]
+    },
+    "59": {
+        "id": 59,
+        "name": "Creamy Avocado Toast with Bacon",
+        "description": "Indulge in a rich and flavorful breakfast with this creamy avocado toast topped with crispy bacon.",
+        "image": "assets/images/59_creamy_avocado_toast_with_bacon.jpg",
+        "equipment": ["Toaster", "Frying Pan"],
+        "preparationTime": 15,
+        "macroRatio": [463, 14, 22, 37, 10],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal"],
+        "tags": ["highFiber", "lowCarb"],
+        "allergens": [],
+        "ingredients": [
+            {
+                "ingredientID": 616,
+                "name": "avocado",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1137,
+                "name": "bacon",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 413,
+                "name": "bread",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1015,
+                "name": "butter",
+                "quantity": 10,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 272
+        },
+        "instructions": [
+            "Toast the bread slices in a toaster until golden brown.",
+            "In a frying pan, cook the bacon until crispy. Remove and set aside on a paper towel to drain excess grease.",
+            "Mash the avocado in a bowl and season with salt and pepper to taste.",
+            "Spread the butter on the toasted bread slices.",
+            "Top the buttered toast with the mashed avocado and crispy bacon.",
+            "Enjoy your creamy avocado toast with bacon!"
+        ]
+    },
+    "60": {
+        "id": 60,
+        "name": "Keto Bacon and Egg Avocado Boat",
+        "description": "A high-fat, ketogenic breakfast recipe that combines crispy bacon, eggs, and creamy avocado for a satisfying meal.",
+        "image": "assets/images/60_keto_bacon_and_egg_avocado_boat.jpg",
+        "equipment": [],
+        "preparationTime": 15,
+        "macroRatio": [288, 11, 3, 28, 6],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal", "LactoseFree", "keto"],
+        "tags": ["lowCarb", "noCarb", "Simple"],
+        "allergens": ["Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 1137,
+                "name": "bacon",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1663,
+                "name": "eggs",
+                "quantity": 2,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 616,
+                "name": "avocado",
+                "quantity": 100,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 109
+        },
+        "instructions": [
+            "Preheat the oven to 375°F (190°C).",
+            "Cook the bacon in a skillet until crispy, then chop it into small pieces.",
+            "Cut the avocado in half and remove the pit. Scoop out some of the flesh to create a larger well for the eggs.",
+            "Crack an egg into each avocado half. Season with salt and pepper.",
+            "Place the avocado halves on a baking sheet and bake for about 10-15 minutes or until the eggs are cooked to your liking.",
+            "Top the avocado boats with the crispy bacon.",
             "Serve hot and enjoy!"
+        ]
+    },
+    "61": {
+        "id": 61,
+        "name": "Greek Yogurt Parfait",
+        "description": "A high protein, low carb, and low fat breakfast option that is delicious and satisfying.",
+        "image": "assets/images/61_greek_yogurt_parfait.jpg",
+        "equipment": ["Bowl", "Spoon", "Glass or Jar"],
+        "preparationTime": 10,
+        "macroRatio": [288, 13, 17, 21, 7],
+        "mealTypes": [1, 1, 0],
+        "categories": ["Meal"],
+        "tags": ["lowCarb", "Quick"],
+        "allergens": ["Nuts"],
+        "ingredients": [
+            {
+                "ingredientID": 1764,
+                "name": "greek yogurt",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1817,
+                "name": "blueberries",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 35,
+                "name": "almonds",
+                "quantity": 10,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1728,
+                "name": "chia seeds",
+                "quantity": 5,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 92,
+                "name": "vanilla extract",
+                "quantity": 5,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 47
+        },
+        "instructions": [
+            "In a bowl, mix the Greek yogurt with vanilla extract and sweetener.",
+            "In a glass or jar, layer the yogurt mixture with berries, chopped almonds, and chia seeds.",
+            "Repeat the layers until the glass is filled.",
+            "Top with a few extra berries and almonds for garnish.",
+            "Serve chilled and enjoy!"
+        ]
+    },
+    "62": {
+        "id": 62,
+        "name": "Egg White and Spinach Breakfast Wrap",
+        "description": "A high protein, low carb, and low fat breakfast option perfect for starting your day on the right note.",
+        "image": "assets/images/62_egg_white_and_spinach_breakfast_wrap.jpg",
+        "equipment": ["Skillet"],
+        "preparationTime": 15,
+        "macroRatio": [143, 25, 8, 6, 3],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal", "Vegetarian"],
+        "tags": ["lowCalorie", "lowFat", "lowCarb", "noCarb"],
+        "allergens": ["Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 187,
+                "name": "egg whites",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 50,
+                "name": "spinach",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 451,
+                "name": "tomato",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1771,
+                "name": "feta cheese",
+                "quantity": 30,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 1608,
+                "name": "whole grain wrap",
+                "quantity": 1,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 72
+        },
+        "instructions": [
+            "In a skillet, sauté spinach and tomato until spinach is wilted.",
+            "Add in the egg whites and cook until set.",
+            "Sprinkle feta cheese on top and let it melt slightly.",
+            "Warm up the whole grain wrap in the skillet.",
+            "Place the egg white and spinach mixture in the wrap, roll it up, and enjoy!"
+        ]
+    },
+    "63": {
+        "id": 63,
+        "name": "Egg White and Turkey Breakfast Bowl",
+        "description": "A high-protein, low-carb, and low-fat breakfast bowl made with egg whites, turkey, and vegetables.",
+        "image": "assets/images/63_egg_white_and_turkey_breakfast_bowl.jpg",
+        "equipment": ["Saucepan", "Skillet"],
+        "preparationTime": 15,
+        "macroRatio": [205, 40, 8, 6, 3],
+        "mealTypes": [1, 0, 0],
+        "categories": ["Meal", "LactoseFree"],
+        "tags": ["lowFat", "highProtein", "lowCarb", "noCarb"],
+        "allergens": ["Egg"],
+        "ingredients": [
+            {
+                "ingredientID": 187,
+                "name": "egg whites",
+                "quantity": 150,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 732,
+                "name": "turkey breast",
+                "quantity": 100,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 50,
+                "name": "spinach",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 37,
+                "name": "bell pepper",
+                "quantity": 50,
+                "unit": "grams"
+            },
+            {
+                "ingredientID": 961,
+                "name": "mushrooms",
+                "quantity": 50,
+                "unit": "grams"
+            }
+        ],
+        "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 245
+        },
+        "instructions": [
+            "In a skillet, cook the turkey breast until browned. Remove and set aside.",
+            "In the same skillet, sauté the bell pepper, mushrooms, and spinach until tender.",
+            "In a separate saucepan, cook the egg whites until set.",
+            "Divide the cooked egg whites, turkey, and sautéed vegetables into a bowl.",
+            "Serve hot and enjoy your high-protein breakfast!"
         ]
     }
 }
