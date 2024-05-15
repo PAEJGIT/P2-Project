@@ -15,21 +15,26 @@ function orderingDataRouter(req, res) {
 
 function orderingData(mealPlan, userDetails, userPreferences, callback) {
     try {
-        fs.readFile(filePath, "utf8", (err, data => {
-            const fileData = JSON.parse(data);
-    
-            fileData.users[0].mealPlan = req.body.mealPlan;
-            fileData.users[0].userDetails = req.body.userDetails;
-            fileData.users[0].userPreferences = req.body.userPreferences;
+        fs.readFile(filePath, "utf8", (err, data) => { 
+            if (err) {
+                callback(false);
+                return;
+            }
 
-            fs.writeFile(filePath, JSON.stringify(fileData, undefined, 4), (err) => {
-                if(err) {
+            const fileData = JSON.parse(data);
+
+            fileData["peter"].mealPlan = mealPlan;
+            fileData["peter"].userDetails = userDetails;
+            fileData["peter"].userPreferences = userPreferences;
+
+            fs.writeFile(filePath, JSON.stringify(fileData, null, 4), (err) => {
+                if (err) {
                     callback(false);
                 } else {
                     callback(true);
                 }
             });
-        }));
+        });
     } catch (error) {
         callback(false);
     }

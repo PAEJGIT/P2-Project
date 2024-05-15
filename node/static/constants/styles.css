@@ -401,12 +401,13 @@ li:hover .endpoints {
     color: white;
     height: 40px;
     width: 130px;
+
 }
 
 #stepbuttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .profile_form input {
@@ -556,7 +557,7 @@ li:hover .endpoints {
 	width: fit-content;
 }
 
-.horizontalLines {
+.requirementsLines {
 	margin-top: 5px;
 	background-color: #c7cedc;
 	height: 3px;
@@ -713,7 +714,7 @@ body span {
 	justify-content: center;
 }
 
-.summaryHorizontalLines {
+.summaryHorizontalLines > div {
 	background-color: #c7cedc;
 	height: 2px;
 	width: 100%;

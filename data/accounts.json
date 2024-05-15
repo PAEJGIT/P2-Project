@@ -1,43 +1,29 @@
 {
-    "users": [
-        {
-            "name": "peter",
-            "email": "peter@gmail.com",
-            "password": "Peter123",
-            "userDetails": [
-                {
-                    "sex": "female",
-                    "age": "15",
-                    "weight": "55",
-                    "height": "127",
-                    "activitylevel": "5"
-                },
-                {
-                    "sex": "male",
-                    "age": "15",
-                    "weight": "37",
-                    "height": "120",
-                    "activitylevel": "3"
-                }
-            ],
-            "userPreferences": [
-                {
-                    "healthgoal": "weightgain",
-                    "dietpreference": "vegetarian",
-                    "diettype": "keto",
-                    "pregnant": "True",
-                    "lactating": "True"
-                },
-                {
-                    "healthgoal": "weightgain",
-                    "dietpreference": "vegan",
-                    "diettype": "lowcarb"
-                }
-            ],
-            "mealPlan": {
-                "peopleAmount": "2",
-                "mealAmount": "5"
+    "peter": {
+        "name": "peter",
+        "email": "peter@gmail.com",
+        "password": "Peter123",
+        "userDetails": [
+            {
+                "sex": "female",
+                "age": "26",
+                "weight": "47",
+                "height": "120",
+                "activitylevel": "5"
             }
+        ],
+        "userPreferences": [
+            {
+                "healthgoal": "weightloss",
+                "dietpreference": "vegetarian",
+                "diettype": "highfiber",
+                "pregnant": "True",
+                "lactating": "True"
+            }
+        ],
+        "mealPlan": {
+            "peopleAmount": "1",
+            "mealAmount": "4"
         }
-    ]
+    }
 }
