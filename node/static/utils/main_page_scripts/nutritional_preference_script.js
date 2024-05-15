@@ -128,7 +128,7 @@ function swapForms(profile, form) {
 }
 
 /* saves form data before user clicks away from the page */
-window.addEventListener("beforeunload", () => {
+window.addEventListener("submit", () => {
 let allFormsData = [];
 
 for (let i = 1; i <= data.peopleAmount; i++) {

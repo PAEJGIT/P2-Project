@@ -79,7 +79,7 @@ function swapForms(profile, form) {
 
 /* Saves all form data to localStorage when user navigates away from the page */
 
-window.addEventListener("beforeunload", () => {
+window.addEventListener("submit", () => {
     let allFormsData = [];
     
     for (let i = 1; i <= data.peopleAmount; i++) {
