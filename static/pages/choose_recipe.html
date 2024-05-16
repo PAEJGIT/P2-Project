@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../constants/styles.css" />
+		<script src="../utils/requests/req_valid_recipes.js"></script>
+	</head>
+
+	<body>
+		<div class="invisible" id="hidden1">
+			<div class="container">
+				<button class="arrow left_arrow" id="left_arrow1"></button>
+				<div class="bar" id="scrollBar1">
+					<div class="itemlist" id="itemlist1"></div>
+				</div>
+				<button class="arrow right_arrow" id="right_arrow1"></button>
+			</div>
+
+			<div class="button_container">
+				<button class="accept" id="accept1">Accept</button>
+			</div>
+		</div>
+
+		<div class="invisible" id="hidden2">
+			<div class="container">
+				<button class="arrow" id="left_arrow2"><</button>
+				<div class="bar" id="scrollBar2">
+					<div class="itemlist" id="itemlist2"></div>
+				</div>
+				<button class="arrow" id="right_arrow2">></button>
+			</div>
+
+			<div class="button_container">
+				<button class="accept" id="accept2">Accept</button>
+			</div>
+		</div>
+
+		<div class="invisible" id="hidden3">
+			<div class="container">
+				<button class="arrow" id="left_arrow3"><</button>
+				<div class="bar" id="scrollBar3">
+					<div class="itemlist" id="itemlist3"></div>
+				</div>
+				<button class="arrow" id="right_arrow3">></button>
+			</div>
+
+			<div class="button_container">
+				<button class="accept" id="accept3" onclick="window.location.href='/dashboard'">Finalize</button>
+			</div>
+		</div>
+
+		<script src="../utils/helpers/valid_recipes.js"></script>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --primary-font: 'poppins', sans-serif;
+    --secondary-font: 'inter', sans-serif;
+    --background-color: #e2e7f0;
+    --primary-900: #1a202c;
+    --primary-800: #2d3648;
+    --primary-700: #4a5468;
+    --primary-600: #717d96;
+    --primary-500: #a0abc0;
+    --primary-400: #cbd2e0;
+    --primary-300: #e2e7f0;
+    --primary-200: #edf0f7;
+    --primary-100: #f7f9fc;
+    --yellow-600: #ffd43a;
+    --yellow-300: #ffedad;
+    --orange-600: #fe9d35;
+    --orange-300: #fed7ad;
+    --green-600: #2edb4b;
+    --green-300: #d1ffd9;
+    --blue-600: #34aff7;
+    --blue-300: #b0dcff;
+    --purple-600: #f134f7;
+    --purple-300: #f6d1ff;
+    --red-600: #ff5252;
+    --red-300: #ffb8b8;
+    --box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, #cbd2e0 -6px -2px 16px 0px;
+    --box-shadow-popover: box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+#logo {
+	height: 3rem;
+}
+
+
+#header-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-100);
+    border-bottom: solid;
+	border-bottom-width: 2px;
+}
+
+#header {
+	display: flex;
+	height: 80px;
+    width: 95%;
+    max-width: 1200px;
+	position: sticky;
+	top: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+	z-index: 1;
+	grid-row: 1 / 3;
+	grid-column: 1 / 21;
+	justify-content: space-between;
+	align-items: center;
+}
+#nav_bar_list_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 30px;
+}
+
+li {
+    display:flex;
+    margin-left: 30px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav_icons {
+    position: relative;
+    height: 1.3rem;
+    width: 1.3rem;
+    right: 5px;
+    filter: invert(78%) sepia(15%) saturate(227%) hue-rotate(182deg) brightness(94%) contrast(82%);
+}
+
+.endpoints {
+    position: relative;
+    color: #717d96;
+}
+
+li:hover .nav_icons {
+    filter: invert(0%) sepia(95%) saturate(21%) hue-rotate(2deg) brightness(92%) contrast(108%);
+}
+
+li:hover .endpoints {
+    color: var(--primary-700);
+}
+
+.endpoints::before {
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: -23px;
+    width: 0%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+.endpoints:hover::before {
+    width: 120%;
+}

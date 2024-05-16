@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../constants/styles.css" />
+		<script src="../components/header/header.js"></script>
+		<script src="../components/footer/footer.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</head>
+
+	<body>
+		<!-- Header with navigation -->
+		<div id="header-container"></div>
+
+		<!-- Main content area -->
+		<main id="content">
+			<div id="home-content-container">
+				<div id="home-container">
+					<div id="home-container-card-title">
+						<image id="home-card-icon" src="../assets/icons/icon_shield.svg" alt="icon_home" />
+						<h1>Save money by saving your health</h1>
+					</div>
+					<p>Learn you how to meet your individual nutritional needs and enjoy delicious food.</p>
+					<button id="home-button-start" class="btnLogin-popup">Start Now!</button>
+				</div>
+				<div id="spacer"></div>
+				<div id="home-container-bottom">
+					<div id="home-container">
+						<div id="home-container-card-title">
+							<image id="home-card-icon" src="../assets/icons/icon_db.svg" alt="API" />
+							<h1>Database</h1>
+						</div>
+						<p>You can also find ingredients or recipes through either of our database(s)*.</p>
+						<div>
+							<button id="search-button">See all ingredients</button>
+							<button id="search-button">See all recipes</button>
+						</div>
+						<p class="description">*You need to register for access to the database through our API.</p>
+					</div>
+					<div id="home-container">
+						<div id="home-container-card-title">
+							<image id="home-card-icon" src="../assets/icons/icon_api.svg" alt="API" />
+							<h1>API</h1>
+						</div>
+						<p>You can also find ingredients or recipes through either of our database(s)*.</p>
+						<div>
+							<button id="search-button">Sign-in to get key</button>
+							<button id="search-button">Write to support</button>
+						</div>
+						<p class="description">*You need to register for access to the database through our API.</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div id="overlay" class="overlay"></div>
+		<div class="wrapper">
+			<span id="icon-close" class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+			<div class="form-box login">
+				<h2>Login</h2>
+				<form id="loginForm">
+					<div class="input-box">
+						<span class="icon"><ion-icon name="person"></ion-icon></span>
+						<input type="text" name="username" required />
+						<label>Username</label>
+					</div>
+					<div class="input-box">
+						<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+						<input type="password" name="password" required />
+						<label>Password</label>
+					</div>
+					<div class="remember-forgot">
+						<label><input type="checkbox" /> Remember me</label>
+						<a href="#">Forgot Password?</a>
+					</div>
+					<button type="submit" class="btn">Login</button>
+					<div class="login-register">
+						<p>
+							Don't have an account?
+							<a href="#" class="register-link" onclick=""> Register</a>
+						</p>
+					</div>
+				</form>
+			</div>
+
+			<div class="form-box register">
+				<h2>Register</h2>
+				<form id="registerForm">
+					<div class="input-box">
+						<span class="icon"><ion-icon name="person"></ion-icon></span>
+						<input type="text" name="usernameRegister" required />
+						<label>Username</label>
+					</div>
+					<div class="input-box">
+						<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+						<input type="password" name="passwordRegister" required />
+						<label>Password</label>
+					</div>
+					<!-- <div class="remember-forgot">
+				  <label><input type="checkbox" /> Remember me</label>
+				  <a href="#">Forgot Password?</a>
+				</div> -->
+					<button type="submit" class="btn">Register</button>
+					<div class="login-register">
+						<p>
+							Already have an account?
+							<a href="#" class="login-link" onclick=""> Login</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Footer with navigation -->
+		<div id="footer-container"></div>
+		<script src="../utils/requests/req_login.js"></script>
+		<script src="../utils/requests/req_register.js"></script>
+		<script src="../utils/helpers/scripts.js"></script>
+		<script>
+			document.getElementById('home-button-start').addEventListener('click', function() {
+				document.getElementById('overlay').classList.add('active');
+			});
+
+			document.getElementById('icon-close').addEventListener('click', function() {
+				document.getElementById('overlay').classList.remove('active');
+			});
+		</script>
+	</body>
+</html>

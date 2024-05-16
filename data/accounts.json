@@ -1,11 +1,20 @@
 {
-    "users": [
-        {
-            "name": "peter",
-            "email": "peter@gmail.com",
-            "password": "Peter123",
-            "familySize": "2",
-            "meals": "2"
-        }
-    ]
+	"peter": {
+		"name": "peter",
+		"email": "peter@gmail.com",
+		"password": "Peter123",
+		"userDetails": [{ "sex": "female", "age": "26", "weight": "47", "height": "120", "activitylevel": "5" }],
+		"userPreferences": [
+			{
+				"healthgoal": "weightloss",
+				"dietpreference": "vegetarian",
+				"diettype": "highfiber",
+				"pregnant": "True",
+				"lactating": "True"
+			}
+		],
+		"mealPlan": { "peopleAmount": "1", "mealAmount": "4" }
+	},
+	"Stefan": { "password": "123456" },
+	"Stefaa": { "password": "123456" }
 }

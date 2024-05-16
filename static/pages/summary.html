@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+		<link rel="stylesheet" href="../constants/styles.css" />
+		<script src="../utils/helpers/mealRecommendation.js"></script>
+		<script src="../components/header/header.js"></script>
+		<script src="../components/footer/footer.js"></script>
+	</head>
+
+	<body>
+		<div id="header-container"></div>
+
+		<div id="grid_parent">
+			<div id="step_bar">
+				<div id="step_links">
+					<div class="linkContainers">
+						<ul>
+							<li>
+								<img
+									class="step_icons"
+									src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png" />
+								<a class="stepLinks" id="order/choose-mealplan"
+									><span class="link_spans"></span>Vælg måltidsplan</a
+								>
+								<i></i>
+							</li>
+						</ul>
+					</div>
+
+					<div class="linkContainers">
+						<ul>
+							<li>
+								<img
+									class="step_icons"
+									src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png" />
+								<a class="stepLinks" id="order/set-profile"
+									><span class="link_spans"></span>Sundhedsprofil</a
+								>
+								<i></i>
+							</li>
+						</ul>
+					</div>
+
+					<div class="linkContainers">
+						<ul>
+							<li>
+								<img
+									class="step_icons"
+									src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png" />
+								<a class="stepLinks" id="order/nutritional-preference"
+									><span class="link_spans"></span>Sundhedsmål</a
+								>
+								<i></i>
+							</li>
+						</ul>
+					</div>
+
+					<div class="linkContainers" style="background-color: rgba(158, 158, 158, 0.384)">
+						<ul>
+							<li>
+								<img
+									class="step_icons"
+									style="
+										filter: invert(0%) sepia(95%) saturate(21%) hue-rotate(2deg) brightness(92%)
+											contrast(108%);
+									"
+									src="https://static-00.iconduck.com/assets.00/full-screen-icon-256x256-z03tmnai.png" />
+								<a class="stepLinks" id="order/summary" style="color: black"
+									><span class="link_spans"></span>Opsummering</a
+								>
+								<i></i>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="order_box">
+					<span>Prisoversigt:</span>
+					<span>wrgrewhesthtes</span>
+				</div>
+			</div>
+
+			<div id="step_header">
+				<span id="step_title">Opsummering</span>
+				<button id="orderTitle">Måltidsplanlægning</button>
+			</div>
+
+			<div id="step_content">
+				<div id="users"></div>
+
+				<form class="profile_form" id="form1">
+					<div id="summaryFormTitleContent">
+						<span id="summaryFormTitle">Does this look correct?</span>
+						<span id="summaryFormDescription"
+							>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sequi qui a nemo?</span
+						>
+					</div>
+
+					<div class="summaryHorizontalLines">
+						<div></div>
+					</div>
+
+					<div id="userHealthDetailsParentContainer">
+						<div id="userHealthDetails">
+							<span>Your Sex</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+
+						<div id="userHealthDetails">
+							<span>Your Age</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+
+						<div id="userHealthDetails">
+							<span>Your Height</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+
+						<div id="userHealthDetails">
+							<span>Your Weight</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+
+						<div id="userHealthDetails">
+							<span>Your Occupation</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="summaryHorizontalLines">
+						<div></div>
+					</div>
+
+					<div id="userHealthDetailsParentContainer">
+						<div id="userHealthDetails">
+							<span>Your Goal</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+
+						<div id="userHealthDetails">
+							<span>Your Preference</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+
+						<div id="userHealthDetails">
+							<span>Your Approach</span>
+							<div id="userRightHealthDetailsContainer">
+								<span class="detailsContent">abc</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="summaryHorizontalLines">
+						<div></div>
+					</div>
+
+					<div id="summarySubmitButtonContainer">
+						<button type="button" id="submitDetails" onclick="window.location.href='/order/choose-recipe'">
+							This is correct
+						</button>
+					</div>
+				</form>
+
+				<div id="userRequirements">
+					<div id="energyRequirements">
+						<span id="energyRequirementsTitle">Energifordeling</span>
+						<div class="requirementsLines"></div>
+					</div>
+
+					<div class="requirementsParentContainers">
+						<div class="BMRTDEEContainers">
+							<div>
+								<span>BMR ?</span>
+							</div>
+							<span style="font-size: 12px">Basic Metabolic Rate</span>
+
+							<div class="BMRTDEEBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+
+						<div class="BMRTDEEContainers">
+							<div>
+								<span>BMR ?</span>
+							</div>
+							<span style="font-size: 12px">Basic Metabolic Rate</span>
+
+							<div class="BMRTDEEBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+					</div>
+
+					<div id="macroRequirements">
+						<span id="macroTitle">Anbefalet macros</span>
+						<div class="requirementsLines"></div>
+					</div>
+
+					<div class="macrosParentContainer">
+						<div class="macroRequirementBoxContainers">
+							<div>
+								<span>Proteiner ?</span>
+							</div>
+							<span style="font-size: 12px">Daglig protein</span>
+
+							<div class="macroBoxes" id="BMRBox">
+								<span>1000</span>
+							</div>
+						</div>
+
+						<div class="macroRequirementBoxContainers">
+							<div>
+								<span>kulhydrater ?</span>
+							</div>
+							<span style="font-size: 12px">Daglig kulhydrater</span>
+
+							<div class="macroBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+
+						<div class="macroRequirementBoxContainers">
+							<div>
+								<span>Fedt ?</span>
+							</div>
+							<span style="font-size: 12px">Daglig fedt</span>
+
+							<div class="macroBoxes">
+								<span>1000</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="userGreeting">
+					<span> Hej bruger</span>
+					<span
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque omnis at error sint similique
+						delectus totam tenetur vel optio. Commodi minima aliquid enim quasi, illo veniam dolor placeat
+						debitis laboriosam?</span
+					>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer-container"></div>
+
+		<script src="../components/allPages.js"></script>
+
+		<script src="../utils/main_page_scripts/summary_script.js"></script>
+	</body>
+</html>
