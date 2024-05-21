@@ -1,4 +1,5 @@
 /* dynamically renders a form for each profile */
+
 function profileRendering(numberOfPeople) {
 	allProfiles = document.getElementById('users');
 

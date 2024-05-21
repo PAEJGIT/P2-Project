@@ -111,3 +111,66 @@ li:hover .endpoints {
 .endpoints:hover::before {
     width: 120%;
 }
+
+.avatar-button {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #34aff7;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.log-out-button {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #cbd2e0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.settings-button {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #cbd2e0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.avatar-button:hover {
+    background: rgb(41,72,255);
+    background: linear-gradient(90deg, rgba(41,72,255,1) 0%, rgba(57,106,252,1) 100%);
+}
+.log-out-button:hover {
+    background: rgb(160,171,192);
+    background: linear-gradient(90deg, rgba(160,171,192,1) 0%, rgba(226,231,240,1) 100%);
+}
+.settings-button:hover {
+    background: rgb(160,171,192);
+    background: linear-gradient(90deg, rgba(160,171,192,1) 0%, rgba(226,231,240,1) 100%);
+}
+.button_nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.logged_in_text {
+    display: flex;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    color: var(--primary-700);
+    margin-top: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}

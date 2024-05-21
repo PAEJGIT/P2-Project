@@ -1,17 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
+	// Get localStorage
+	const localStorage = window.localStorage;
+	// Get user info from localStorage
+	const localUser = JSON.parse(localStorage.getItem('userProfile'));
+
+	console.log('User info: ');
+	console.table(localUser);
+
 	const userProfile = {
-		peopleAmount: JSON.parse(localStorage.getItem('order/choose-mealplan')).peopleAmount,
-		mealAmount: JSON.parse(localStorage.getItem('order/choose-mealplan')).mealAmount,
-		sex: JSON.parse(localStorage.getItem('order/set-profile'))[0].sex,
-		age: JSON.parse(localStorage.getItem('order/set-profile'))[0].age,
-		heightCm: JSON.parse(localStorage.getItem('order/set-profile'))[0].height,
-		weightKg: JSON.parse(localStorage.getItem('order/set-profile'))[0].weight,
-		activityFactor: JSON.parse(localStorage.getItem('order/set-profile'))[0].activitylevel,
-		pregnant: '',
-		lactating: '',
-		compositionGoal: JSON.parse(localStorage.getItem('order/nutritional-preference'))[0].healthgoal,
-		compositionPreference: JSON.parse(localStorage.getItem('order/nutritional-preference'))[0].dietpreference,
-		compositionType: JSON.parse(localStorage.getItem('order/nutritional-preference'))[0].diettype,
+		peopleAmount: 1,
+		mealAmount: 3,
+		sex: localUser.sex,
+		age: localUser.age,
+		heightCm: localUser.height,
+		weightKg: localUser.weight,
+		activityFactor: localUser.activity,
+		pregnant: localUser.pregnant,
+		lactating: localUser.lactating,
+		compositionGoal: localUser.healthGoal,
+		compositionPreference: localUser.nutritionalPreference,
+		compositionType: localUser.dietaryApproach
 	};
 	//console.table(userData);
 	reqValidRecipes(userProfile, (data) => {

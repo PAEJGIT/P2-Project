@@ -5,8 +5,7 @@
  */
 const Header = (cssPath = '../components/header/header.css', injectTo = 'header-container') => {
 	// State to check if the user is logged in
-	let isLoggedIn = localStorage.length === 0 ? false : true;
-	console.log(localStorage.length);
+	let username = localStorage.getItem('username') ? true : false;
 	// Event listener for the log out button
 	document.addEventListener('click', (e) => {
 		// Clear local storage
@@ -42,9 +41,23 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
             </nav>
             <div id="nav_buttons">
                          ${
-								isLoggedIn
+								username
 									? `
-            <button id="log_out_button" type="button">Log out</button>
+			<div class="button_nav">
+            	<button id="button_navigation" class="log-out-button" type="button">
+					<img src="../../assets/icons/icon_logout.svg"></img>
+				</button>
+				<button id="button_navigation" class="settings-button"  type="button">
+					<img src="../../assets/icons/icon_settings.svg"></img>
+				</button>
+				<button id="avatar" class="avatar-button"  type="button">
+					<img src="../../assets/icons/icon_user.svg"></img>
+				</button>
+			</div>
+
+			<div class="logged_in_text">
+				<div id="user_name">Logged in as: ${localStorage.getItem('username')}</div>
+			</div>
             `
 									: `
             <button id="log_in_button" onclick="location.href='/login'" type="button">Log in</button>

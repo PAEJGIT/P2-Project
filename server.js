@@ -18,6 +18,10 @@ app.use(modules.express.static(__dirname + '/static/')); // Serve static files f
  */
 const GenerateRoutes = () => {
 	const routes = {
+		stepper: {
+			url: '/stepper',
+			page: 'stepper.html',
+		},
 		home: {
 			url: '/',
 			page: 'home.html',
@@ -80,6 +84,34 @@ app.post('/login', modules.loginRouter); // Define the login route
 app.post('/register', modules.registerRouter); // Define the register route
 app.post('/ordering-data', modules.orderingDataRouter); // Define the ordering data route
 app.post('/validRecipes', modules.validRecipesRouter); // Define the recipe chooser route
+
+// Define the route to update the user profile
+app.post('/updateProfile', (req, res) => {
+	const { username, userProfile } = req.body;
+	modules.fs.readFile(modules.path.join(__dirname, 'data', 'accounts.json'), 'utf8', (err, data) => {
+		if (err) {
+			console.error('Error reading accounts file:', err);
+			return res.status(500).send('Server error');
+		}
+		const accounts = JSON.parse(data);
+		if (!accounts[username]) {
+			return res.status(404).send('User not found');
+		}
+		accounts[username].userProfile = userProfile;
+		modules.fs.writeFile(
+			modules.path.join(__dirname, 'data', 'accounts.json'),
+			JSON.stringify(accounts, null, 2),
+			'utf8',
+			(err) => {
+				if (err) {
+					console.error('Error writing accounts file:', err);
+					return res.status(500).send('Server error');
+				}
+				res.send('Profile updated successfully');
+			}
+		);
+	});
+});
 
 // Start the server on the specified port
 app.listen(port, '127.0.0.1', () => {

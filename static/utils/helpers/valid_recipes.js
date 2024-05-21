@@ -38,8 +38,6 @@ document.getElementById('accept3').addEventListener('click', function () {
 	accept3();
 	// Go to page '/order/choose-recipe'
 	//window.location.href = '/order/choose-recipe';
-
-
 });
 
 /**
@@ -114,9 +112,16 @@ function scrollItems3(direction) {
  * Also calculates the middle item of all items added, and scrolls the bar to the middle!
  */
 function addBreakfastRecipes(validRecipes) {
+	// Get localStorage user info
+	let userInfo = JSON.parse(localStorage.getItem('userProfile'));
+	// Log the recipes and user info
+	const show_recipes_in_log = false;
+	const show_user_info_in_log = false;
+	show_recipes_in_log ? console.log(validRecipes) : null;
+	show_user_info_in_log ? console.log(userInfo) : null;
+
 	globalValidRecipes = validRecipes;
 	let itemlist1 = document.getElementById('itemlist1');
-	console.log(validRecipes);
 
 	createInvisibleItem(itemlist1);
 	createInvisibleItem(itemlist1);

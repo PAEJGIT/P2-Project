@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stepper Page</title>
+		<link rel="stylesheet" href="../constants/styles.css" />
+		<script src="../components/header/header.js"></script>
+		<!-- <script src="../components/footer/footer.js"></script> -->
+	</head>
+	<body>
+		<!-- Header with navigation -->
+		<div id="header-container"></div>
+
+		<!-- Main content area -->
+		<div id="stepper-content">
+			<!-- Stepper left-container -->
+			<div class="stepper-left-container">
+				<div class="stepper-left-container-sections">
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_name.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Name</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_sex.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Sex</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_age.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Age</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_weight.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Weight</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_height.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Height</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_activity.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Activity</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_healthgoal.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Healthgoal</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_preference.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Nutritional Preference</span>
+					</div>
+
+					<div class="stepper-left-container-sections-box">
+						<img
+							src="../assets/icons/inputs/icon_approach.svg"
+							class="stepper-left-container-sections-box-img"
+							alt="Stepper 1" />
+						<span class="stepper-left-container-sections-box-text">Dietary Approach</span>
+					</div>
+				</div>
+
+				<div class="stepper-left-container-pricing">
+					<div class="stepper-left-container-pricing-box">
+						<span class="stepper-left-container-pricing-box-estimate">Estimated Price (~)</span>
+						<span class="stepper-left-container-pricing-box-price">1.234 kr.</span>
+						<span class="stepper-left-container-pricing-box-average">avg. 0.00 DKK pr. meal</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Stepper right-container -->
+			<div class="stepper-right-container">
+				<div class="stepper-right-section">
+					<h1 class="stepper-right-section-title">Health Profile</h1>
+					<div class="stepper-right-section-process">
+						<span class="stepper-right-section-process-text">MEAL PLANNING</span>
+					</div>
+				</div>
+
+				<div class="stepper-right-content">
+					<div class="stepper-right-content-container">
+						<!-- Health profile-->
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedName" class="input_label">Your Name</label>
+									<span class="input_description"
+										>Your age is defined by date of birth minus today's date.</span
+									>
+									<div class="stepper-divider"></div>
+									<input
+										class="input_field"
+										type="text"
+										id="selectedName"
+										name="selectedName"
+										placeholder="Enter your name"
+										required />
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container" style="justify-content: end">
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedSex" id="label_sex" class="input_label">Your Sex</label>
+									<span class="input_description"
+										>Your biological sex is defined by your number of chromosomes.</span
+									>
+									<div class="stepper-divider"></div>
+									<select name="sex" id="selectedSex" class="input_field" required>
+										<option value="" selected>— Vælg et køn —</option>
+										<option value="male">Mand</option>
+										<option value="female">Kvinde</option>
+									</select>
+								</div>
+								<div id="pregnant_lactating_section" style="display: none">
+									<div class="spacer-2"></div>
+									<div class="input_container inputText">
+										<label for="selectedPregnancy" id="label_pregnant_lactate" class="input_label"
+											>Are you pregnant or lactating?</label
+										>
+										<span class="input_description"
+											>We will make sure you (both) get all necessary nutrients</span
+										>
+										<div class="stepper-divider"></div>
+										<div class="stepper-button-container">
+											<button
+												class="stepper-button-radio selected"
+												value="none"
+												onclick="selectButton(this)">
+												<span class="stepper-button-radio-text">Hell no</span>
+												<img
+													src="../assets/icons/icon_check.svg"
+													alt="selected icon"
+													class="button_icon_check" />
+											</button>
+											<button
+												class="stepper-button-radio"
+												value="pregnant"
+												onclick="selectButton(this)">
+												<span class="stepper-button-radio-text">Pregnant</span>
+												<img
+													src="../assets/icons/icon_check.svg"
+													alt="selected icon"
+													class="button_icon_check" />
+											</button>
+											<button
+												class="stepper-button-radio"
+												value="lactating"
+												onclick="selectButton(this)">
+												<span class="stepper-button-radio-text">Lactating</span>
+												<img
+													src="../assets/icons/icon_check.svg"
+													alt="selected icon"
+													class="button_icon_check" />
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedAge" class="input_label">Your Age</label>
+									<span class="input_description"
+										>Your age is defined by date of birth minus today's date.</span
+									>
+									<div class="stepper-divider"></div>
+									<input
+										class="input_field"
+										type="number"
+										id="selectedAge"
+										min="10"
+										max="100"
+										name="selectedAge"
+										step="1"
+										placeholder="Enter your age"
+										required />
+								</div>
+								<div class="spacer-3"></div>
+
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedWeight" class="input_label">Your Weight</label>
+									<span class="input_description"
+										>Your weight is defined by your body weight in kg.</span
+									>
+									<div class="stepper-divider"></div>
+									<input
+										class="input_field"
+										type="number"
+										id="selectedWeight"
+										min="30"
+										max="400"
+										name="selectedWeight"
+										step="1"
+										placeholder="Enter your weight in kg"
+										required />
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedHeight" class="input_label">Your Height</label>
+									<span class="input_description"
+										>Your height is defined by your body length in cm.</span
+									>
+									<div class="stepper-divider"></div>
+									<input
+										class="input_field"
+										type="number"
+										id="selectedHeight"
+										min="120"
+										max="220"
+										name="selectedHeight"
+										step="1"
+										placeholder="Enter your height in cm"
+										required />
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedActivity" id="label_activity" class="input_label"
+										>What are your current occupation?</label
+									>
+									<span class="input_description"
+										>Your occupation is defined by an average of your activity.</span
+									>
+									<div class="stepper-divider"></div>
+									<select name="activitylevel" id="selectedActivity" class="input_field" required>
+										<option value="" selected>Choose your activity level</option>
+										<option value="1">Completely Paralyzed, Comatose</option>
+										<option value="2">Sedentary Lifestyle, Little or No Exercise</option>
+										<option value="3">
+											Lightly Active, Exercise or Moderate Sports 2 to 3 Days a Week
+										</option>
+										<option value="4">
+											Moderately Active, Physical Work or Sports 4 to 5 Days a Week
+										</option>
+										<option value="5">
+											Extremely Active, Very Heavy Physical Work or Exercise Every Day
+										</option>
+									</select>
+								</div>
+								<div class="spacer-3"></div>
+
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Nutritional Preference-->
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedHealthGoal" id="label_healthgoal" class="input_label"
+										>Your healthgoal</label
+									>
+									<span class="input_description"
+										>Your macro nutrients will change according to your health goal</span
+									>
+									<div class="stepper-divider"></div>
+									<select name="healthGoal" id="selectedHealthGoal" class="input_field" required>
+										<option value="" selected>Choose your healthgoal</option>
+										<option value="maintenance">Maintenance</option>
+										<option value="musclegain">Musclegain</option>
+										<option value="fatloss">Fatloss</option>
+										<option value="weightloss">Weightloss</option>
+										<option value="weightgain">Weightgain</option>
+									</select>
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedNutritionalPreference" id="label_preference" class="input_label"
+										>What is your nutritional preference?</label
+									>
+									<span class="input_description">You can change your preference at any time</span>
+									<div class="stepper-divider"></div>
+									<select
+										name="nutritionalPreference"
+										id="selectedNutritionalPreference"
+										class="input_field"
+										required>
+										<option value="" selected>Choose your nutritional preference</option>
+										<option value="balanced">Balanced</option>
+										<option value="vegetarian">Vegetarian</option>
+										<option value="vegan">Vegan</option>
+										<option value="omnivore">Omnivore</option>
+									</select>
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="step">
+							<div class="stepper-right-content-container-box">
+								<div class="input_container inputText">
+									<label for="selectedDietaryApproach" id="label_dietary_approach" class="input_label"
+										>What is your preferred dietary approach?</label
+									>
+									<span class="input_description"
+										>We will restructure your nutrients to your approach</span
+									>
+									<div class="stepper-divider"></div>
+									<select
+										name="dietaryApproach"
+										id="selectedDietaryApproach"
+										class="input_field"
+										required>
+										<option value="" selected>Choose your dietary approach</option>
+										<option value="balanced">Balanced</option>
+										<option value="keto">Keto</option>
+										<option value="highFiber">High Fiber</option>
+										<option value="low-carb">Low-carb</option>
+									</select>
+								</div>
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="nextStep()">
+										<span class="stepper-button-filled-text">Next</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Summary-->
+						<div class="step active">
+							<div class="stepper-right-content-container-box">
+								<div class="health_profile_ready">
+									<img
+										src="../assets/icons/icon_circle_check.svg"
+										class="stepper-right-content-container-box-img" />
+									<h3 class="nutritional-intro-title">Your Health Profile is Ready</h3>
+								</div>
+								<div class="divider"></div>
+								<div class="nutritional-intro-description">
+									<span class="stepper-summary-text">
+										<span style="font-weight: 700">Hi <span id="NAME_summary"></span>!</span>
+										<br /><br />Just wanted to let you know that you have an BMI of
+										<span id="BMI_summary"></span>, which requires approximately
+										<span id="BMR_summary"></span> calories to function. <br /><br />The adjusted
+										value in relation to your activity is <span id="TDEE_summary"></span>, which we
+										think you'll love! Since you chose <span id="HEALTHGOAL_summary"></span>
+										<br /><br /><span id="PREFERENCE_summary"></span>
+										<span id="DIETARY_summary"></span>
+										<br /><br />Therefore your daily protein intake is
+										<span id="PROTEINS_summary"></span>, while we have placed your daily
+										carbohydrate intake at <span id="CARBS_summary"></span> and your daily fat
+										intake at <span id="FATS_summary"></span>. <br /><br />We hope these changes
+										suit your nutritional preferences and approach to diet, but please feel free to
+										<span class="nutritional-intro-contact-us-link" style="font-size: 0.75rem"
+											>let us know</span
+										>
+										if there's anything we can do differently. <br /><br />We really hope you like
+										it! <br /><br /><span style="font-weight: 700">Best,</span> <br /><span
+											style="font-style: italic"
+											>Your Personalised Nutrition Team</span
+										></span
+									>
+									<div class="divider"></div>
+									<span class="nutritional-intro-user-description" style="font-size: 0.75rem"
+										>If you are satisfied with the information, click the button below to find
+										recipes.</span
+									>
+								</div>
+
+								<div class="spacer-3"></div>
+								<div class="stepper-divider"></div>
+								<div class="stepper-button-container">
+									<button class="stepper-button-outline" onclick="prevStep()">
+										<span class="stepper-button-outline-text">Back</span>
+									</button>
+									<button class="stepper-button-filled" onclick="finishStep()">
+										<span class="stepper-button-filled-text">Find Recipes</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stepper-right-content-container">
+						<div class="stepper-right-content-container-box">
+							<div id="userGreeting">
+								<span id="user-welcome-title" class="nutritional-intro-user-title">Hello,</span>
+								<span class="nutritional-intro-user-description"
+									>This is your current template, which will be used to find appropriate recipes for
+									your macro nutritional needs. If you’ve any questions regarding the calculations, do
+									not hesitate to
+									<span class="nutritional-intro-contact-us-link">contact us</span>.</span
+								>
+							</div>
+							<div id="userRequirements">
+								<div id="energyRequirements">
+									<span class="nutritional-box-section-title">Energy Requirements</span>
+									<div class="nutritional-box-section-divider"></div>
+								</div>
+
+								<div class="requirementsParentContainers">
+									<div class="BMRTDEEContainers">
+										<div class="nutritional-box-title-container">
+											<span class="nutritional-box-title">BMR</span>
+											<img
+												class="nutritional-box-title-image"
+												src="../assets/icons/icon_info.svg"
+												alt="info" />
+										</div>
+										<span class="nutritional-box-description">Basic Metabolic Rate</span>
+
+										<div class="nutritional-box-content-container">
+											<span id="BMR_text" class="nutritional-box-content-text"></span>
+											<div id="loading_indicator_bmr" class="loading-indicator"></div>
+										</div>
+									</div>
+
+									<div class="BMRTDEEContainers">
+										<div class="nutritional-box-title-container">
+											<span class="nutritional-box-title">TDEE</span>
+											<img
+												class="nutritional-box-title-image"
+												src="../assets/icons/icon_info.svg"
+												alt="info" />
+										</div>
+										<span class="nutritional-box-description">Total Daily Energy Expenditure</span>
+										<div class="nutritional-box-content-container">
+											<span id="TDEE_text" class="nutritional-box-content-text"></span>
+											<div id="loading_indicator_tdee" class="loading-indicator"></div>
+										</div>
+									</div>
+								</div>
+
+								<div id="macroRequirements">
+									<span id="macroTitle" class="nutritional-box-section-title"
+										>Macronutrient Requirements</span
+									>
+									<div class="nutritional-box-section-divider"></div>
+								</div>
+
+								<div class="macrosParentContainer">
+									<div class="macroRequirementBoxContainers">
+										<div class="nutritional-box-title-container">
+											<span class="nutritional-box-title">Proteins</span>
+											<img
+												class="nutritional-box-title-image"
+												src="../assets/icons/icon_info.svg"
+												alt="info" />
+										</div>
+										<span class="nutritional-box-description">Daily Proteins</span>
+
+										<div class="nutritional-box-content-container" id="BMRBox">
+											<span id="PROTEINS_text" class="nutritional-box-content-text"></span>
+											<div id="loading_indicator_proteins" class="loading-indicator"></div>
+										</div>
+									</div>
+
+									<div class="macroRequirementBoxContainers">
+										<div class="nutritional-box-title-container">
+											<span class="nutritional-box-title">Carbohydrates</span>
+											<img
+												class="nutritional-box-title-image"
+												src="../assets/icons/icon_info.svg"
+												alt="info" />
+										</div>
+										<span class="nutritional-box-description">Daily Carbohydrates</span>
+
+										<div class="nutritional-box-content-container">
+											<span id="CARBS_text" class="nutritional-box-content-text"></span>
+											<div id="loading_indicator_carbs" class="loading-indicator"></div>
+										</div>
+									</div>
+
+									<div class="macroRequirementBoxContainers">
+										<div class="nutritional-box-title-container">
+											<span class="nutritional-box-title">Fats</span>
+											<img
+												class="nutritional-box-title-image"
+												src="../assets/icons/icon_info.svg"
+												alt="info" />
+										</div>
+										<span class="nutritional-box-description">Daily Fats</span>
+
+										<div class="nutritional-box-content-container">
+											<span id="FATS_text" class="nutritional-box-content-text"></span>
+											<div id="loading_indicator_fats" class="loading-indicator"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="../utils/processStepper.js"></script>
+
+		<script>
+			let currentStep = 0;
+			const steps = document.querySelectorAll('.step');
+			const femaleStep = document.getElementById('female_step');
+
+			function showStep(step, direction = 'next') {
+				steps.forEach((element, index) => {
+					if (index === step) {
+						if (direction === 'next') {
+							element.classList.add('active');
+							element.classList.remove('exit-back');
+						} else {
+							element.classList.add('active-back');
+							element.classList.remove('exit');
+						}
+					} else if (index === currentStep) {
+						if (direction === 'next') {
+							element.classList.add('exit');
+							element.classList.remove('active-back');
+						} else {
+							element.classList.add('exit-back');
+							element.classList.remove('active');
+						}
+					} else {
+						element.classList.remove('active', 'active-back', 'exit', 'exit-back');
+					}
+				});
+
+				currentStep = step;
+			}
+			function nextStep() {
+				if (currentStep < steps.length - 1) {
+					showStep(currentStep + 1, 'next');
+				}
+			}
+			function prevStep() {
+				if (currentStep > 0) {
+					showStep(currentStep - 1, 'back');
+				}
+			}
+
+			function finishStep() {
+				// Go to page with recipes
+				window.location.href = '../pages/choose_recipe.html';
+			}
+			// Initialize the first step
+			showStep(currentStep);
+
+			// Pregnant or lactating
+			function selectButton(button) {
+				// Deselect all buttons
+				var buttons = document.querySelectorAll('.stepper-button-radio');
+				buttons.forEach(function (btn) {
+					btn.classList.remove('selected');
+				});
+				// Select the clicked button
+				button.classList.add('selected');
+				// Get the value of the selected button
+				var selectedValue = button.getAttribute('value');
+			}
+		</script>
+		<script type="module">
+			async function login(username, password) {
+				const response = await fetch('/login', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ username, password }),
+				});
+
+				const result = await response.json();
+
+				if (response.ok) {
+					// Save the username to localStorage
+					localStorage.setItem('username', result.data.username);
+					console.log('Login successful');
+				} else {
+					console.error('Login failed:', result.reason);
+				}
+			}
+
+			// Example usage
+			const username = 'Stefan'; // Replace with actual input value
+			const password = '123456'; // Replace with actual input value
+			login(username, password);
+		</script>
+	</body>
+</html>
