@@ -1,21 +1,18 @@
 // Get current time
-export const getTime = () => {
+const getTime = () => {
 	const date = new Date();
 	const hours = date.getHours();
 	const minutes = date.getMinutes();
 	const seconds = date.getSeconds();
 	return `${hours}:${minutes}:${seconds}`;
 };
-// Get current date
-export const getDate = () => {
-	const date = new Date();
-	const day = date.getDate();
-	const month = date.getMonth() + 1;
-	const year = date.getFullYear();
-	return `${day}.${month}.${year}`;
-};
 
-// Colorcodes
+const getFilename = (fullPath) => fullPath.split("\\").pop();
+
+/**
+ * Color Reference
+ * @type {Object}
+ */
 const colorsRef = {
 	Reset: "\x1b[0m",
 	Bright: "\x1b[1m",
@@ -45,32 +42,49 @@ const colorsRef = {
 	BgWhite: "\x1b[47m",
 	BgGray: "\x1b[100m",
 };
-// Color Function
+
+/**
+ * Colorize a string with the specified text and background colors.
+ * @param {*} textcolor
+ * @param {*} backgroundColor
+ * @param {*} string
+ * @returns {string} The colorized string.
+ */
 const colorString = (textcolor, backgroundColor, string) => {
-	return `${colorsRef[textcolor]}${colorsRef[backgroundColor]}${colorsRef.Bright}${string}${colorsRef.Reset}`;
+	return `${colorsRef[textcolor]}${colorsRef[backgroundColor]}${colorsRef.Bright}${string}${colorsRef.Reset}\t`;
 };
 
-// Log function
-export const LogMain = ({
-	location = null,
-	func = null,
-	profix = null,
+/**
+ * LogMain function
+ * @param {string} fileLocation - Location of the log (default: `__filename`)
+ * @param {string} func - Function of the log (default: `null`)
+ * @param {string} profix - Profix of the log (default: `'INFO'`)
+ * @param {string} message - Message of the log (default: `'MESSAGE'`)
+ * @param {string} type - Type of the log (default: `'INFO'`)
+ * @param {boolean} time - Show time in log (default: `true`)
+ * @param {boolean} space - Add space before log (default: `false`)
+ * @param {boolean} enabled - Enable log (default: `true`)
+ */
+const LogMain = ({
+	fileLocation = null,
+	currentFunction = null,
+	profix = "INFO",
 	message = "MESSAGE",
 	type = "INFO",
-	time = false,
+	time = true,
 	space = false,
 	enabled = true,
 }) => {
-	const consoleLog = (symbol, fgColor, bgColor) =>
-		console.info(
-			colorString(
-				fgColor,
-				bgColor,
-				` ${symbol}${time ? " " + getTime() : ""}${func ? " | " + func : ``}${
-					location && func ? " at " : ""
-				}${location ? "" + location : ""} | ${profix ? profix + ": " : ""}${message} `
-			)
-		);
+	const consoleLog = (symbol, fgColor, bgColor) => {
+		const timeString = time ? ` ${getTime()}` : "";
+		const funcString = currentFunction ? ` | ${currentFunction}` : "";
+		const fileString = getFilename(fileLocation);
+		const locationString = fileString ? ` in ${fileString}` : "";
+		const profixString = profix ? `${profix}: ` : "";
+
+		console.info(colorString(fgColor, bgColor, ` ${symbol}${timeString}${funcString}${locationString} | ${profixString}${message}`));
+	};
+
 	const TYPES = {
 		DEBUG: ["🛈", "FgWhite", "BgGray"],
 		INFO: ["ℹ", "FgWhite", "BgBlue"],
@@ -79,42 +93,108 @@ export const LogMain = ({
 		ERROR: ["⚠", "FgWhite", "BgRed"],
 		TABLE: ["☰", "FgWhite", "BgGray"],
 	};
-	return (
-		enabled &&
-		(space && console.log("\n"),
-		type.toUpperCase() === "COUNTER"
-			? consoleCounter()
-			: consoleLog(...TYPES[type.toUpperCase()]))
-	);
+
+	if (enabled) {
+		if (space) console.log("\n");
+		consoleLog(...TYPES[type.toUpperCase()]);
+	}
 };
 
 /**
- * ### Log function
- *
- * ---
- *
- * @param {string} location - Location of the log
- * @param {string} func - Function of the log
- * @param {string} profix - Profix of the log
- * @param {string} message - Message of the log
- * @param {string} type - Type of the log
- * @param {boolean} time - Show time in log
- * @param {boolean} space - Add space before log
- * @returns {function}
+ * Logging utility functions that dispatch to the main log handler with specific log levels.
+ * Each function logs a message with additional details and a predefined log type.
+ * @type {Object}
+ * @example log.debug(__filename, functionName, 'Debug', 'This is a debug message.', true, true, true);
+ * @property {Function} debug - Log a debug message.
+ * @property {Function} info - Log an informational message.
+ * @property {Function} success - Log a success message.
+ * @property {Function} warn - Log a warning message.
+ * @property {Function} error - Log an error message.
+ * @property {Function} table - Log a table message.
  */
-export const log = {
-	debug: (location, func, profix, message, time, space, enabled) =>
-		LogMain({ location, func, profix, message, time, space, type: "DEBUG", enabled }),
-	info: (location, func, profix, message, time, space, enabled) =>
-		LogMain({ location, func, profix, message, time, space, type: "INFO", enabled }),
-	success: (location, func, profix, message, time, space, enabled) =>
-		LogMain({ location, func, profix, message, time, space, type: "SUCCESS", enabled }),
-	warn: (location, func, profix, message, time, space, enabled) =>
-		LogMain({ location, func, profix, message, time, space, type: "WARN", enabled }),
-	error: (location, func, profix, message, time, space, enabled) =>
-		LogMain({ location, func, profix, message, time, space, type: "ERROR", enabled }),
-	table: (location, func, profix, message, time, space, enabled) =>
-		LogMain({ location, func, profix, message, time, space, type: "TABLE", enabled }),
+const log = {
+	/**
+	 * Log Debug function
+	 * @param {string} fileLocation - Location of the log (default: `__filename`)
+	 * @param {string} currentFunction - Function of the log (default: `null`)
+	 * @param {string} profix - Profix of the log (default: `'INFO'`)
+	 * @param {string} message - Message of the log (default: `'MESSAGE'`)
+	 * @param {string} type - Type of the log (default: `'INFO'`)
+	 * @param {boolean} time - Show time in log (default: `false`)
+	 * @param {boolean} space - Add space before log (default: `false`)
+	 * @param {boolean} enabled - Enable log (default: `true`)
+	 * @returns {void}
+	 */
+	debug: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "DEBUG", enabled });
+	},
+	/**
+	 * Log Info function
+	 * @param {string} fileLocation - Location of the log (default: `__filename`)
+	 * @param {string} currentFunction - Function of the log (default: `null`)
+	 * @param {string} profix - Profix of the log (default: `'INFO'`)
+	 * @param {string} message - Message of the log (default: `'MESSAGE'`)
+	 * @param {string} type - Type of the log (default: `'INFO'`)
+	 * @param {boolean} time - Show time in log (default: `false`)
+	 * @param {boolean} space - Add space before log (default: `false`)
+	 * @param {boolean} enabled - Enable log (default: `true`)
+	 * @returns {void}
+	 */
+	info: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "INFO", enabled });
+	},
+	/**
+	 * Log Success function
+	 * @param {string} fileLocation - Location of the log (default: `__filename`)
+	 * @param {string} currentFunction - Function of the log (default: `null`)
+	 * @param {string} profix - Profix of the log (default: `'INFO'`)
+	 * @param {string} message - Message of the log (default: `'MESSAGE'`)
+	 * @param {string} type - Type of the log (default: `'INFO'`)
+	 * @param {boolean} time - Show time in log (default: `false`)
+	 * @param {boolean} space - Add space before log (default: `false`)
+	 * @param {boolean} enabled - Enable log (default: `true`)
+	 * @returns {void}
+	 */
+	success: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "SUCCESS", enabled });
+	},
+	/**
+	 * Log Warning function
+	 * @param {string} fileLocation - Location of the log (default: `__filename`)
+	 * @param {string} currentFunction - Function of the log (default: `null`)
+	 * @param {string} profix - Profix of the log (default: `'INFO'`)
+	 * @param {string} message - Message of the log (default: `'MESSAGE'`)
+	 * @param {string} type - Type of the log (default: `'INFO'`)
+	 * @param {boolean} time - Show time in log (default: `false`)
+	 * @param {boolean} space - Add space before log (default: `false`)
+	 * @param {boolean} enabled - Enable log (default: `true`)
+	 * @returns {void}
+	 */
+	warn: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "WARN", enabled });
+	},
+	/**
+	 * Log Error function
+	 * @param {string} fileLocation - Location of the log (default: `__filename`)
+	 * @param {string} currentFunction - Function of the log (default: `null`)
+	 * @param {string} profix - Profix of the log (default: `'INFO'`)
+	 * @param {string} message - Message of the log (default: `'MESSAGE'`)
+	 * @param {string} type - Type of the log (default: `'INFO'`)
+	 * @param {boolean} time - Show time in log (default: `false`)
+	 * @param {boolean} space - Add space before log (default: `false`)
+	 * @param {boolean} enabled - Enable log (default: `true`)
+	 * @returns {void}
+	 */
+	error: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "ERROR", enabled });
+		//throw new Error(fileLocation, { cause: message });
+	},
+	/**
+	 * Log Table function
+	 * @param {string} Object
+	 * @returns {void}
+	 */
+	table: (object) => console.table(object),
 };
 
-window.log = log;
+module.exports = log;

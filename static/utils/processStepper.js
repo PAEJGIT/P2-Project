@@ -294,6 +294,7 @@ function getFormData() {
 
 	// Get current username from localStorage
 	const username = localStorage.getItem('username');
+
 	// Update user profile in accounts.json
 	async function updateUserProfile() {
 		const userProfile = JSON.parse(localStorage.getItem('userProfile'));

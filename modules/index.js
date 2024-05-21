@@ -13,5 +13,6 @@ const modules = {
 	calculateMealPortions: require('./calculators/calculatePortions'),  // Import the calculate portions module
 	calculateUserProfile: require('./calculators/calculateProfile'),    // Import the calculate profile module
 	calculateRecipes: require('./calculators/calculateRecipes'),        // Import the calculate recipes module
+	updateProfile: require('./user/updateProfile'),                     // Import the update profile module
 };
 module.exports = modules;                                           	// Export the modules object

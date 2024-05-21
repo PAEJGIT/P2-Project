@@ -125,7 +125,7 @@ const log = {
 	 * @param {boolean} enabled - Enable log (default: `true`)
 	 * @returns {void}
 	 */
-	debug: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
+	debug: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
 		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "DEBUG", enabled });
 	},
 	/**
@@ -140,7 +140,7 @@ const log = {
 	 * @param {boolean} enabled - Enable log (default: `true`)
 	 * @returns {void}
 	 */
-	info: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
+	info: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
 		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "INFO", enabled });
 	},
 	/**
@@ -170,7 +170,7 @@ const log = {
 	 * @param {boolean} enabled - Enable log (default: `true`)
 	 * @returns {void}
 	 */
-	warn: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
+	warn: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
 		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "WARN", enabled });
 	},
 	/**

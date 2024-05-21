@@ -675,31 +675,5 @@
 				var selectedValue = button.getAttribute('value');
 			}
 		</script>
-		<script type="module">
-			async function login(username, password) {
-				const response = await fetch('/login', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({ username, password }),
-				});
-
-				const result = await response.json();
-
-				if (response.ok) {
-					// Save the username to localStorage
-					localStorage.setItem('username', result.data.username);
-					console.log('Login successful');
-				} else {
-					console.error('Login failed:', result.reason);
-				}
-			}
-
-			// Example usage
-			const username = 'Stefan'; // Replace with actual input value
-			const password = '123456'; // Replace with actual input value
-			login(username, password);
-		</script>
 	</body>
 </html>
