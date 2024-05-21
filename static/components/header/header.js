@@ -44,7 +44,7 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 								username
 									? `
 			<div class="button_nav">
-            	<button id="button_navigation" class="log-out-button" type="button">
+            	<button id="log_out_button" class="log-out-button" type="button">
 					<img src="../../assets/icons/icon_logout.svg"></img>
 				</button>
 				<button id="button_navigation" class="settings-button"  type="button">
