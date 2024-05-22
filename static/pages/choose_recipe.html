@@ -5,49 +5,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="../constants/styles.css" />
-		<script src="../utils/requests/req_valid_recipes.js"></script>
+		<script type="module" src="../utils/requests/req_valid_recipes.js"></script>
+		<script src="../components/header/header.js"></script>
+		<script src="../components/footer/footer.js"></script>
 	</head>
 
 	<body>
-		<div class="invisible" id="hidden1">
-			<div class="container">
-				<button class="arrow left_arrow" id="left_arrow1"></button>
-				<div class="bar" id="scrollBar1">
-					<div class="itemlist" id="itemlist1"></div>
-				</div>
-				<button class="arrow right_arrow" id="right_arrow1"></button>
-			</div>
+		<!-- Header with navigation -->
+		<div id="header-container"></div>
 
-			<div class="button_container">
-				<button class="accept" id="accept1">Accept</button>
-			</div>
-		</div>
-
-		<div class="invisible" id="hidden2">
-			<div class="container">
-				<button class="arrow" id="left_arrow2"><</button>
-				<div class="bar" id="scrollBar2">
-					<div class="itemlist" id="itemlist2"></div>
-				</div>
-				<button class="arrow" id="right_arrow2">></button>
-			</div>
-
-			<div class="button_container">
-				<button class="accept" id="accept2">Accept</button>
+		<div id="title_container" class="title_container">
+			<div class="title_content">
+				<h1 id="recipe_chooser_title" class="recipe_chooser_title">Choose Breakfast</h1>
+				<p id="recipe_chooser_description" class="description">
+					Choose your first meal of the day. If you do not want the recommended meal, you can skip it and you
+					will be shown a whole series of meals to choose from. After you have chosen, you will be directed to
+					your next meal.
+				</p>
 			</div>
 		</div>
+		<div class="divider no-margin"></div>
 
-		<div class="invisible" id="hidden3">
-			<div class="container">
-				<button class="arrow" id="left_arrow3"><</button>
-				<div class="bar" id="scrollBar3">
-					<div class="itemlist" id="itemlist3"></div>
-				</div>
-				<button class="arrow" id="right_arrow3">></button>
-			</div>
+		<div class="main_container">
+			<div id="item_container" class="item_container"></div>
+		</div>
 
-			<div class="button_container">
-				<button class="accept" id="accept3" onclick="window.location.href='/dashboard'">Finalize</button>
+		<!-- Footer with navigation -->
+		<!-- <div id="footer-container"></div>-->
+
+		<div id="overlay" class="overlay">
+			<div class="center column space-between">
+				<div class="loading-indicator-recipe"></div>
+				<div id="overlay-text" class="overlay-text">Loading recipes...</div>
 			</div>
 		</div>
 

@@ -1,4 +1,5 @@
-
+const ENABLE_LOGGING = true;
+const log = require('../utils/log');
 const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, '..', '..', 'data', 'sorted_recipes.json');
@@ -10,13 +11,21 @@ function recipeChooserRouter(req, res) {
 	const { userProfile } = req.body;
 	let user = generateRandomUser();
 	let userMacros = calculateUserProfile(userProfile);
-	console.table(userMacros)
+	console.table(userMacros);
 	findAllValidRecipes(userMacros, (err, validRecipes) => {
 		res.status(200).json(validRecipes);
 	});
 }
 
 async function findAllValidRecipes(userMacros, callback) {
+	// Time Debug
+	const time_1 = new Date().getSeconds();
+	log.debug('calculateRecipes.js', 'choose_recipe.html', 'INFO', 'Requesting Recipes', ENABLE_LOGGING);
+
+
+
+
+
 	const data = await fs.promises.readFile(filePath, 'utf-8');
 	let sortedRecipesJSON = JSON.parse(data);
 	let validRecipes = {};
@@ -28,6 +37,11 @@ async function findAllValidRecipes(userMacros, callback) {
 			validRecipes
 		);
 	}
+
+	// Time Debug
+	const time_2 = new Date().getSeconds();
+	log.debug('calculateRecipes.js', 'choose_recipe.html', 'INFO', `Done [Total time of ${time_2 - time_1} seconds]`, ENABLE_LOGGING);
+
 	callback(null, validRecipes);
 }
 

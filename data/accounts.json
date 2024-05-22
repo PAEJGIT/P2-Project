@@ -54,22 +54,27 @@
     "password": "123456",
     "userProfile": {
       "name": "Stefan",
-      "sex": "",
-      "age": "",
-      "weight": "",
-      "height": "",
-      "activity": "",
-      "healthGoal": "",
-      "nutritionalPreference": "",
-      "dietaryApproach": "",
+      "sex": "male",
+      "age": "22",
+      "weight": "222",
+      "height": "222",
+      "activity": "3",
+      "healthGoal": "musclegain",
+      "nutritionalPreference": "balanced",
+      "dietaryApproach": "balanced",
       "pregnant": false,
       "lactating": false,
-      "BMI": 0,
-      "BMR": 0,
-      "TDEE": 0,
-      "proteins": 0,
-      "carbohydrates": 0,
-      "fats": 0
+      "BMI": "45",
+      "BMR": 4002.98,
+      "TDEE": 6500,
+      "proteins": 400,
+      "carbohydrates": 674,
+      "fats": 245,
+      "activeRecipes": [
+        "Savory Turkey Meatballs",
+        "Avocado Toast",
+        "Garlic Lemon Broccoli Pasta"
+      ]
     }
   },
   "lort12": {

@@ -112,7 +112,7 @@ const LogMain = ({
  * @property {Function} error - Log an error message.
  * @property {Function} table - Log a table message.
  */
-const log = {
+export const log = {
 	/**
 	 * Log Debug function
 	 * @param {string} fileLocation - Location of the log (default: `__filename`)
@@ -194,7 +194,5 @@ const log = {
 	 * @param {string} Object
 	 * @returns {void}
 	 */
-	table: (object) => console.table(object),
+	table: (object, enabled) => enabled ? console.table(object) : null,
 };
-
-module.exports = log;
