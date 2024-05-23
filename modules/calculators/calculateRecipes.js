@@ -5,13 +5,14 @@ const path = require('path');
 const filePath = path.join(__dirname, '..', '..', 'data', 'sorted_recipes.json');
 const calculateMealPortions = require('../calculators/calculatePortions');
 const calculateUserProfile = require('../calculators/calculateProfile');
-const generateRandomUser = require('../generators/generateUser');
 
 function recipeChooserRouter(req, res) {
 	const { userProfile } = req.body;
-	let user = generateRandomUser();
 	let userMacros = calculateUserProfile(userProfile);
+<<<<<<< Updated upstream
 	console.table(userMacros);
+=======
+>>>>>>> Stashed changes
 	findAllValidRecipes(userMacros, (err, validRecipes) => {
 		res.status(200).json(validRecipes);
 	});
