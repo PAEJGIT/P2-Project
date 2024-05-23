@@ -25,6 +25,8 @@ const calculateBMI = (weight, height) => {
  * @throws {Error} If any input is not valid.
  */
 const calculateBMR = (sex, age, weight, height) => {
+	// Convert sex input to lower case to ensure case-insensitivity
+	sex = sex.toLowerCase();
 	if (!['male', 'female'].includes(sex) || age <= 0 || weight <= 0 || height <= 0) {
 		throw new Error('Invalid input values for calculating BMR.');
 	} else {
@@ -44,6 +46,7 @@ const calculateBMR = (sex, age, weight, height) => {
  */
 const calculateTDEE = (BMR, activityFactor) => {
 	let TDEE = 0;
+	activityFactor = activityFactor.toString();
 	if (activityFactor < 1 || activityFactor > 5) {
 		throw new Error('Invalid input values for calculating TDEE.', {
 			cause: "Invalid input for 'activityFactor'",
