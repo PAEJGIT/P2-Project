@@ -1,5 +1,5 @@
 const log = require('../utils/log.js');
-const ENABLE_LOGGING = false;
+const ENABLE_LOGGING = true;
 
 /**
  * **calculateBMI**

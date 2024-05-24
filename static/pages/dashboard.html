@@ -12,10 +12,74 @@
 	<body>
 		<!-- Header with navigation -->
 		<div id="header-container"></div>
+		<div class="dashboard_content">
+			<div class="dashboard_container">
+				<!-- Left section -->
+				<div class="dashboard_left_container">
+					<div class="dashboard_left_container_section_recipes">
+						<div class="dashboard_title_card">
+							<span class="dashboard_title_card_text">Your Recipes</span>
+						</div>
 
-		<!-- Main content area -->
-		<main id="content"></main>
+						<div id="dashboard_recipe_container" class="dashboard_recipe_container"></div>
+					</div>
 
+					<div class="dashboard_left_container_section_settings">
+						<div class="dashboard_title_card">
+							<div class="dashboard_title_card_text">Settings</div>
+						</div>
+
+						<div class="dashboard_settings_container">
+							<div class="dashboard_setting_card">
+								<image
+									class="dashboard_setting_card_icon"
+									src="../../assets/icons/icon_settings_2.svg" />
+								<span class="dashboard_setting_card_text">Change Recipes</span>
+							</div>
+							<div class="dashboard_setting_card">
+								<image class="dashboard_setting_card_icon" src="../../assets/icons/icon_stepper.svg" />
+								<span class="dashboard_setting_card_text">Repeat Stepper</span>
+							</div>
+							<div class="dashboard_setting_card">
+								<image
+									class="dashboard_setting_card_icon"
+									src="../../assets/icons/icon_userDelete.svg" />
+								<span class="dashboard_setting_card_text">Delete Account</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right section -->
+				<div class="dashboard_right_container">
+					<div class="dashboard_right_title_container">
+						<span class="dashboard_right_title">
+							<span class="dashboard_right_title_bold">Report</span> on this week
+						</span>
+						<span class="dashboard_right_description">From 23.05 to 30.05, 2024</span>
+					</div>
+
+					<div class="divider"></div>
+
+					<!-- Circle Diagram -->
+					<div class="dashboard_diagram_container">
+						<canvas id="macronutrientChart" width="400" height="400"></canvas>
+					</div>
+
+					<!-- Stats -->
+					<div class="dashboard_stats_container">
+						<!-- Calories -->
+						<div>
+							<div>icon</div>
+							<div>
+								<span>Calories</span>
+								<span>1520cal</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="wrapper">
 			<span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
 			<div class="form-box login">
@@ -73,6 +137,160 @@
 			</div>
 		</div>
 		<!-- Footer with navigation -->
-		<div id="footer-container"></div>
+		<!--<div id="footer-container"></div> -->
+
+		<script>
+			// Update user profile in accounts.json
+			async function getProfile() {
+				// Get current username from localStorage
+				const username = localStorage.getItem('username');
+				const response = await fetch('/getProfile', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ username }),
+				});
+				if (response.ok) {
+					const data = response
+						.json()
+						.then((data) => {
+							const userProfile = data.userProfile;
+							return userProfile;
+						})
+						.catch((error) => {
+							console.error('Error parsing JSON:', error);
+						});
+					return data;
+				} else {
+					console.error('Failed to update profile');
+				}
+			}
+		</script>
+		<script>
+			// Get ID of item container
+			const itemContainer = document.getElementById('dashboard_recipe_container');
+			// Fetch user from the server
+			let globalValidRecipes = getProfile();
+			globalValidRecipes.then((data) => {
+				globalValidRecipes = data.activeRecipes;
+				if (itemContainer) {
+					globalValidRecipes.forEach((recipe, index) => {
+						console.log(recipe);
+						// Create an pop-over wrapper
+						let popOverWrapper = document.createElement('div');
+						popOverWrapper.className = 'popover__wrapper';
+						// Create pop-over content
+						let popOverContent = document.createElement('div');
+						popOverContent.className = 'popover__content';
+						// Set the pop-over content to the macros of the recipe
+						const { calories, protein, carb, fat } = recipe;
+						popOverContent.innerHTML = `<p>Calories: ${calories}</p> <p>Protein: ${protein}</p> <p>Carbs: ${carb}</p> <p>Fat: ${fat}</p>`;
+						// Create a card for each recipe
+						let card = document.createElement('div');
+						card.className = 'dashboard_recipe_card';
+
+						// Make card clickable and add event listener
+						card.addEventListener('click', function () {
+							// Change CSS of the card
+							card.classList.toggle('dashboard_setting_card--active');
+						});
+
+						// Create an image for each recipe
+						let image = document.createElement('img');
+						image.onerror = function () {
+							// Test if the image is available
+							image.src = '../../assets/images/1_oatmeal_with_apple.jpg';
+						};
+						image.src = '../../' + recipe.image;
+						image.className = 'card-img-top';
+						card.appendChild(image);
+
+						// Create a card body for each recipe
+						let body = document.createElement('div');
+						body.className = 'card-body';
+
+						// Create a title for each recipe
+						let title = document.createElement('h5');
+						title.className = 'card-title';
+						title.textContent = recipe.name;
+						body.appendChild(title);
+
+						// Create a one or multiple tags for each recipe
+						const tagContainer = document.createElement('div');
+						tagContainer.className = 'tag-container';
+						const tags = recipe.tags;
+						tags.forEach((tag) => {
+							const tagElement = document.createElement('span');
+							tagElement.className = 'badge badge-secondary';
+							tagElement.textContent = tag;
+							tagContainer.appendChild(tagElement);
+						});
+						body.appendChild(tagContainer);
+
+						// Create a description for each recipe
+						let descriptionContainer = document.createElement('div');
+						let description = document.createElement('p');
+
+						descriptionContainer.className = 'card-description-container';
+						description.className = 'card-description';
+
+						description.textContent = recipe.description;
+						descriptionContainer.appendChild(description);
+						body.appendChild(descriptionContainer);
+
+						// Container to contain preparation time and ratings
+						let preparationTimeRatingContainer = document.createElement('div');
+						preparationTimeRatingContainer.className = 'preparation-time-rating-container';
+
+						// Create a preparation time for each recipe
+						let preparationTimeContainer = document.createElement('div');
+						let preparationTimeIcon = document.createElement('i');
+						let preparationTimeText = document.createElement('p');
+						preparationTimeContainer.className = 'preparation-time-container';
+						preparationTimeIcon.className = 'preparation-time-icon';
+						preparationTimeText.className = 'preparation-time';
+						preparationTimeText.textContent = recipe.preparationTime + ' minutes';
+						preparationTimeContainer.appendChild(preparationTimeIcon);
+						preparationTimeContainer.appendChild(preparationTimeText);
+
+						// Create ratings for each recipe
+						let ratingContainer = document.createElement('div');
+						let ratingAverage = recipe.ratings.averageRating; // 1-5
+						let ratingNumberOf = recipe.ratings.numberOfRatings;
+						let ratingIconDefaultPath = '../../assets/icons/icon_star_default.svg';
+						let ratingIconFilledPath = '../../assets/icons/icon_star_filled.svg';
+						ratingContainer.className = 'rating-container';
+						for (let i = 0; i < 5; i++) {
+							let ratingIcon = document.createElement('img');
+							ratingIcon.src = i < ratingAverage ? ratingIconFilledPath : ratingIconDefaultPath;
+							ratingIcon.className = 'rating-icon';
+							ratingContainer.appendChild(ratingIcon);
+						}
+
+						preparationTimeRatingContainer.appendChild(preparationTimeContainer);
+						preparationTimeRatingContainer.appendChild(ratingContainer);
+						body.appendChild(preparationTimeRatingContainer);
+
+						// Append the body to the card
+						card.appendChild(body);
+						// Append the card to the pop-over wrapper
+						popOverWrapper.appendChild(card);
+						itemContainer.appendChild(card);
+
+						//* IGNORE
+						// Append pop-over content to the pop-over wrapper
+						//equipment
+						//macroRatio
+						//mealTypes
+						//categories
+						//allergens
+						//ingredients
+						//ratings
+						//popOverWrapper.appendChild(popOverContent);
+					});
+				}
+			});
+		</script>
 	</body>
 </html>

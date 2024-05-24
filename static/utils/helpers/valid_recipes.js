@@ -109,13 +109,13 @@ function addRecipesToList(validRecipes) {
 			card.addEventListener('click', function () {
 				// Change CSS of the card
 				card.classList.toggle('card--active');
-				// Add or remove the recipe from the chosen recipes
+				// Add the chosen recipe
 				if (chosenRecipes.includes(recipe)) {
 					chosenRecipes = chosenRecipes.filter((chosenRecipe) => chosenRecipe !== recipe);
 				} else {
-					chosenRecipes.push(recipe);
+					chosenRecipes.push(globalValidRecipes[recipe].info);
 				}
-				refreshList(chosenRecipes[chosenAmount]);
+				refreshList(chosenRecipes[chosenAmount].name);
 				chosenAmount++;
 				updateTitle(chosenAmount);
 			});

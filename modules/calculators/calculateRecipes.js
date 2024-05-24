@@ -9,10 +9,6 @@ const calculateUserProfile = require('../calculators/calculateProfile');
 function recipeChooserRouter(req, res) {
 	const { userProfile } = req.body;
 	let userMacros = calculateUserProfile(userProfile);
-<<<<<<< Updated upstream
-	console.table(userMacros);
-=======
->>>>>>> Stashed changes
 	findAllValidRecipes(userMacros, (err, validRecipes) => {
 		res.status(200).json(validRecipes);
 	});

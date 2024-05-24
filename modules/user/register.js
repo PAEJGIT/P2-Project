@@ -5,6 +5,10 @@ const log = require('../utils/log');
 
 function registerRouter(req, res) {
 	const { username, password } = req.body;
+	if (!username || !password) {
+		res.status(400).json({ success: false, reason: 'Missing username or password' });
+		return;
+	}
 	register(username, password, (obj) => {
 		if (obj.success === true) {
 			res.status(200).json(obj);

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const log = require('../utils/log');
 
-const ENABLE_LOGGING = false;
+const ENABLE_LOGGING = true;
 
 /**
  * Updates the user profile in the accounts.json file.
@@ -18,7 +18,14 @@ module.exports = function updateProfile(req, res) {
 			log.warn(__filename, 'updateProfile', 'Error reading accounts file. Check path', err, ENABLE_LOGGING);
 			return res.status(500).send('Server error');
 		}
-		const accounts = JSON.parse(data);
+		let accounts = null;
+		try {
+			accounts = JSON.parse(data);
+		}
+		catch (err) {
+			log.error(__filename, 'updateProfile', 'Error parsing JSON data', err, ENABLE_LOGGING);
+			return res.status(500).send('Server error');
+		}
 		if (!accounts[username]) {
 			log.warn(__filename, 'updateProfile', `User with input of ${username} not found`, err, ENABLE_LOGGING);
 			return res.status(404).send('User not found');
