@@ -203,5 +203,3 @@ function CalculateResult(validSets, result) {
 	}
 	return result;
 }
-
-TestValidRecipeSets();
