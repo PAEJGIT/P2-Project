@@ -290,6 +290,7 @@ function getFormData() {
 		carbohydrates: CARBS,
 		fats: FATS,
 	};
+
 	localStorage.setItem('userProfile', JSON.stringify(userProfile));
 
 	// Get current username from localStorage
@@ -304,7 +305,7 @@ function getFormData() {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ username, userProfile }),
+			body: JSON.stringify({ username, userProfile }, null, 2),
 		});
 
 		if (response.ok) {
