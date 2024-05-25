@@ -80,6 +80,7 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 			});
 			document.getElementById('button-header-signin').addEventListener('click', function () {
 				document.getElementById('overlay').classList.add('active');
+				wrapper.classList.add('active');
 			});
 			document.getElementById('button-header-login').addEventListener('click', () => {
 				wrapper.classList.add('active-popup');
