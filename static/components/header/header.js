@@ -77,6 +77,7 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 			loadCSS();
 			document.getElementById('button-header-login').addEventListener('click', function () {
 				document.getElementById('overlay').classList.add('active');
+				wrapper.classList.remove('active');
 			});
 			document.getElementById('button-header-signin').addEventListener('click', function () {
 				document.getElementById('overlay').classList.add('active');
