@@ -67,6 +67,7 @@ const testCalculateBMR = () => {
 const testCalculateTDEE = () => {
 	log.info(__filename, 'testCalculateTDEE', 'INFO', 'Running tests for calculateTDEE function', true, true, true);
 	test(() => {
+<<<<<<< Updated upstream
 		const BMR = calculateBMR('male', 25, 70, 175); // Example BMR for a male
 		const result = calculateTDEE(BMR, 3);
 		assert(
@@ -74,10 +75,15 @@ const testCalculateTDEE = () => {
 			'Correctly calculates TDEE with activity level',
 			Math.abs(result - 2672.28) < 0.01
 		);
+=======
+		const BMR = 1655.1; // Example BMR for a male
+		const result = calculateTDEE(BMR, '3');
+		assert('Correctly calculates TDEE with activity level', Math.abs(result - 2565.4) < 0.01);
+>>>>>>> Stashed changes
 	});
 	test(() => {
 		try {
-			calculateTDEE(1655.1, 6); // Invalid activity level
+			calculateTDEE(1655.1, '6'); // Invalid activity level
 		} catch (error) {
 			assert(testCalculateTDEE.name, 'Correctly throws error for invalid activity level', true);
 		}

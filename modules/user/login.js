@@ -47,4 +47,7 @@ function login(username, password, callback) {
 	});
 }
 
-module.exports = loginRouter;
+module.exports = {
+	loginRouter,
+	login
+};

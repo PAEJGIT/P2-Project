@@ -5,8 +5,8 @@ const modules = {
 	cors: require('cors'),                                          	// Middleware to enable Cross-Origin Resource Sharing (CORS) for your server
 	fs: require('fs'),                                              	// Node.js core module to interact with the file system
 	path: require('path'),                                          	// Node.js core module to work with file paths
-	loginRouter: require('./user/login'),                               // Import the login router
-	registerRouter: require('./user/register'),                         // Import the register router
+	loginRouter: require('./user/login').loginRouter,                               // Import the login router
+	registerRouter: require('./user/register').registerRouter,                         // Import the register router
 	validRecipesRouter: require('./calculators/calculateRecipes'), 		// Import the recipe chooser router
     orderingDataRouter: require("./user/ordering_data"),                // Import the ordering data router
     log: require('./utils/log'),                                    	// Import the log module
