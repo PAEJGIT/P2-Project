@@ -174,3 +174,59 @@ li:hover .endpoints {
     justify-content: center;
     align-items: center;
 }
+
+.button.filled {
+	background-color: #2d3648;
+	border-radius: 8px;
+	border-color: #2d3648;
+	border-style: solid;
+	color: white;
+	width: 10rem;
+	height: 3rem;
+}
+.button.filled:hover {
+	background-color: #3f4b64;
+	cursor: pointer;
+}
+.button.filled:active {
+	border-color: var(--primary-500);
+	background-color: var(--primary-600);
+	transform: scale(0.98);
+	transition: transform 0.1s background-color 0.1s, border-color 0.1s;
+}
+.button_filled_text {
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 24px;
+	color: var(--primary-200);
+}
+.button.outline {
+	background-color: #edf0f7;
+	border-radius: 8px;
+	border-color: #2d3648;
+	border-style: solid;
+	color: #2d3648;
+	width: 10rem;
+	height: 3rem;
+}
+.button.outline:hover {
+	background-color: var(--primary-300);
+	cursor: pointer;
+}
+.button.outline:active {
+	border-color: var(--primary-500);
+	background-color: var(--primary-100);
+	transform: scale(0.98);
+	transition: transform 0.1s background-color 0.1s, border-color 0.1s;
+	.stepper-button-outline-text {
+		color: var(--primary-500);
+	}
+}
+.button_outline_text {
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 24px;
+	color: var(--primary-700);
+}

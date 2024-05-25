@@ -60,21 +60,33 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 			</div>
             `
 									: `
-            <button id="log_in_button" onclick="location.href='/login'" type="button">Log in</button>
-            <button id="sign_in_button" onclick="location.href='/register'" type="button">Sign up</button>
+            <button id="button-header-login" class="button filled btnLogin-popup"  type="button">Log in</button>
+            <button id="button-header-signin" class="button outline btnLogin-popup"  type="button">Sign up</button>
             `
 							}
             </div>
-
     </div>
     `;
 
 	// Inject the HTML string into the DOM
 	document.addEventListener('DOMContentLoaded', function () {
+		const wrapper = document.querySelector('.wrapper');
 		const headerContainer = document.getElementById(injectTo);
 		if (headerContainer) {
 			headerContainer.innerHTML = headerHTML;
 			loadCSS();
+			document.getElementById('button-header-login').addEventListener('click', function () {
+				document.getElementById('overlay').classList.add('active');
+			});
+			document.getElementById('button-header-signin').addEventListener('click', function () {
+				document.getElementById('overlay').classList.add('active');
+			});
+			document.getElementById('button-header-login').addEventListener('click', () => {
+				wrapper.classList.add('active-popup');
+			});
+			document.getElementById('button-header-signin').addEventListener('click', () => {
+				wrapper.classList.add('active-popup');
+			});
 		} else {
 			console.error('Header container not found');
 		}
