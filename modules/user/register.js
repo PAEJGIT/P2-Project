@@ -43,10 +43,13 @@ function register(username, password, callback) {
 				callback({ success: false, reason: 'Failed to write to file' });
 				return;
 			}
-			log.success(__filename, null, 'Registration', 'User registered successfully');
+			//log.success(__filename, null, 'Registration', 'User registered successfully');
 			callback({ success: true, reason: 'User registered successfully' });
 		});
 	});
 }
 
-module.exports = registerRouter;
+module.exports = {
+	registerRouter,
+	register
+};

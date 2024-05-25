@@ -8,7 +8,7 @@ const generateRandomUser = () => {
 	const goals = ['maintenance', 'musclegain', 'fatloss', 'weightloss', 'weightgain'];
 	const preferences = ['omnivore', 'vegetarian', 'vegan', 'balanced'];
 	const types = ['keto', 'low-carb', 'high-fiber', 'balanced'];
-	const activityFactors = [1, 2, 3, 4, 5];
+	const activityFactors = ['1', '2', '3', '4', '5'];
 
 	const name = names[Math.floor(Math.random() * names.length)];
 	const sex = sexes[Math.floor(Math.random() * sexes.length)];
