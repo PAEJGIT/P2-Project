@@ -1,147 +1,145 @@
 {
-	"stefaa": {
-		"password": "123456",
-		"userProfile": {
-			"name": "Stefaa",
-			"sex": "male",
-			"age": "22",
-			"weight": "222",
-			"height": "222",
-			"activity": "3",
-			"healthGoal": "musclegain",
-			"nutritionalPreference": "balanced",
-			"dietaryApproach": "balanced",
-			"pregnant": false,
-			"lactating": false,
-			"BMI": "45",
-			"BMR": 4002.98,
-			"TDEE": 6500,
-			"proteins": 400,
-			"carbohydrates": 674,
-			"fats": 245,
-			"activeRecipes": [
-				{
-					"id": 31,
-					"name": "Pancakes with Berries",
-					"description": "Fluffy and golden pancakes topped with a mix of fresh berries and a drizzle of maple syrup, perfect for a delicious and indulgent breakfast or brunch.",
-					"image": "assets/images/31_pancakes_with_berries.jpg",
-					"equipment": ["Pan", "Bowl", "Whisk", "Spatula"],
-					"preparationTime": 30,
-					"tags": ["highCalorie", "lowFat", "highFiber"],
-					"categories": ["Meal"],
-					"allergens": ["Egg"],
-					"ratings": { "averageRating": 2, "numberOfRatings": 319 },
-					"calories": 562,
-					"protein": 21,
-					"carb": 104,
-					"fat": 8
-				},
-				{
-					"id": 14,
-					"name": "Mango Coconut Chia Pudding",
-					"description": "A tropical and refreshing chia pudding made with coconut milk, fresh mango, and a hint of honey, perfect for a healthy and satisfying breakfast or snack.",
-					"image": "assets/images/14_mango_coconut_chia_pudding.jpg",
-					"equipment": ["Bowl", "Blender", "Spoon"],
-					"preparationTime": 5,
-					"tags": ["highFiber", "lowCarb", "Quick"],
-					"categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
-					"allergens": [],
-					"ratings": { "averageRating": 2, "numberOfRatings": 204 },
-					"calories": 287,
-					"protein": 9,
-					"carb": 23,
-					"fat": 20
-				},
-				{
-					"id": 35,
-					"name": "Low-Carb Grilled Chicken Salad",
-					"description": "A delicious low-carb salad featuring grilled chicken, mixed greens, cherry tomatoes, and a homemade vinaigrette.",
-					"image": "assets/images/35_low-carb_grilled_chicken_salad.jpg",
-					"equipment": ["Grill", "Bowl"],
-					"preparationTime": 30,
-					"tags": ["highProtein", "lowCarb", "noCarb"],
-					"categories": ["Meal", "LactoseFree", "keto"],
-					"allergens": [],
-					"ratings": { "averageRating": 2, "numberOfRatings": 393 },
-					"calories": 443,
-					"protein": 47,
-					"carb": 8,
-					"fat": 29
-				}
-			]
-		}
-	},
-	"user": {
-		"password": "123456",
-		"userProfile": {
-			"name": "John",
-			"sex": "male",
-			"age": "22",
-			"weight": "222",
-			"height": "111",
-			"activity": "2",
-			"healthGoal": "weightgain",
-			"nutritionalPreference": "balanced",
-			"dietaryApproach": "balanced",
-			"pregnant": false,
-			"lactating": false,
-			"BMI": "180",
-			"BMR": 3470.2910000000006,
-			"TDEE": 5250,
-			"proteins": 266,
-			"carbohydrates": 680,
-			"fats": 163,
-			"activeRecipes": [
-				{
-					"id": 49,
-					"name": "Savory Turkey Meatballs",
-					"description": "Delicious and juicy turkey meatballs perfect for a high protein and low fat meal option.",
-					"image": "assets/images/49_savory_turkey_meatballs.jpg",
-					"equipment": ["Oven", "Mixing Bowl", "Baking sheet"],
-					"preparationTime": 45,
-					"tags": ["highProtein", "lowCarb"],
-					"categories": ["Meal", "LactoseFree"],
-					"allergens": ["Egg"],
-					"ratings": { "averageRating": 1, "numberOfRatings": 222 },
-					"calories": 472,
-					"protein": 73,
-					"carb": 18,
-					"fat": 21
-				},
-				{
-					"id": 19,
-					"name": "Mixed Smoothie with Nuts",
-					"description": "A nutritious and satisfying smoothie made with a blend of mixed fruits, nuts, and seeds, perfect for a quick and healthy breakfast or snack.",
-					"image": "assets/images/19_mixed_smoothie_with_nuts.jpg",
-					"equipment": ["Blender"],
-					"preparationTime": 5,
-					"tags": ["highCalorie", "highFiber", "Quick"],
-					"categories": ["Meal", "Vegetarian"],
-					"allergens": ["Nuts"],
-					"ratings": { "averageRating": 4, "numberOfRatings": 360 },
-					"calories": 511,
-					"protein": 18,
-					"carb": 61,
-					"fat": 23
-				},
-				{
-					"id": 9,
-					"name": "Garlic Lemon Broccoli Pasta",
-					"description": "A light and zesty pasta dish that combines tender broccoli, garlic, and lemon zest for a delicious vegetarian dinner.",
-					"image": "assets/images/9_garlic_lemon_broccoli_pasta.jpg",
-					"equipment": ["Pot", "Frying pan", "Colander", "Grater"],
-					"preparationTime": 0,
-					"tags": ["lowFat", "highFiber", "Quick"],
-					"categories": ["Meal", "Vegan", "Vegetarian", "LactoseFree"],
-					"allergens": [],
-					"ratings": { "averageRating": 1, "numberOfRatings": 248 },
-					"calories": 436,
-					"protein": 24,
-					"carb": 74,
-					"fat": 5
-				}
-			]
-		}
-	},
-	"Integration_Test_Username": { "password": "Integration_Test_Password" }
+  "stefaa": {
+    "password": "123456",
+    "userProfile": {
+      "name": "asds",
+      "sex": "male",
+      "age": "35",
+      "weight": "145",
+      "height": "180",
+      "activity": "2",
+      "healthGoal": "weightgain",
+      "nutritionalPreference": "omnivore",
+      "dietaryApproach": "low-carb",
+      "pregnant": false,
+      "lactating": false,
+      "BMI": "45",
+      "BMR": 2696.052,
+      "TDEE": 4200,
+      "proteins": 174,
+      "carbohydrates": 175,
+      "fats": 312
+    }
+  },
+  "user": {
+    "password": "123456",
+    "userProfile": {
+      "name": "John",
+      "sex": "male",
+      "age": "22",
+      "weight": "222",
+      "height": "111",
+      "activity": "2",
+      "healthGoal": "weightgain",
+      "nutritionalPreference": "balanced",
+      "dietaryApproach": "balanced",
+      "pregnant": false,
+      "lactating": false,
+      "BMI": "180",
+      "BMR": 3470.2910000000006,
+      "TDEE": 5250,
+      "proteins": 266,
+      "carbohydrates": 680,
+      "fats": 163,
+      "activeRecipes": [
+        {
+          "id": 49,
+          "name": "Savory Turkey Meatballs",
+          "description": "Delicious and juicy turkey meatballs perfect for a high protein and low fat meal option.",
+          "image": "assets/images/49_savory_turkey_meatballs.jpg",
+          "equipment": [
+            "Oven",
+            "Mixing Bowl",
+            "Baking sheet"
+          ],
+          "preparationTime": 45,
+          "tags": [
+            "highProtein",
+            "lowCarb"
+          ],
+          "categories": [
+            "Meal",
+            "LactoseFree"
+          ],
+          "allergens": [
+            "Egg"
+          ],
+          "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 222
+          },
+          "calories": 472,
+          "protein": 73,
+          "carb": 18,
+          "fat": 21
+        },
+        {
+          "id": 19,
+          "name": "Mixed Smoothie with Nuts",
+          "description": "A nutritious and satisfying smoothie made with a blend of mixed fruits, nuts, and seeds, perfect for a quick and healthy breakfast or snack.",
+          "image": "assets/images/19_mixed_smoothie_with_nuts.jpg",
+          "equipment": [
+            "Blender"
+          ],
+          "preparationTime": 5,
+          "tags": [
+            "highCalorie",
+            "highFiber",
+            "Quick"
+          ],
+          "categories": [
+            "Meal",
+            "Vegetarian"
+          ],
+          "allergens": [
+            "Nuts"
+          ],
+          "ratings": {
+            "averageRating": 4,
+            "numberOfRatings": 360
+          },
+          "calories": 511,
+          "protein": 18,
+          "carb": 61,
+          "fat": 23
+        },
+        {
+          "id": 9,
+          "name": "Garlic Lemon Broccoli Pasta",
+          "description": "A light and zesty pasta dish that combines tender broccoli, garlic, and lemon zest for a delicious vegetarian dinner.",
+          "image": "assets/images/9_garlic_lemon_broccoli_pasta.jpg",
+          "equipment": [
+            "Pot",
+            "Frying pan",
+            "Colander",
+            "Grater"
+          ],
+          "preparationTime": 0,
+          "tags": [
+            "lowFat",
+            "highFiber",
+            "Quick"
+          ],
+          "categories": [
+            "Meal",
+            "Vegan",
+            "Vegetarian",
+            "LactoseFree"
+          ],
+          "allergens": [],
+          "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 248
+          },
+          "calories": 436,
+          "protein": 24,
+          "carb": 74,
+          "fat": 5
+        }
+      ]
+    }
+  },
+  "Integration_Test_Username": {
+    "password": "Integration_Test_Password"
+  }
 }

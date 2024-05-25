@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
 	let loginForm = document.getElementById('loginForm');
 
@@ -25,7 +27,8 @@ function reqLogin(username, password) {
 		.then((data) => {
 			if (data.success) {
 				localStorage.setItem('username', username);
-				alert('Login succesful!');
+				//alert('Login succesful!');
+				console.log("Succesfully logged in");
 				window.location.href = '../pages/stepper.html';
 			} else {
 				alert('Login failed:' + data.reason);

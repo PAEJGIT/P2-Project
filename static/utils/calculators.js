@@ -212,18 +212,18 @@ export const calculateCarbs = (
 	const activityLevel = activityFactor >= 4 ? 'high' : 'low';
 	// Define base ratios for carbohydrate intake based on health goal
 	const baseRatios = {
-		maintenance: 0.5,
-		musclegain: 0.6,
-		fatloss: 0.3,
-		weightloss: 0.4,
-		weightgain: 0.7,
+		maintenance: compositionPreference === 'omnivore' ? 0.3 : 0.5,
+		musclegain: compositionPreference === 'omnivore' ? 0.3 : 0.6,
+		fatloss: compositionPreference === 'omnivore' ? 0.3 : 0.3,
+		weightloss: compositionPreference === 'omnivore' ? 0.3 : 0.4,
+		weightgain: compositionPreference === 'omnivore' ? 0.3 : 0.7,
 	};
-	let carbRatio =
-		(compositionPreference === 'omnivore' ? 0.3 : baseRatios[compositionGoal]) || baseRatios['maintenance'];
+	let carbRatio = baseRatios[compositionGoal] || baseRatios['maintenance'];
+	console.log(Math.round((remainingCalories * carbRatio) / 4))
 	const modifiers = {
 		'over60': ageGroup === 'over60' ? 0.05 : -0.05,
 		'pregnant': pregnant ? 0.1 : 0,
-		'low-carb': compositionType === 'low-carb' ? -baseRatios[compositionGoal] + 0.25 : 0,
+		'low-carb': compositionType === 'low-carb' ? -carbRatio + 0.25 : 0,
 		'keto': compositionType === 'keto' ? -carbRatio + (0.1 - activityFactor / 1000) : 0,
 		'highActivity': activityLevel === 'high' ? 0.1 : 0,
 	};
@@ -231,5 +231,6 @@ export const calculateCarbs = (
 	for (const modifier in modifiers) {
 		carbRatio += modifiers[modifier];
 	}
+	console.log(Math.round((remainingCalories * carbRatio) / 4))
 	return Math.round((remainingCalories * carbRatio) / 4);
 };

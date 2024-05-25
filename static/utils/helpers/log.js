@@ -7,40 +7,40 @@ const getTime = () => {
 	return `${hours}:${minutes}:${seconds}`;
 };
 
-const getFilename = (fullPath) => fullPath.split("\\").pop();
+const getFilename = (fullPath) => fullPath.split('\\').pop();
 
 /**
  * Color Reference
  * @type {Object}
  */
 const colorsRef = {
-	Reset: "\x1b[0m",
-	Bright: "\x1b[1m",
-	Dim: "\x1b[2m",
-	Underscore: "\x1b[4m",
-	Blink: "\x1b[5m",
-	Reverse: "\x1b[7m",
-	Hidden: "\x1b[8m",
+	Reset: '\x1b[0m',
+	Bright: '\x1b[1m',
+	Dim: '\x1b[2m',
+	Underscore: '\x1b[4m',
+	Blink: '\x1b[5m',
+	Reverse: '\x1b[7m',
+	Hidden: '\x1b[8m',
 
-	FgBlack: "\x1b[30m",
-	FgRed: "\x1b[31m",
-	FgGreen: "\x1b[32m",
-	FgYellow: "\x1b[33m",
-	FgBlue: "\x1b[34m",
-	FgMagenta: "\x1b[35m",
-	FgCyan: "\x1b[36m",
-	FgWhite: "\x1b[37m",
-	FgGray: "\x1b[90m",
+	FgBlack: '\x1b[30m',
+	FgRed: '\x1b[31m',
+	FgGreen: '\x1b[32m',
+	FgYellow: '\x1b[33m',
+	FgBlue: '\x1b[34m',
+	FgMagenta: '\x1b[35m',
+	FgCyan: '\x1b[36m',
+	FgWhite: '\x1b[37m',
+	FgGray: '\x1b[90m',
 
-	BgBlack: "\x1b[40m",
-	BgRed: "\x1b[41m",
-	BgGreen: "\x1b[42m",
-	BgYellow: "\x1b[43m",
-	BgBlue: "\x1b[44m",
-	BgMagenta: "\x1b[45m",
-	BgCyan: "\x1b[46m",
-	BgWhite: "\x1b[47m",
-	BgGray: "\x1b[100m",
+	BgBlack: '\x1b[40m',
+	BgRed: '\x1b[41m',
+	BgGreen: '\x1b[42m',
+	BgYellow: '\x1b[43m',
+	BgBlue: '\x1b[44m',
+	BgMagenta: '\x1b[45m',
+	BgCyan: '\x1b[46m',
+	BgWhite: '\x1b[47m',
+	BgGray: '\x1b[100m',
 };
 
 /**
@@ -68,34 +68,40 @@ const colorString = (textcolor, backgroundColor, string) => {
 const LogMain = ({
 	fileLocation = null,
 	currentFunction = null,
-	profix = "INFO",
-	message = "MESSAGE",
-	type = "INFO",
+	profix = 'INFO',
+	message = 'MESSAGE',
+	type = 'INFO',
 	time = true,
 	space = false,
 	enabled = true,
 }) => {
 	const consoleLog = (symbol, fgColor, bgColor) => {
-		const timeString = time ? ` ${getTime()}` : "";
-		const funcString = currentFunction ? ` | ${currentFunction}` : "";
+		const timeString = time ? ` ${getTime()}` : '';
+		const funcString = currentFunction ? ` | ${currentFunction}` : '';
 		const fileString = getFilename(fileLocation);
-		const locationString = fileString ? ` in ${fileString}` : "";
-		const profixString = profix ? `${profix}: ` : "";
+		const locationString = fileString ? ` in ${fileString}` : '';
+		const profixString = profix ? `${profix}: ` : '';
 
-		console.info(colorString(fgColor, bgColor, ` ${symbol}${timeString}${funcString}${locationString} | ${profixString}${message}`));
+		console.info(
+			colorString(
+				fgColor,
+				bgColor,
+				` ${symbol}${timeString}${funcString}${locationString} | ${profixString}${message}`
+			)
+		);
 	};
 
 	const TYPES = {
-		DEBUG: ["🛈", "FgWhite", "BgGray"],
-		INFO: ["ℹ", "FgWhite", "BgBlue"],
-		SUCCESS: ["✔", "FgWhite", "BgGreen"],
-		WARN: ["◉", "FgWhite", "BgYellow"],
-		ERROR: ["⚠", "FgWhite", "BgRed"],
-		TABLE: ["☰", "FgWhite", "BgGray"],
+		DEBUG: ['🛈', 'FgWhite', 'BgGray'],
+		INFO: ['ℹ', 'FgWhite', 'BgBlue'],
+		SUCCESS: ['✔', 'FgWhite', 'BgGreen'],
+		WARN: ['◉', 'FgWhite', 'BgYellow'],
+		ERROR: ['⚠', 'FgWhite', 'BgRed'],
+		TABLE: ['☰', 'FgWhite', 'BgGray'],
 	};
 
 	if (enabled) {
-		if (space) console.log("\n");
+		if (space) console.log('\n');
 		consoleLog(...TYPES[type.toUpperCase()]);
 	}
 };
@@ -126,7 +132,7 @@ export const log = {
 	 * @returns {void}
 	 */
 	debug: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
-		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "DEBUG", enabled });
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: 'DEBUG', enabled });
 	},
 	/**
 	 * Log Info function
@@ -141,7 +147,7 @@ export const log = {
 	 * @returns {void}
 	 */
 	info: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
-		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "INFO", enabled });
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: 'INFO', enabled });
 	},
 	/**
 	 * Log Success function
@@ -156,7 +162,7 @@ export const log = {
 	 * @returns {void}
 	 */
 	success: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
-		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "SUCCESS", enabled });
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: 'SUCCESS', enabled });
 	},
 	/**
 	 * Log Warning function
@@ -171,7 +177,7 @@ export const log = {
 	 * @returns {void}
 	 */
 	warn: (fileLocation, currentFunction, profix, message, time, space, enabled) => {
-		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "WARN", enabled });
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: 'WARN', enabled });
 	},
 	/**
 	 * Log Error function
@@ -186,7 +192,7 @@ export const log = {
 	 * @returns {void}
 	 */
 	error: (fileLocation, currentFunction, profix, message, enabled, time, space) => {
-		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: "ERROR", enabled });
+		LogMain({ fileLocation, currentFunction, profix, message, time, space, type: 'ERROR', enabled });
 		//throw new Error(fileLocation, { cause: message });
 	},
 	/**
@@ -194,5 +200,5 @@ export const log = {
 	 * @param {string} Object
 	 * @returns {void}
 	 */
-	table: (object, enabled) => enabled ? console.table(object) : null,
+	table: (object, enabled) => (enabled ? console.table(object) : null),
 };
