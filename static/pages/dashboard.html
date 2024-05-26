@@ -30,17 +30,19 @@
 						</div>
 
 						<div class="dashboard_settings_container">
-							<div class="dashboard_setting_card">
+							<div
+								class="dashboard_setting_card"
+								onclick="window.location.href = '/pages/choose_recipe.html'">
 								<image
 									class="dashboard_setting_card_icon"
 									src="../../assets/icons/icon_settings_2.svg" />
 								<span class="dashboard_setting_card_text">Change Recipes</span>
 							</div>
-							<div class="dashboard_setting_card">
+							<div class="dashboard_setting_card" onclick="window.location.href = '/pages/stepper.html'">
 								<image class="dashboard_setting_card_icon" src="../../assets/icons/icon_stepper.svg" />
 								<span class="dashboard_setting_card_text">Repeat Stepper</span>
 							</div>
-							<div class="dashboard_setting_card">
+							<div type="button" class="dashboard_setting_card" onclick="window.location.href = '/'">
 								<image
 									class="dashboard_setting_card_icon"
 									src="../../assets/icons/icon_userDelete.svg" />
@@ -65,15 +67,80 @@
 					<div class="dashboard_diagram_container">
 						<canvas id="macronutrientChart" width="400" height="400"></canvas>
 					</div>
+					<div class="divider"></div>
+
+					<!-- Stats -->
+					<div class="dashboard_stats_row">
+						<!-- BMR -->
+						<div class="dashboard_stats_box">
+							<div class="dashboard_stats_box_icon">
+								<div class="dashboard_stats_box_icon_inner bg-grey"></div>
+							</div>
+							<div class="dashboard_stats_box_text">
+								<span class="dashboard_stats_box_text_title">BMR</span>
+								<span id="bmr_text" class="dashboard_stats_box_text_description"></span>
+							</div>
+						</div>
+						<!-- BMI -->
+						<div class="dashboard_stats_box">
+							<div class="dashboard_stats_box_icon">
+								<div class="dashboard_stats_box_icon_inner bg-grey"></div>
+							</div>
+							<div class="dashboard_stats_box_text">
+								<span class="dashboard_stats_box_text_title">BMI</span>
+								<span id="bmi_text" class="dashboard_stats_box_text_description"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="divider"></div>
 
 					<!-- Stats -->
 					<div class="dashboard_stats_container">
-						<!-- Calories -->
-						<div>
-							<div>icon</div>
-							<div>
-								<span>Calories</span>
-								<span>1520cal</span>
+						<div class="dashboard_stats_column">
+							<!-- Calories -->
+							<div class="dashboard_stats_box">
+								<div class="dashboard_stats_box_icon">
+									<div class="dashboard_stats_box_icon_inner bg-red"></div>
+								</div>
+								<div class="dashboard_stats_box_text">
+									<span class="dashboard_stats_box_text_title">Calories</span>
+									<span id="calories_text" class="dashboard_stats_box_text_description"></span>
+								</div>
+							</div>
+
+							<!-- Proteins -->
+							<div class="dashboard_stats_box">
+								<div class="dashboard_stats_box_icon">
+									<div class="dashboard_stats_box_icon_inner bg-green"></div>
+								</div>
+								<div class="dashboard_stats_box_text">
+									<span class="dashboard_stats_box_text_title">Proteins</span>
+									<span id="proteins_text" class="dashboard_stats_box_text_description"></span>
+								</div>
+							</div>
+						</div>
+						<div class="dashboard_stats_column">
+							<!-- Carbohydrates -->
+							<div class="dashboard_stats_box">
+								<div class="dashboard_stats_box_icon">
+									<div class="dashboard_stats_box_icon_inner bg-orange"></div>
+								</div>
+								<div class="dashboard_stats_box_text">
+									<span class="dashboard_stats_box_text_title">Carbohydrates</span>
+									<span id="carbohydrates_text" class="dashboard_stats_box_text_description"></span>
+								</div>
+							</div>
+
+							<!-- Fats -->
+							<div class="dashboard_stats_box">
+								<div class="dashboard_stats_box_icon">
+									<div class="dashboard_stats_box_icon_inner bg-blue"></div>
+								</div>
+								<div class="dashboard_stats_box_text">
+									<span class="dashboard_stats_box_text_title">Fats</span>
+									<span id="fats_text" class="dashboard_stats_box_text_description"></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -136,8 +203,6 @@
 				</form>
 			</div>
 		</div>
-		<!-- Footer with navigation -->
-		<!--<div id="footer-container"></div> -->
 
 		<script>
 			// Update user profile in accounts.json
@@ -170,13 +235,33 @@
 		<script>
 			// Get ID of item container
 			const itemContainer = document.getElementById('dashboard_recipe_container');
+			// Get ID of calories text
+			const calories_text = document.getElementById('calories_text');
+			// Get ID of proteins text
+			const proteins_text = document.getElementById('proteins_text');
+			// Get ID of carbohydrates text
+			const carbohydrates_text = document.getElementById('carbohydrates_text');
+			// Get ID of fats text
+			const fats_text = document.getElementById('fats_text');
+			// Get ID of bmr text
+			const bmr_text = document.getElementById('bmr_text');
+			// Get ID of bmi text
+			const bmi_text = document.getElementById('bmi_text');
+
 			// Fetch user from the server
 			let globalValidRecipes = getProfile();
 			globalValidRecipes.then((data) => {
+				// Update dashboard with user data
+				calories_text.textContent = data.TDEE + 'cal';
+				proteins_text.textContent = data.proteins + 'g';
+				carbohydrates_text.textContent = data.carbohydrates + 'g';
+				fats_text.textContent = data.fats + 'g';
+				bmr_text.textContent = Math.round(data.BMR) + 'cal';
+				bmi_text.textContent = Math.round(data.BMI);
+
 				globalValidRecipes = data.activeRecipes;
 				if (itemContainer) {
 					globalValidRecipes.forEach((recipe, index) => {
-						console.log(recipe);
 						// Create an pop-over wrapper
 						let popOverWrapper = document.createElement('div');
 						popOverWrapper.className = 'popover__wrapper';
