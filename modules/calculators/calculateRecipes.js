@@ -1,79 +1,83 @@
-const ENABLE_LOGGING = true;
-const log = require('../utils/log');
 const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, '..', '..', 'data', 'sorted_recipes.json');
 const calculateMealPortions = require('../calculators/calculatePortions');
 const calculateUserProfile = require('../calculators/calculateProfile');
-const generateRandomUser = require('../generators/generateUser');
 
-function recipeChooserRouter(req, res) {
+const log = require('../utils/log');
+const ENABLE_LOGGING = true;
+
+/**
+ * Function to route the request to the recipe chooser
+ * @param {object} req - The request object
+ * @param {object} res - The response object
+ * @returns {object} - The valid recipes
+ */
+function routerChooseRecipe(req, res) {
 	const { userProfile } = req.body;
 	let userMacros = calculateUserProfile(userProfile);
-	findAllValidRecipes(userMacros, (err, validRecipes) => {
+	findValidRecipes(userMacros, (err, validRecipes) => {
 		res.status(200).json(validRecipes);
 	});
 }
 
-async function findAllValidRecipes(userMacros, callback) {
-	// Time Debug
-	//const time_1 = new Date().getSeconds();
-	//log.debug('calculateRecipes.js', 'choose_recipe.html', 'INFO', 'Requesting Recipes', ENABLE_LOGGING);
-
-
-
-
-
+/**
+ * Function to find all valid recipes based on user macros
+ * @param {object} userMacros - The user macros
+ * @param {function} callback - The callback function
+ * @returns {object} - The valid recipes
+ */
+async function findValidRecipes(userMacros, callback) {
 	const data = await fs.promises.readFile(filePath, 'utf-8');
 	let sortedRecipesJSON = JSON.parse(data);
 	let validRecipes = {};
 	for (let breakfastName in sortedRecipesJSON) {
-		checkValidRecipeSetsOfBreakfast(
-			sortedRecipesJSON[breakfastName].info.name,
-			sortedRecipesJSON,
-			userMacros,
-			validRecipes
-		);
+		findRecipeSets(sortedRecipesJSON[breakfastName].info.name, sortedRecipesJSON, userMacros, validRecipes);
 	}
-
-	// Time Debug
-	//const time_2 = new Date().getSeconds();
-	//log.debug('calculateRecipes.js', 'choose_recipe.html', 'INFO', `Done [Total time of ${time_2 - time_1} seconds]`, ENABLE_LOGGING);
-
 	callback(null, validRecipes);
 }
 
-function checkValidRecipeSetsOfBreakfast(recipeName, sortedRecipesJSON, targetMacros, validRecipes) {
+/**
+ * Function to check the valid recipe sets for a given recipe
+ * @param {string} recipe - The name of the recipe
+ * @param {object} data - The sorted recipes JSON object
+ * @param {object} macroTarget - The macros required to be met
+ * @param {object} recipeObject - The valid recipes object
+ */
+function findRecipeSets(recipe, data, macroTarget, recipeObject) {
+	// The maximum error range for the total macros
 	let maxErrorRange = 65;
-	validRecipes[recipeName] = { info: sortedRecipesJSON[recipeName].info };
-	let tempRecipeSet = {
+	// Add the recipe info to the object
+	recipeObject[recipe] = { info: data[recipe].info };
+	// Temporary object to store the recipe sets
+	let _recipeSets = {
 		breakfast: {},
 		lunch: {},
 		dinner: {},
 	};
-
-	tempRecipeSet.breakfast = sortedRecipesJSON[recipeName].info;
-	let breakfastKey = recipeName;
+	// Set the breakfast info
+	_recipeSets.breakfast = data[recipe].info;
+	let breakfastKey = recipe;
 	let lunchAmount = 0;
 
-	for (let lunchKey in sortedRecipesJSON[breakfastKey]) {
+	for (let lunchKey in data[breakfastKey]) {
 		if (lunchKey === 'info') {
 			continue;
 		}
-		validRecipes[recipeName][lunchKey] = {
-			info: sortedRecipesJSON[recipeName][lunchKey].info,
+		recipeObject[recipe][lunchKey] = {
+			info: data[recipe][lunchKey].info,
 		};
 		let dinnerAmount = 0;
-		for (let dinnerKey in sortedRecipesJSON[breakfastKey][lunchKey]) {
+		for (let dinnerKey in data[breakfastKey][lunchKey]) {
 			if (dinnerKey === 'info') {
 				continue;
 			}
-			tempRecipeSet.lunch = sortedRecipesJSON[breakfastKey][lunchKey].info;
-			tempRecipeSet.dinner = sortedRecipesJSON[breakfastKey][lunchKey][dinnerKey].info;
-			let recipeSetData = calculateMealPortions(targetMacros, tempRecipeSet);
+			_recipeSets.lunch = data[breakfastKey][lunchKey].info;
+			_recipeSets.dinner = data[breakfastKey][lunchKey][dinnerKey].info;
+			let recipeSetData = calculateMealPortions(macroTarget, _recipeSets);
 			if (recipeSetData.minError < maxErrorRange) {
-				validRecipes[recipeName][lunchKey][dinnerKey] = {
-					info: sortedRecipesJSON[recipeName][lunchKey][dinnerKey].info,
+				recipeObject[recipe][lunchKey][dinnerKey] = {
+					info: data[recipe][lunchKey][dinnerKey].info,
 					portions: [
 						recipeSetData.bestPortions.breakfast,
 						recipeSetData.bestPortions.lunch,
@@ -86,120 +90,14 @@ function checkValidRecipeSetsOfBreakfast(recipeName, sortedRecipesJSON, targetMa
 		}
 
 		if (dinnerAmount == 0) {
-			delete validRecipes[recipeName][lunchKey];
+			delete recipeObject[recipe][lunchKey];
 			continue;
 		}
 		lunchAmount++;
 	}
 	if (lunchAmount == 0) {
-		delete validRecipes[recipeName];
+		delete recipeObject[recipe];
 	}
 }
 
-module.exports = recipeChooserRouter;
-
-
-
-function TestValidRecipeSets() {
-	let RunAmount = 100;
-
-	let result = {
-		'0': 0,
-		'1-250': 0,
-		'251-500': 0,
-		'501-1000': 0,
-		'1001-2000': 0,
-		'2001-4000': 0,
-		'4001-6000': 0,
-		'6000+': 0
-	}
-	let finished = 0;
-
-	for(let i = 0; i < RunAmount; i++) {
-		let randomUser = generateRandomUser();
-
-		let randomUserMacros = calculateUserProfile(randomUser);
-
-
-		findAllValidRecipes(randomUserMacros, (err, validRecipes) => {
-
-			let totalValidRecipeSets = 0;
-
-			let breakfastKeys = Object.keys(validRecipes).length;
-			let lunchKeys = 0;
-			let dinnerKeys = 0;
-
-			let breakfastCount = 0;
-			let lunchCount = 0;
-
-			
-			for(let validBreakfast in validRecipes) {
-				
-				let validLunchAmount = validRecipes[validBreakfast];
-
-				breakfastCount++;
-				
-				for(let validLunch in validLunchAmount) {
-					
-					if(validLunchAmount[validLunch] === "info") {
-						continue;
-					}
-
-					lunchKeys++;
-					lunchCount++;
-					
-					totalValidRecipeSets += Object.keys(validLunchAmount[validLunch]).length - 1;
-
-					dinnerKeys += Object.keys(validLunchAmount[validLunch]).length - 1;
-				}
-				
-			}
-			console.log("Avg. Breakfast keys: " + breakfastKeys)
-			console.log("Avg. Lunch keys Per Breakfast: " + lunchKeys / breakfastCount)
-			console.log("Avg. Dinner keys Per Lunch: " + dinnerKeys / lunchCount)
-
-			console.log(totalValidRecipeSets);
-
-			if(breakfastKeys == 0) {
-				console.table(randomUser);
-				console.table(randomUserMacros);
-			}
-			
-			result = CalculateResult(totalValidRecipeSets, result);
-			
-			finished++;
-
-			if(finished == RunAmount) {
-				console.table(result);	
-			}
-		});
-	}
-}
-
-function CalculateResult(validSets, result) {
-	if(validSets == 0) {
-		result['0'] += 1
-	}
-	if(validSets > 0 && validSets <= 250) {
-		result['1-250'] += 1
-	}
-	if(validSets > 250 && validSets <= 500) {
-		result['251-500'] += 1
-	}
-	if(validSets > 500 && validSets <= 1000) {
-		result['501-1000'] += 1
-	}
-	if(validSets > 1000 && validSets <= 2000) {
-		result['1001-2000'] += 1
-	}
-	if(validSets > 2000 && validSets <= 4000) {
-		result['2001-4000'] += 1
-	}
-	if(validSets > 4000 && validSets <= 6000) {
-		result['4001-6000'] += 1
-	}
-	if(validSets > 6000) {
-		result['6000+'] += 1
-	}
-	return result;
-}
+module.exports = routerChooseRecipe;

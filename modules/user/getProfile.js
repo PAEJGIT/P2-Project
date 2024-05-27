@@ -4,6 +4,12 @@ const fs = require('fs');
 const path = require('path');
 const log = require('../utils/log');
 
+/**
+ * Function to get the user profile
+ * @param {object} req - The request object
+ * @param {object} res - The response object
+ * @returns {object} - The user profile
+ */
 const getProfile = (req, res) => {
 	const { username } = req.body;
     let userProfile = null;

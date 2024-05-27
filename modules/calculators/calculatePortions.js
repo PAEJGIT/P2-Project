@@ -1,3 +1,9 @@
+/**
+ * Function to calculate the best portions of each meal to reach target macros
+ * @param {object} targetMacros - The target macros to reach
+ * @param {object} meals - The macros of each meal
+ * @returns {object} - The best portions of each meal, the total macros, and the error
+ */
 function calculateMealPortions(targetMacros, meals) {
 	let maxPortionSize = 6;
 	let bestPortions = { breakfast: 0, lunch: 0, dinner: 0 };
@@ -14,7 +20,6 @@ function calculateMealPortions(targetMacros, meals) {
 		}
 		return totals;
 	}
-
 	// Function to calculate the sum of absolute differences from target
 	function calculateError(totals) {
 		return (
@@ -24,7 +29,6 @@ function calculateMealPortions(targetMacros, meals) {
 			Math.abs(totals.fat - targetMacros.fat)
 		);
 	}
-
 	// Try different combinations of portions up to a limit of maxPortionSize
 	for (let b = 1; b <= maxPortionSize; b++) {
 		for (let l = 1; l <= maxPortionSize; l++) {
@@ -41,13 +45,11 @@ function calculateMealPortions(targetMacros, meals) {
 			}
 		}
 	}
-
 	let data = {
 		bestPortions: bestPortions,
 		bestTotals: bestTotals,
 		minError: minError,
 	};
-
 	return data;
 }
 

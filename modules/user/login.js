@@ -2,6 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, '../../data/accounts.json');
 
+/**
+ * Function to route the request to the login function
+ * @param {object} req - The request object
+ * @param {object} res - The response object
+ */
 function loginRouter(req, res) {
 	const { username, password } = req.body;
 	login(username, password, (obj) => {
@@ -13,6 +18,12 @@ function loginRouter(req, res) {
 	});
 }
 
+/**
+ * Function to login the user
+ * @param {string} username - The username
+ * @param {string} password - The password
+ * @param {function} callback - The callback function
+ */
 function login(username, password, callback) {
 	let callbackObject = {
 		success: false,

@@ -53,8 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Function to update the welcome title
 	function updateWelcomeTitle() {
 		const name = document.getElementById('selectedName');
+		const NAME_text = document.getElementById('name_text');
 		const title = document.getElementById('user-welcome-title');
 		if (name) {
+			NAME_text.textContent = name.value.trim();
 			title.textContent = `Hello ${name.value.trim()},`;
 		} else {
 			title.textContent = 'Hello,';

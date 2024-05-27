@@ -3,10 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Stepper Page</title>
+		<title>P2-Project | Stepper</title>
 		<link rel="stylesheet" href="../constants/styles.css" />
 		<script src="../components/header/header.js"></script>
-		<!-- <script src="../components/footer/footer.js"></script> -->
 	</head>
 	<body>
 		<!-- Header with navigation -->
@@ -92,9 +91,9 @@
 
 				<div class="stepper-left-container-pricing">
 					<div class="stepper-left-container-pricing-box">
-						<span class="stepper-left-container-pricing-box-estimate">Estimated Price (~)</span>
-						<span class="stepper-left-container-pricing-box-price">1.234 kr.</span>
-						<span class="stepper-left-container-pricing-box-average">avg. 0.00 DKK pr. meal</span>
+						<span class="stepper-left-container-pricing-box-estimate">Hello</span>
+						<span id="name_text" class="stepper-left-container-pricing-box-price"></span>
+						<span class="stepper-left-container-pricing-box-average">Waiting to find recipes...</span>
 					</div>
 				</div>
 			</div>
@@ -146,9 +145,9 @@
 									>
 									<div class="stepper-divider"></div>
 									<select name="sex" id="selectedSex" class="input_field" required>
-										<option value="" selected>— Vælg et køn —</option>
-										<option value="male">Mand</option>
-										<option value="female">Kvinde</option>
+										<option value="" selected>Choose your sex</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
 									</select>
 								</div>
 								<div id="pregnant_lactating_section" style="display: none">
@@ -612,7 +611,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="module" src="../utils/processStepper.js"></script>
+		<script type="module" src="../utils/scripts/processStepper.js"></script>
 
 		<script>
 			let currentStep = 0;

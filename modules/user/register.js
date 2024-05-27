@@ -3,6 +3,11 @@ const path = require('path');
 const filePath = path.join(__dirname, '../../data/accounts.json');
 const log = require('../utils/log');
 
+/**
+ * Function to route the request to the register function
+ * @param {object} req - The request object
+ * @param {object} res - The response object
+ */
 function registerRouter(req, res) {
 	const { username, password } = req.body;
 	if (!username || !password) {
@@ -18,6 +23,12 @@ function registerRouter(req, res) {
 	});
 }
 
+/**
+ * Function to register a new user
+ * @param {string} username - The username
+ * @param {string} password - The password
+ * @param {function} callback - The callback function
+ */
 function register(username, password, callback) {
 	fs.readFile(filePath, 'utf8', (err, data) => {
 		if (err) {

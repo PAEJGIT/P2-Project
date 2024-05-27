@@ -49,7 +49,6 @@ GenerateRoutes(); // Generate routes for the server
 
 app.post('/login', modules.loginRouter); // Define the login route
 app.post('/register', modules.registerRouter); // Define the register route
-app.post('/ordering-data', modules.orderingDataRouter); // Define the ordering data route
 app.post('/validRecipes', modules.validRecipesRouter); // Define the recipe chooser route
 app.post('/updateProfile', modules.updateProfile); // Define the route to update the user profile
 app.post('/getProfile', modules.getProfile); // Define the route to get the user profile

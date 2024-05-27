@@ -1,13 +1,5 @@
 // Variables
-let currentCenterItemIndex = 0;
-let maxCenterItemIndex = 0;
 let globalValidRecipes;
-let chosenBreakfastObj;
-let chosenBreakfastName;
-let chosenLunchObj;
-let chosenLunchName;
-let chosenDinnerObj;
-let chosenDinnerName;
 
 // Recipe storage for choosen recipes
 let chosenRecipes = [];
@@ -16,6 +8,7 @@ let chosenAmount = 0;
 // Get ID of overlay w. loading indicator [active by default]
 const overlay = document.getElementById('overlay');
 const overlayText = document.getElementById('overlay-text');
+const itemContainer = document.getElementById('item_container');
 // Function to show overlay with fade-in effect
 function showOverlay() {
 	overlay.style.display = 'flex';
@@ -30,12 +23,8 @@ function fetchRecipes(recipes) {
 	globalValidRecipes = recipes;
 	return globalValidRecipes;
 }
-function emptyContainer() {
-	const itemContainer = document.getElementById('item_container');
-	itemContainer.innerHTML = '';
-}
 function refreshList(recipe) {
-	emptyContainer();
+	itemContainer.innerHTML = '';
 	addRecipesToList(globalValidRecipes[recipe]);
 }
 function updateTitle(mealtype) {
@@ -51,6 +40,10 @@ function updateTitle(mealtype) {
 			: 'End your day with a tasty dinner. If you do not want the recommended meal, you can skip it and you will be shown a whole series of meals to choose from. After you have chosen, you will be directed to your next meal.';
 	document.getElementById('recipe_chooser_description').textContent = description;
 }
+/**
+ * Function to add recipes to the list of recipes in the recipe chooser
+ * @param {Object} validRecipes
+ */
 function addRecipesToList(validRecipes) {
 	// Get current username from localStorage
 	const username = localStorage.getItem('username');
@@ -97,7 +90,6 @@ function addRecipesToList(validRecipes) {
 		} else if (recipe === 'info') {
 			continue;
 		} else {
-
 			// Create an pop-over wrapper
 			let popOverWrapper = document.createElement('div');
 			popOverWrapper.className = 'popover__wrapper';

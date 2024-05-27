@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
 	let loginForm = document.getElementById('loginForm');
 
@@ -15,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+/**
+ * Function to send a login request to the server
+ * @param {String} username
+ * @param {String} password
+ */
 function reqLogin(username, password) {
 	fetch('/login', {
 		method: 'POST',
@@ -28,7 +31,7 @@ function reqLogin(username, password) {
 			if (data.success) {
 				localStorage.setItem('username', username);
 				//alert('Login succesful!');
-				console.log("Succesfully logged in");
+				console.log('Succesfully logged in');
 				window.location.href = '../pages/stepper.html';
 			} else {
 				alert('Login failed:' + data.reason);
@@ -39,24 +42,3 @@ function reqLogin(username, password) {
 			console.error('Error:', error);
 		});
 }
-
-// fetch("/register", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-//   body: JSON.stringify({ username, password }),
-// })
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//     if (data.success) {
-//       alert("Registration Successful");
-//     } else {
-//       alert("Registration Failed: " + data.reason);
-//     }
-//   })
-//   .catch((error) => {
-//     console.error("Error:", error);
-//   });
-// });

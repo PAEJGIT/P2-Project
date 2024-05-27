@@ -13,6 +13,7 @@ const calculateBMI = (weight, height) => {
 		return BMI;
 	}
 };
+
 /**
  * **calculateBMR**
  *

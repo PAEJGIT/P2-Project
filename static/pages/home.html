@@ -3,12 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>P2-Project | Home</title>
 		<link rel="stylesheet" href="../constants/styles.css" />
 		<script src="../components/header/header.js"></script>
 		<script src="../components/footer/footer.js"></script>
-		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	</head>
 
 	<body>
@@ -98,10 +96,6 @@
 						<input type="password" name="passwordRegister" required />
 						<label>Password</label>
 					</div>
-					<!-- <div class="remember-forgot">
-				  <label><input type="checkbox" /> Remember me</label>
-				  <a href="#">Forgot Password?</a>
-				</div> -->
 					<button type="submit" class="btn">Register</button>
 					<div class="login-register">
 						<p>
@@ -114,10 +108,34 @@
 		</div>
 		<!-- Footer with navigation -->
 		<div id="footer-container"></div>
-		<script src="../utils/requests/req_login.js"></script>
-		<script src="../utils/requests/req_register.js"></script>
-		<script src="../utils/helpers/scripts.js"></script>
+		<script src="../utils/requests/login.js"></script>
+		<script src="../utils/requests/register.js"></script>
 		<script>
+			const wrapper = document.querySelector('.wrapper');
+			const loginLink = document.querySelector('.login-link');
+			const registerLink = document.querySelector('.register-link');
+			const btnPopup = document.querySelectorAll('.btnLogin-popup');
+			const iconClose = document.querySelector('.icon-close');
+
+			const allConst = [wrapper, loginLink, registerLink, btnPopup, iconClose];
+
+			registerLink.addEventListener('click', () => {
+				wrapper.classList.add('active');
+			});
+
+			loginLink.addEventListener('click', () => {
+				wrapper.classList.remove('active');
+			});
+
+			btnPopup.forEach((btn) => {
+				btn.addEventListener('click', () => {
+					wrapper.classList.add('active-popup');
+				});
+			});
+
+			iconClose.addEventListener('click', () => {
+				wrapper.classList.remove('active-popup');
+			});
 			document.getElementById('home-button-start').addEventListener('click', function () {
 				document.getElementById('overlay').classList.add('active');
 			});

@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://github.com/PAEJGIT/P2-Projectn">
     <!-- Please provide path to your logo here -->
-    <img src="docs/images/logo.png" alt="Logo" width="100" height="100">
+    <img src="./images/logo.png" alt="Logo" width="100" height="100">
   </a>
 </h1>
 <div align="center">
@@ -51,4 +51,4 @@ Special thanks to our teachers and mentors for their guidance and support.
 With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his supervision and high patience regarding our work ethics. He has been a great help in guiding us through the project and providing valuable feedback, while also giving us the freedom to explore and learn on our own.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE.md) file for more details.

@@ -2,118 +2,23 @@
   "stefaa": {
     "password": "123456",
     "userProfile": {
-      "name": "stefaa",
-      "sex": "male",
-      "age": "22",
-      "weight": "111",
-      "height": "188",
-      "activity": "2",
-      "healthGoal": "maintenance",
-      "nutritionalPreference": "balanced",
-      "dietaryApproach": "balanced",
+      "name": "Stefan",
+      "sex": "",
+      "age": "",
+      "weight": "",
+      "height": "",
+      "activity": "",
+      "healthGoal": "",
+      "nutritionalPreference": "",
+      "dietaryApproach": "",
       "pregnant": false,
       "lactating": false,
-      "BMI": "31",
-      "BMR": 2352.7470000000003,
-      "TDEE": 3250,
-      "proteins": 122,
-      "carbohydrates": 311,
-      "fats": 169,
-      "activeRecipes": [
-        {
-          "id": 5,
-          "name": "Avocado Toast",
-          "description": "A classic and trendy breakfast option that combines ripe avocado on toasted bread, topped with a sprinkle of salt and pepper for added flavor.",
-          "image": "assets/images/5_avocado_toast.jpg",
-          "equipment": [
-            "toaster",
-            "knife"
-          ],
-          "preparationTime": 5,
-          "tags": [
-            "highCalorie",
-            "highFiber",
-            "Quick"
-          ],
-          "categories": [
-            "Meal",
-            "Vegan",
-            "Vegetarian",
-            "LactoseFree"
-          ],
-          "allergens": [],
-          "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 180
-          },
-          "calories": 587,
-          "protein": 12,
-          "carb": 50,
-          "fat": 37,
-          "portions": 2
-        },
-        {
-          "id": 4,
-          "name": "Simple Lemon Garlic Pasta",
-          "description": "An easy and quick pasta dish featuring a tangy lemon and garlic sauce, perfect for a light meal.",
-          "image": "assets/images/4_simple_lemon_garlic_pasta.jpg",
-          "equipment": [
-            "pot",
-            "strainer",
-            "pan"
-          ],
-          "preparationTime": 20,
-          "tags": [
-            "highCalorie",
-            "highFiber"
-          ],
-          "categories": [
-            "Meal",
-            "Vegan",
-            "Vegetarian",
-            "LactoseFree"
-          ],
-          "allergens": [],
-          "ratings": {
-            "averageRating": 3,
-            "numberOfRatings": 174
-          },
-          "calories": 627,
-          "protein": 15,
-          "carb": 65,
-          "fat": 34,
-          "portions": 1
-        },
-        {
-          "id": 21,
-          "name": "Spaghetti Carbonara",
-          "description": "A classic Italian pasta dish featuring spaghetti tossed with crispy pancetta, creamy egg sauce, and grated Parmesan cheese, perfect for a rich and indulgent meal.",
-          "image": "assets/images/21_spaghetti_carbonara.jpg",
-          "equipment": [
-            "Pot",
-            "Skillet",
-            "Knife",
-            "Cutting board"
-          ],
-          "preparationTime": 20,
-          "tags": [],
-          "categories": [
-            "Meal"
-          ],
-          "allergens": [
-            "Egg"
-          ],
-          "ratings": {
-            "averageRating": 4,
-            "numberOfRatings": 94
-          },
-          "calories": 334,
-          "protein": 20,
-          "carb": 37,
-          "fat": 18,
-          "portions": 4
-        }
-      ]
+      "BMI": 0,
+      "BMR": 0,
+      "TDEE": 0,
+      "proteins": 0,
+      "carbohydrates": 0,
+      "fats": 0
     }
   },
   "user": {

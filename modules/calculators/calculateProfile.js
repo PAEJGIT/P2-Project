@@ -345,38 +345,3 @@ const calculateUserProfile = (userProfile) => {
 	};
 };
 module.exports = calculateUserProfile;
-
-const data = {
-	userProfile: {
-		basicInfo: {
-			name: 'John Doe',
-			sex: 'male',
-			weightKg: 80,
-			heightCm: 180,
-			age: 30,
-			activityFactor: 2, // (1.2, 1.375, 1.55, 1.725, 1.9)
-			pregnant: false,
-			lactating: false,
-			compositionGoal: 'maintenance', // ('maintenance', 'musclegain', 'fatloss', 'weightloss', 'weightgain')
-			compositionPreference: 'balanced', // ('omnivore', 'vegetarian', 'vegan', 'balanced')
-			compositionType: 'balanced', // ('keto', 'low-carb', 'high-fiber', 'balanced')
-		},
-		dietaryPreferences: {
-			excludeIngredients: ['milk', 'eggs'],
-			excludeRecipes: ['recipe1', 'recipe2'],
-			favoriteCuisines: ['italian', 'mexican'],
-			maxCookingTimeMinutes: 30,
-			preferredCookingEquipment: ['oven', 'stove'],
-			cookingDifficultyLevel: 1,
-			servingSize: 2,
-		},
-		nutritionalTargets: {
-			totalDailyEnergyExpenditure: 0,
-			proteinGrams: 0,
-			carbohydratesGrams: 0,
-			fatGrams: 0,
-			fiberGrams: 0,
-			bodyMassIndex: 0,
-		},
-	},
-};
