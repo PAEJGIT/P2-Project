@@ -79,15 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	reqValidRecipes(userProfile, (data) => {
 		// Call function that runs the choosers
-		//addBreakfastRecipes(data);
-
-		// Hide overlay
 		hideOverlay();
 		addRecipesToList(data);
-
 		// Log
 		log.debug('req_valid_recipes.js', 'Document', 'INFO', 'Done', ENABLE_LOGGING);
-
 	});
 });
 
@@ -105,6 +100,6 @@ function reqValidRecipes(userProfile, callback) {
 			callback(data);
 		})
 		.catch((error) => {
-			log.error("reqValidRecipes", null, 'ERROR', error, ENABLE_LOGGING);
+			log.error('reqValidRecipes', null, 'ERROR', error, ENABLE_LOGGING);
 		});
 }

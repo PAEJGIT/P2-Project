@@ -69,6 +69,11 @@ function addRecipesToList(validRecipes) {
 				let userProfile = JSON.parse(localStorage.getItem('userProfile'));
 				// Add the chosen recipes to the user profile
 				userProfile.activeRecipes = chosenRecipes;
+				// Add portions to each recipe
+				const portions = globalValidRecipes.portions;
+				userProfile.activeRecipes.forEach((recipe, index) => {
+					recipe.portions = portions[index];
+				});
 				const response = await fetch('/updateProfile', {
 					method: 'POST',
 					headers: {
@@ -92,6 +97,7 @@ function addRecipesToList(validRecipes) {
 		} else if (recipe === 'info') {
 			continue;
 		} else {
+
 			// Create an pop-over wrapper
 			let popOverWrapper = document.createElement('div');
 			popOverWrapper.className = 'popover__wrapper';
@@ -198,6 +204,7 @@ function addRecipesToList(validRecipes) {
 
 			// Append the body to the card
 			card.appendChild(body);
+			popOverWrapper.appendChild(popOverContent);
 			// Append the card to the pop-over wrapper
 			popOverWrapper.appendChild(card);
 			itemContainer.appendChild(popOverWrapper);
