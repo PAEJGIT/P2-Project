@@ -1,5 +1,5 @@
 # File to ignore files and folders in git
 
 # Ignore .vscode folder
-.vscode/
-/.vscode
+.vscode
+.vscode/*
