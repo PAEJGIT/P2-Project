@@ -32,28 +32,27 @@
 
 ## Overview
 
-Welcome to our Meal Recipe Recommendation Website project! This project is developed by a group of second-semester Datalogy students at Aalborg University. The aim of the project is to create a simple and user-friendly website that recommends meal recipes based on user preferences.
+Welcome to our Meal Recipe Recommendation Website project! This project is developed by a group of 2. semester (`CS-24-DAT-2-06`) Datalogy students at Aalborg University. The aim of the project is to create a simple and user-friendly website that recommends meal recipes based on user preferences.
 
 ## Features
+- **Basic Authentication:** Users can create an account and log in to save their preferences.
 - **User Preferences:** Users can input their dietary preferences, such as vegetarian, vegan, gluten-free, etc.
 - **Recipe Suggestions:** Based on the input preferences, the website suggests meal recipes.
 - **Basic Analysis:** The website provides a basic analysis of the meal recipes, such as the number of calories, protein, fat, and carbohydrates.
-- **Basic Authentication:** Users can create an account and log in to save their preferences.
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express.js
 
 ## Authors & contributors
-The original setup of this repository is by [CS-XX-XX](https://github.com/XXX).
+The original setup of this repository is by [CS-24-DAT-2-06](https://github.com/XXX).
 For a full list of all authors and contributors, see [the contributors page](https://github.com/SkimmedMilky/p2-meal-recommendation/contributors).
 
 ## Acknowledgements
 
-> **[?]**
-> Aalborg University, Denmark.
-> Special thanks to our teachers and mentors for their guidance and support.
-> With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his guidance and support.
+**Aalborg University, Denmark.**
+Special thanks to our teachers and mentors for their guidance and support.
+With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his supervision and high patience regarding our work ethics.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
