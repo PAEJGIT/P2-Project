@@ -75,20 +75,22 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 		if (headerContainer) {
 			headerContainer.innerHTML = headerHTML;
 			loadCSS();
-			document.getElementById('button-header-login').addEventListener('click', function () {
-				document.getElementById('overlay').classList.add('active');
-				wrapper.classList.remove('active');
-			});
-			document.getElementById('button-header-signin').addEventListener('click', function () {
-				document.getElementById('overlay').classList.add('active');
-				wrapper.classList.add('active');
-			});
-			document.getElementById('button-header-login').addEventListener('click', () => {
-				wrapper.classList.add('active-popup');
-			});
-			document.getElementById('button-header-signin').addEventListener('click', () => {
-				wrapper.classList.add('active-popup');
-			});
+			if (!username) {
+				document.getElementById('button-header-login').addEventListener('click', function () {
+					document.getElementById('overlay').classList.add('active');
+					wrapper.classList.remove('active');
+				});
+				document.getElementById('button-header-signin').addEventListener('click', function () {
+					document.getElementById('overlay').classList.add('active');
+					wrapper.classList.add('active');
+				});
+				document.getElementById('button-header-login').addEventListener('click', () => {
+					wrapper.classList.add('active-popup');
+				});
+				document.getElementById('button-header-signin').addEventListener('click', () => {
+					wrapper.classList.add('active-popup');
+				});
+			}
 		} else {
 			console.error('Header container not found');
 		}

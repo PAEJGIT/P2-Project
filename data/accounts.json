@@ -381,5 +381,122 @@
         }
       ]
     }
+  },
+  "tar": {
+    "password": "123456",
+    "userProfile": {
+      "name": "Stefan",
+      "sex": "male",
+      "age": "22",
+      "weight": "222",
+      "height": "222",
+      "activity": "2",
+      "healthGoal": "maintenance",
+      "nutritionalPreference": "balanced",
+      "dietaryApproach": "low-carb",
+      "pregnant": false,
+      "lactating": false,
+      "BMI": "45",
+      "BMR": 4002.98,
+      "TDEE": 5500,
+      "proteins": 244,
+      "carbohydrates": 226,
+      "fats": 402,
+      "activeRecipes": [
+        {
+          "id": 5,
+          "name": "Avocado Toast",
+          "description": "A classic and trendy breakfast option that combines ripe avocado on toasted bread, topped with a sprinkle of salt and pepper for added flavor.",
+          "image": "assets/images/5_avocado_toast.jpg",
+          "equipment": [
+            "toaster",
+            "knife"
+          ],
+          "preparationTime": 5,
+          "tags": [
+            "highCalorie",
+            "highFiber",
+            "Quick"
+          ],
+          "categories": [
+            "Meal",
+            "Vegan",
+            "Vegetarian",
+            "LactoseFree"
+          ],
+          "allergens": [],
+          "ratings": {
+            "averageRating": 3,
+            "numberOfRatings": 180
+          },
+          "calories": 587,
+          "protein": 12,
+          "carb": 50,
+          "fat": 37,
+          "portions": 4
+        },
+        {
+          "id": 60,
+          "name": "Keto Bacon and Egg Avocado Boat",
+          "description": "A high-fat, ketogenic breakfast recipe that combines crispy bacon, eggs, and creamy avocado for a satisfying meal.",
+          "image": "assets/images/60_keto_bacon_and_egg_avocado_boat.jpg",
+          "equipment": [],
+          "preparationTime": 15,
+          "tags": [
+            "lowCarb",
+            "noCarb",
+            "Simple"
+          ],
+          "categories": [
+            "Meal",
+            "LactoseFree",
+            "keto"
+          ],
+          "allergens": [
+            "Egg"
+          ],
+          "ratings": {
+            "averageRating": 5,
+            "numberOfRatings": 109
+          },
+          "calories": 288,
+          "protein": 11,
+          "carb": 3,
+          "fat": 28,
+          "portions": 6
+        },
+        {
+          "id": 17,
+          "name": "Caprese Salad",
+          "description": "A classic Italian salad featuring ripe tomatoes, fresh mozzarella, basil leaves, and a drizzle of balsamic glaze, perfect for a light and refreshing appetizer or side dish.",
+          "image": "assets/images/17_caprese_salad.jpg",
+          "equipment": [
+            "Plate",
+            "Knife"
+          ],
+          "preparationTime": 10,
+          "tags": [
+            "highProtein",
+            "lowCarb",
+            "noCarb",
+            "Quick"
+          ],
+          "categories": [
+            "Meal",
+            "keto"
+          ],
+          "allergens": [],
+          "ratings": {
+            "averageRating": 1,
+            "numberOfRatings": 183
+          },
+          "calories": 311,
+          "protein": 33,
+          "carb": 7,
+          "fat": 21,
+          "portions": 4
+        }
+      ]
+    }
   }
 }
