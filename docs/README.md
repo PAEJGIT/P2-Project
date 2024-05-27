@@ -22,7 +22,6 @@
   - [Overview](#overview)
   - [Features](#features)
   - [Technologies Used](#technologies-used)
-  - [Authors \& contributors](#authors--contributors)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
 
@@ -44,15 +43,12 @@ Welcome to our Meal Recipe Recommendation Website project! This project is devel
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express.js
 
-## Authors & contributors
-The original setup of this repository is by [CS-24-DAT-2-06](https://github.com/XXX).
-For a full list of all authors and contributors, see [the contributors page](https://github.com/SkimmedMilky/p2-meal-recommendation/contributors).
-
 ## Acknowledgements
 
 **Aalborg University, Denmark.**
+
 Special thanks to our teachers and mentors for their guidance and support.
-With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his supervision and high patience regarding our work ethics.
+With high focus on [Ramoni Ojekunle Adeogun](https://vbn.aau.dk/da/persons/ramoni-ojekunle-adeogun) for his supervision and high patience regarding our work ethics. He has been a great help in guiding us through the project and providing valuable feedback, while also giving us the freedom to explore and learn on our own.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
