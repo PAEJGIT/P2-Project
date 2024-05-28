@@ -7,7 +7,7 @@ const modules = {
 	path: require('path'),                                          	// Node.js core module to work with file paths
 	loginRouter: require('./user/login').loginRouter,                   // Import the login router
 	registerRouter: require('./user/register').registerRouter,          // Import the register router
-	validRecipesRouter: require('./calculators/calculateRecipes'), 		// Import the recipe chooser router
+	validRecipesRouter: require('./calculators/calculateRecipes').routerChooseRecipe, 		// Import the recipe chooser router
     log: require('./utils/log'),                                    	// Import the log module
 	calculateMealPortions: require('./calculators/calculatePortions'),  // Import the calculate portions module
 	calculateUserProfile: require('./calculators/calculateProfile'),    // Import the calculate profile module
