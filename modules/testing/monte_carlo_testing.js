@@ -108,3 +108,4 @@ function CalculateResult(validSets, result) {
 	}
 	return result;
 }
+
