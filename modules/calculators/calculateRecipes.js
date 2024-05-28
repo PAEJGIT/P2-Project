@@ -110,7 +110,7 @@ module.exports = routerChooseRecipe;
  * @returns {object} - The result of the test
  * @param {number} RunAmount - The number of times to run the test
  */
-function TestValidRecipeSets(RunAmount = 100) {
+const TestValidRecipeSets = (RunAmount = 100) => {
 	let runCount = RunAmount;
 
 	let result = {
@@ -178,7 +178,7 @@ function TestValidRecipeSets(RunAmount = 100) {
 			}
 		});
 	}
-}
+};
 
 /**
  * Function to calculate the result of the test
