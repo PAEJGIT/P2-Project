@@ -1,5 +1,6 @@
 const calculateUserProfile = require('../calculators/calculateProfile');
 const generateRandomUser = require('../generators/generateUser');
+const findValidRecipes = require('../calculators/calculateRecipes').findValidRecipes;
 
 /**
  * Function to test the valid recipe sets
@@ -108,3 +109,5 @@ function CalculateResult(validSets, result) {
 	}
 	return result;
 }
+
+TestValidRecipeSets(500);
