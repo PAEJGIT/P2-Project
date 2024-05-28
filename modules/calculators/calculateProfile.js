@@ -315,7 +315,7 @@ const calculateUserProfile = (userProfile) => {
 	// Calculate remaining calories for carbs after accounting for protein calories
 	let remainingCalories = adjustedTDEE - proteinCalories;
 	// Calculate carbohydrate requirements and their caloric contribution
-	const carbs = calculateCarbs({
+	const carbs = calculateCarbs(
 		remainingCalories,
 		age,
 		activityFactor,
@@ -323,7 +323,7 @@ const calculateUserProfile = (userProfile) => {
 		compositionGoal,
 		compositionPreference,
 		compositionType,
-	});
+	);
 	const carbCalories = carbs * 4;
 	const fibers = calculateFibers(carbs, adjustedTDEE);
 	// Calculate remaining calories for fats
