@@ -225,15 +225,15 @@ const calculateProteins = (
  * @param {string} options.compositionType - The dietary type of the user ('keto', 'low-carb', 'high-fiber', 'balanced').
  * @returns {number} The estimated carbohydrate intake in grams.
  */
-const calculateCarbs = ({
+const calculateCarbs = (
 	remainingCalories,
 	age,
 	activityFactor,
 	pregnant,
 	compositionGoal,
 	compositionPreference,
-	compositionType,
-}) => {
+	compositionType
+) => {
 	const ageGroup = age > 60 ? 'over60' : 'under60';
 	const activityLevel = activityFactor >= 4 ? 'high' : 'low';
 	// Define base ratios for carbohydrate intake based on health goal
