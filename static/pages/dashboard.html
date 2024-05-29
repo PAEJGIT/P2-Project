@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<base href="/node2/">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>P2-Project | Dashboard</title>
-		<link rel="stylesheet" href="../constants/styles.css" />
-		<script src="../components/header/header.js"></script>
+		<link rel="stylesheet" href="constants/styles.css" />
+		<script src="components/header/header.js"></script>
 	</head>
 
 	<body>
@@ -31,20 +32,20 @@
 						<div class="dashboard_settings_container">
 							<div
 								class="dashboard_setting_card"
-								onclick="window.location.href = '/pages/choose_recipe.html'">
+								onclick="window.location.href = '/node2/pages/choose_recipe.html'">
 								<image
 									class="dashboard_setting_card_icon"
-									src="../../assets/icons/icon_settings_2.svg" />
+									src="assets/icons/icon_settings_2.svg" />
 								<span class="dashboard_setting_card_text">Change Recipes</span>
 							</div>
-							<div class="dashboard_setting_card" onclick="window.location.href = '/pages/stepper.html'">
-								<image class="dashboard_setting_card_icon" src="../../assets/icons/icon_stepper.svg" />
+							<div class="dashboard_setting_card" onclick="window.location.href = '/node2/pages/stepper.html'">
+								<image class="dashboard_setting_card_icon" src="assets/icons/icon_stepper.svg" />
 								<span class="dashboard_setting_card_text">Repeat Stepper</span>
 							</div>
 							<div type="button" class="dashboard_setting_card" onclick="window.location.href = '/'">
 								<image
 									class="dashboard_setting_card_icon"
-									src="../../assets/icons/icon_userDelete.svg" />
+									src="assets/icons/icon_userDelete.svg" />
 								<span class="dashboard_setting_card_text">Delete Account</span>
 							</div>
 						</div>
@@ -65,7 +66,7 @@
 					<!-- Circle Diagram -->
 					<div class="dashboard_diagram_container">
 						<div class="macronutrientChart">
-							<img src="../assets/icons/icon_chart.svg" alt="Circle Diagram" />
+							<img src="assets/icons/icon_chart.svg" alt="Circle Diagram" />
 						</div>
 					</div>
 
@@ -222,7 +223,7 @@
 			async function getProfile() {
 				// Get current username from localStorage
 				const username = localStorage.getItem('username');
-				const response = await fetch('/getProfile', {
+				const response = await fetch('/node2/getProfile', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -319,9 +320,9 @@
 						let image = document.createElement('img');
 						image.onerror = function () {
 							// Test if the image is available
-							image.src = '../../assets/images/1_oatmeal_with_apple.jpg';
+							image.src = 'assets/images/1_oatmeal_with_apple.jpg';
 						};
-						image.src = '../../' + recipe.image;
+						image.src = '' + recipe.image;
 						image.className = 'card-img-top';
 						card.appendChild(image);
 
@@ -368,7 +369,7 @@
 						let preparationTimeText = document.createElement('p');
 						preparationTimeContainer.className = 'preparation-time-container';
 						preparationTimeIcon.className = 'preparation-time-icon';
-						preparationTimeIcon.style.backgroundImage = 'url(../../../assets/icons/icon_soup_filled.svg)';
+						preparationTimeIcon.style.backgroundImage = 'url(assets/icons/icon_soup_filled.svg)';
 						preparationTimeText.className = 'preparation-time';
 						preparationTimeText.textContent = recipe.portions + ' portions';
 						preparationTimeContainer.appendChild(preparationTimeIcon);
@@ -378,8 +379,8 @@
 						let ratingContainer = document.createElement('div');
 						let ratingAverage = recipe.ratings.averageRating; // 1-5
 						let ratingNumberOf = recipe.ratings.numberOfRatings;
-						let ratingIconDefaultPath = '../../assets/icons/icon_star_default.svg';
-						let ratingIconFilledPath = '../../assets/icons/icon_star_filled.svg';
+						let ratingIconDefaultPath = 'assets/icons/icon_star_default.svg';
+						let ratingIconFilledPath = 'assets/icons/icon_star_filled.svg';
 						ratingContainer.className = 'rating-container';
 						for (let i = 0; i < 5; i++) {
 							let ratingIcon = document.createElement('img');

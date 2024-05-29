@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<base href="/node2/">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>P2-Project | Home</title>
-		<link rel="stylesheet" href="../constants/styles.css" />
-		<script src="../components/header/header.js"></script>
-		<script src="../components/footer/footer.js"></script>
+		<link rel="stylesheet" href="constants/styles.css" />
+		<script src="components/header/header.js"></script>
+		<script src="components/footer/footer.js"></script>
 	</head>
 
 	<body>
@@ -18,7 +19,7 @@
 			<div id="home-content-container">
 				<div id="home-container">
 					<div id="home-container-card-title">
-						<image id="home-card-icon" src="../assets/icons/icon_shield.svg" alt="icon_home" />
+						<image id="home-card-icon" src="assets/icons/icon_shield.svg" alt="icon_home" />
 						<h1>Save money by saving your health</h1>
 					</div>
 					<p>Learn you how to meet your individual nutritional needs and enjoy delicious food.</p>
@@ -28,7 +29,7 @@
 				<div id="home-container-bottom">
 					<div id="home-container">
 						<div id="home-container-card-title">
-							<image id="home-card-icon" src="../assets/icons/icon_db.svg" alt="API" />
+							<image id="home-card-icon" src="assets/icons/icon_db.svg" alt="API" />
 							<h1>Database</h1>
 						</div>
 						<p>You can also find ingredients or recipes through either of our database(s)*.</p>
@@ -40,7 +41,7 @@
 					</div>
 					<div id="home-container">
 						<div id="home-container-card-title">
-							<image id="home-card-icon" src="../assets/icons/icon_api.svg" alt="API" />
+							<image id="home-card-icon" src="assets/icons/icon_api.svg" alt="API" />
 							<h1>API</h1>
 						</div>
 						<p>You can also find ingredients or recipes through either of our database(s)*.</p>
@@ -108,8 +109,8 @@
 		</div>
 		<!-- Footer with navigation -->
 		<div id="footer-container"></div>
-		<script src="../utils/requests/login.js"></script>
-		<script src="../utils/requests/register.js"></script>
+		<script src="utils/requests/login.js"></script>
+		<script src="utils/requests/register.js"></script>
 		<script>
 			// TODO: Could create external file or merging for this
 			const wrapper = document.querySelector('.wrapper');

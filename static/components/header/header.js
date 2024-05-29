@@ -3,7 +3,7 @@
  * @param {string} cssPath - Path to the CSS file
  * @returns {string} - HTML string
  */
-const Header = (cssPath = '../components/header/header.css', injectTo = 'header-container') => {
+const Header = (cssPath = 'components/header/header.css', injectTo = 'header-container') => {
 	// State to check if the user is logged in
 	let username = localStorage.getItem('username') ? true : false;
 	// Event listener for the log out button
@@ -11,7 +11,7 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 		// Clear local storage
 		if (e.target.id === 'log_out_button') {
 			localStorage.clear();
-			window.location.href = '/';
+			window.location.href = '/node2/';
 		}
 	});
 	// Event listener for the log in button
@@ -26,15 +26,15 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 	// HTML string
 	const headerHTML = `
     <div id="header">
-            <a href="/"><img id="logo" src="../assets/images/logo.png"></a>
+            <a href="/"><img id="logo" src="assets/images/logo.png"></a>
             <nav class="nav_bar">
                 <ul id="nav_bar_list_container">
                     <li>
-                        <img class="nav_icons" src="../assets/icons/icon_soup.svg" />
+                        <img class="nav_icons" src="assets/icons/icon_soup.svg" />
                         <a class="endpoints" href="/recipes">Recipe Database</a>
                     </li>
                     <li>
-                        <img class="nav_icons" src="../assets/icons/icon_cherry.svg" />
+                        <img class="nav_icons" src="assets/icons/icon_cherry.svg" />
                         <a class="endpoints" href="/ingredients">Ingredient Database</a>
                     </li>
                 </ul>
@@ -45,13 +45,13 @@ const Header = (cssPath = '../components/header/header.css', injectTo = 'header-
 									? `
 			<div class="button_nav">
             	<button id="log_out_button" class="log-out-button" type="button">
-					<img src="../../assets/icons/icon_logout.svg"></img>
+					<img class="log-out-button-icon" src="assets/icons/icon_logout.svg"></img>
 				</button>
 				<button id="button_navigation" class="settings-button"  type="button">
-					<img src="../../assets/icons/icon_settings.svg"></img>
+					<img src="assets/icons/icon_settings.svg"></img>
 				</button>
 				<button id="avatar" class="avatar-button"  type="button">
-					<img src="../../assets/icons/icon_user.svg"></img>
+					<img src="assets/icons/icon_user.svg"></img>
 				</button>
 			</div>
 

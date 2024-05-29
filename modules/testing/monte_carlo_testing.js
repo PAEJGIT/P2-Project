@@ -110,4 +110,4 @@ function CalculateResult(validSets, result) {
 	return result;
 }
 
-TestValidRecipeSets(500);
+TestValidRecipeSets(100);

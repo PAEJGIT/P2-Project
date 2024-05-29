@@ -4,7 +4,7 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
 	const password = this.querySelector('input[name="passwordRegister"]').value;
 	const wrapper = document.getElementsByClassName('wrapper');
 
-	fetch('/register', {
+	fetch('/node2/register', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

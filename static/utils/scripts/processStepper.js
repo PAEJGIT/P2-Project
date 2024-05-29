@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const username = localStorage.getItem('username');
 	if (!username) {
 		alert('Please login to continue. Redirecting to home page...');
-		window.location.href = '../pages/home.html';
+		window.location.href = '/node2/pages/home.html';
 	}
 	// Check if user profile is already saved in localStorage
 
@@ -302,7 +302,7 @@ function getFormData() {
 	async function updateUserProfile() {
 		const userProfile = JSON.parse(localStorage.getItem('userProfile'));
 
-		const response = await fetch('/updateProfile', {
+		const response = await fetch('/node2/updateProfile', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * @param {String} password
  */
 function reqLogin(username, password) {
-	fetch('/login', {
+	fetch('/node2/login', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function reqLogin(username, password) {
 				localStorage.setItem('username', username);
 				//alert('Login succesful!');
 				console.log('Succesfully logged in');
-				window.location.href = '../pages/stepper.html';
+				window.location.href = '/node2/pages/stepper.html';
 			} else {
 				alert('Login failed:' + data.reason);
 			}

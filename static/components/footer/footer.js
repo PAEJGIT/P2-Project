@@ -3,7 +3,7 @@
  * @param {string} cssPath - Path to the CSS file
  * @returns {string} - HTML string
  */
-const Footer = (cssPath = '../components/footer/footer.css') => {
+const Footer = (cssPath = 'components/footer/footer.css') => {
 	// Load the CSS file
 	const loadCSS = () => {
 		const link = document.createElement('link');
@@ -15,7 +15,7 @@ const Footer = (cssPath = '../components/footer/footer.css') => {
 	const footerHTML = `
     <footer>
         <div id="footer-container-left">
-            <a href="/"><img id="logo" src="../assets/images/logo.png"></a>
+            <a href="/"><img id="logo" src="assets/images/logo.png"></a>
             <span id="footer-container-left-content"> © 2023-current — Aalborg Universitet. All rights reserved.</span>
         </div>
         <div id="footer-container-right">

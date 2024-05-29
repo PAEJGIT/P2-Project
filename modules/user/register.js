@@ -37,6 +37,7 @@ function register(username, password, callback) {
 			callback({ success: false, reason: 'Failed to read file' });
 			return;
 		}
+		
 		const users = JSON.parse(data);
 
 		if (users[username]) {
@@ -47,7 +48,7 @@ function register(username, password, callback) {
 		// Add new user
 		users[username] = { password };
 
-		fs.writeFile(filePath, JSON.stringify(users), (err) => {
+		fs.writeFile(filePath, JSON.stringify(users, null, 2), (err) => {
 			if (err) {
 				//console.error("Error writing to file:", err);
 				log.error(__filename, null, 'Error writing to file', err);

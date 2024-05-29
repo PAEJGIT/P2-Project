@@ -134,6 +134,13 @@ li:hover .endpoints {
     align-items: center;
     cursor: pointer;
 }
+.log-out-button:hover {
+    background: rgb(160,171,192);
+    background: linear-gradient(90deg, rgba(160,171,192,1) 0%, rgba(226,231,240,1) 100%);
+}
+.log-out-button-icon{
+    pointer-events: none;
+}
 .settings-button {
     display: flex;
     width: 3rem;
@@ -148,10 +155,6 @@ li:hover .endpoints {
 .avatar-button:hover {
     background: rgb(41,72,255);
     background: linear-gradient(90deg, rgba(41,72,255,1) 0%, rgba(57,106,252,1) 100%);
-}
-.log-out-button:hover {
-    background: rgb(160,171,192);
-    background: linear-gradient(90deg, rgba(160,171,192,1) 0%, rgba(226,231,240,1) 100%);
 }
 .settings-button:hover {
     background: rgb(160,171,192);

@@ -67,7 +67,7 @@ function addRecipesToList(validRecipes) {
 				userProfile.activeRecipes.forEach((recipe, index) => {
 					recipe.portions = portions[index];
 				});
-				const response = await fetch('/updateProfile', {
+				const response = await fetch('/node2/updateProfile', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ function addRecipesToList(validRecipes) {
 			// Wait for the overlay to show and then redirect after 4 seconds
 			setTimeout(() => {
 				// Redirect to the dashboard
-				window.location.href = '/dashboard';
+				window.location.href = '/node2/dashboard';
 			}, 4000);
 		} else if (recipe === 'info') {
 			continue;
@@ -122,9 +122,9 @@ function addRecipesToList(validRecipes) {
 			let image = document.createElement('img');
 			image.onerror = function () {
 				// Test if the image is available
-				image.src = '../../assets/images/1_oatmeal_with_apple.jpg';
+				image.src = 'assets/images/1_oatmeal_with_apple.jpg';
 			};
-			image.src = '../../' + globalValidRecipes[recipe].info.image;
+			image.src = globalValidRecipes[recipe].info.image;
 			image.className = 'card-img-top';
 			card.appendChild(image);
 
@@ -180,8 +180,8 @@ function addRecipesToList(validRecipes) {
 			let ratingContainer = document.createElement('div');
 			let ratingAverage = globalValidRecipes[recipe].info.ratings.averageRating; // 1-5
 			let ratingNumberOf = globalValidRecipes[recipe].info.ratings.numberOfRatings;
-			let ratingIconDefaultPath = '../../assets/icons/icon_star_default.svg';
-			let ratingIconFilledPath = '../../assets/icons/icon_star_filled.svg';
+			let ratingIconDefaultPath = 'assets/icons/icon_star_default.svg';
+			let ratingIconFilledPath = 'assets/icons/icon_star_filled.svg';
 			ratingContainer.className = 'rating-container';
 			for (let i = 0; i < 5; i++) {
 				let ratingIcon = document.createElement('img');

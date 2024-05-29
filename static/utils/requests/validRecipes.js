@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function reqValidRecipes(userProfile, callback) {
 	console.table(userProfile);
-	fetch('/validRecipes', {
+	fetch('/node2/validRecipes', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
