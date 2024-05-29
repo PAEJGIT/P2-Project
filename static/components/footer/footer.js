@@ -15,7 +15,7 @@ const Footer = (cssPath = 'components/footer/footer.css') => {
 	const footerHTML = `
     <footer>
         <div id="footer-container-left">
-            <a href="/"><img id="logo" src="assets/images/logo.png"></a>
+            <a href="/node2/"><img id="logo" src="assets/images/logo.png"></a>
             <span id="footer-container-left-content"> © 2023-current — Aalborg Universitet. All rights reserved.</span>
         </div>
         <div id="footer-container-right">

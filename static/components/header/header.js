@@ -26,16 +26,16 @@ const Header = (cssPath = 'components/header/header.css', injectTo = 'header-con
 	// HTML string
 	const headerHTML = `
     <div id="header">
-            <a href="/"><img id="logo" src="assets/images/logo.png"></a>
+            <a href="/node2/"><img id="logo" src="assets/images/logo.png"></a>
             <nav class="nav_bar">
                 <ul id="nav_bar_list_container">
                     <li>
                         <img class="nav_icons" src="assets/icons/icon_soup.svg" />
-                        <a class="endpoints" href="/recipes">Recipe Database</a>
+                        <a class="endpoints" href="/node2/">Recipe Database</a>
                     </li>
                     <li>
                         <img class="nav_icons" src="assets/icons/icon_cherry.svg" />
-                        <a class="endpoints" href="/ingredients">Ingredient Database</a>
+                        <a class="endpoints" href="/node2/">Ingredient Database</a>
                     </li>
                 </ul>
             </nav>
